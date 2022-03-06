@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="StudentManagementASPX.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="StudentManagementASPX_NavExtender_NavXtenderAddLink" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://192.168.0.87:7047/BC140/WS/New%20Data%20Migration/Codeunit/NavXtenderAddLink</Value>
+    </Setting>
+    <Setting Name="StudentManagementASPX_StudentManagement_StudentManagement" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.0.95:6052/Kasneb/WS/kasneb/Codeunit/StudentManagement</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

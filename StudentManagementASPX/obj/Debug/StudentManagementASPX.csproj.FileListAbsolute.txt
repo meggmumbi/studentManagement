@@ -1,0 +1,496 @@
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\ApplicationInsights.config
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\roslyn\csc.exe
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\roslyn\System.Collections.Immutable.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\roslyn\System.Reflection.Metadata.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\roslyn\vbc.exe
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\roslyn\VBCSCompiler.exe
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\roslyn\VBCSCompiler.exe.config
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\StudentManagementASPX.dll.config
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\StudentManagementASPX.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\StudentManagementASPX.pdb
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\Microsoft.Data.Edm.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\Microsoft.Data.OData.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\Microsoft.Data.Services.Client.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\System.Spatial.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\Microsoft.Data.Edm.xml
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\Microsoft.Data.OData.xml
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\Microsoft.Data.Services.Client.xml
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\System.Spatial.xml
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\de\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\es\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\it\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\de\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\es\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\fr\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\it\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\ja\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\ko\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\ru\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\de\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\es\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\fr\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\it\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\ja\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\ko\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\ru\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\de\System.Spatial.resources.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\es\System.Spatial.resources.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\fr\System.Spatial.resources.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\it\System.Spatial.resources.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\ja\System.Spatial.resources.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\ko\System.Spatial.resources.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\ru\System.Spatial.resources.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\zh-Hans\System.Spatial.resources.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\bin\zh-Hant\System.Spatial.resources.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\obj\Debug\StudentManagementASPX.dll
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\obj\Debug\StudentManagementASPX.pdb
+D:\C#projects\Clients\KASNEB\StudentManagementASPX\StudentManagementASPX\obj\Debug\StudentManagementASPX.csprojResolveAssemblyReference.cache
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\obj\Debug\StudentManagementASPX.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\obj\Debug\StudentManagementASPX.pdb
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\ApplicationInsights.config
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\roslyn\csc.exe
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\roslyn\System.Collections.Immutable.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\roslyn\System.Reflection.Metadata.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\roslyn\vbc.exe
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\roslyn\VBCSCompiler.exe
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\roslyn\VBCSCompiler.exe.config
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\StudentManagementASPX.dll.config
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\StudentManagementASPX.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\StudentManagementASPX.pdb
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\Microsoft.Data.Edm.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\Microsoft.Data.OData.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\Microsoft.Data.Services.Client.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\System.Spatial.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\Microsoft.Data.Edm.xml
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\Microsoft.Data.OData.xml
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\Microsoft.Data.Services.Client.xml
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\System.Spatial.xml
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\de\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\es\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\it\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\de\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\es\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\fr\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\it\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\ja\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\ko\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\ru\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\de\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\es\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\fr\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\it\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\ja\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\ko\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\ru\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\de\System.Spatial.resources.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\es\System.Spatial.resources.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\fr\System.Spatial.resources.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\it\System.Spatial.resources.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\ja\System.Spatial.resources.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\ko\System.Spatial.resources.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\ru\System.Spatial.resources.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\zh-Hans\System.Spatial.resources.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\bin\zh-Hant\System.Spatial.resources.dll
+D:\C#projects\Clients\Clone\studentmanagement\StudentManagementASPX\obj\Debug\StudentManagementASPX.csprojResolveAssemblyReference.cache
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\ApplicationInsights.config
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\roslyn\csc.exe
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\roslyn\System.Collections.Immutable.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\roslyn\System.Reflection.Metadata.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\roslyn\vbc.exe
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\roslyn\VBCSCompiler.exe
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\roslyn\VBCSCompiler.exe.config
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\StudentManagementASPX.dll.config
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\StudentManagementASPX.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\StudentManagementASPX.pdb
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\Microsoft.Data.Edm.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\Microsoft.Data.OData.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\Microsoft.Data.Services.Client.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\System.Spatial.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\Microsoft.Data.Edm.xml
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\Microsoft.Data.OData.xml
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\Microsoft.Data.Services.Client.xml
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\System.Spatial.xml
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\de\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\es\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\it\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\de\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\es\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\fr\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\it\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\ja\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\ko\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\ru\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\de\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\es\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\fr\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\it\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\ja\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\ko\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\ru\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\de\System.Spatial.resources.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\es\System.Spatial.resources.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\fr\System.Spatial.resources.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\it\System.Spatial.resources.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\ja\System.Spatial.resources.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\ko\System.Spatial.resources.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\ru\System.Spatial.resources.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\zh-Hans\System.Spatial.resources.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\bin\zh-Hant\System.Spatial.resources.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\obj\Debug\StudentManagementASPX.dll
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\obj\Debug\StudentManagementASPX.pdb
+D:\Dynasoft Portals\Kasneb\studentmanagement\StudentManagementASPX\obj\Debug\StudentManagementASPX.csprojResolveAssemblyReference.cache
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\ApplicationInsights.config
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\roslyn\csc.exe
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\roslyn\System.Collections.Immutable.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\roslyn\System.Reflection.Metadata.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\roslyn\vbc.exe
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\roslyn\VBCSCompiler.exe
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\roslyn\VBCSCompiler.exe.config
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\StudentManagementASPX.dll.config
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\StudentManagementASPX.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\StudentManagementASPX.pdb
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\Microsoft.Data.Edm.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\Microsoft.Data.OData.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\Microsoft.Data.Services.Client.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\System.Spatial.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\Microsoft.Data.Edm.xml
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\Microsoft.Data.OData.xml
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\Microsoft.Data.Services.Client.xml
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\System.Spatial.xml
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\de\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\es\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\it\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\de\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\es\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\fr\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\it\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\ja\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\ko\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\ru\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\de\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\es\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\fr\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\it\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\ja\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\ko\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\ru\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\de\System.Spatial.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\es\System.Spatial.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\fr\System.Spatial.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\it\System.Spatial.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\ja\System.Spatial.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\ko\System.Spatial.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\ru\System.Spatial.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\zh-Hans\System.Spatial.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\bin\zh-Hant\System.Spatial.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\obj\Debug\StudentManagementASPX.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\obj\Debug\StudentManagementASPX.pdb
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagement\StudentManagementASPX\obj\Debug\StudentManagementASPX.csprojResolveAssemblyReference.cache
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\ApplicationInsights.config
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\roslyn\csc.exe
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\roslyn\System.Collections.Immutable.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\roslyn\System.Reflection.Metadata.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\roslyn\vbc.exe
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\roslyn\VBCSCompiler.exe
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\roslyn\VBCSCompiler.exe.config
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\StudentManagementASPX.dll.config
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\StudentManagementASPX.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\StudentManagementASPX.pdb
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\Microsoft.Data.Edm.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\Microsoft.Data.OData.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\Microsoft.Data.Services.Client.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\System.Spatial.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\Microsoft.Data.Edm.xml
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\Microsoft.Data.OData.xml
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\Microsoft.Data.Services.Client.xml
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\System.Spatial.xml
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\de\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\es\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\it\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\de\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\es\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\fr\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\it\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\ja\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\ko\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\ru\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\de\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\es\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\fr\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\it\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\ja\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\ko\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\ru\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\de\System.Spatial.resources.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\es\System.Spatial.resources.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\fr\System.Spatial.resources.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\it\System.Spatial.resources.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\ja\System.Spatial.resources.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\ko\System.Spatial.resources.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\ru\System.Spatial.resources.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\zh-Hans\System.Spatial.resources.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\bin\zh-Hant\System.Spatial.resources.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\obj\Debug\StudentManagementASPX.csprojResolveAssemblyReference.cache
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\obj\Debug\StudentManagementASPX.dll
+D:\Dynasoft Portals\Kasneb\studentPortal\studentmanagement\StudentManagementASPX\obj\Debug\StudentManagementASPX.pdb
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\ApplicationInsights.config
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\roslyn\csc.exe
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\roslyn\System.Collections.Immutable.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\roslyn\System.Reflection.Metadata.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\roslyn\vbc.exe
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\roslyn\VBCSCompiler.exe
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\roslyn\VBCSCompiler.exe.config
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\StudentManagementASPX.dll.config
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\StudentManagementASPX.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\StudentManagementASPX.pdb
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\Microsoft.Data.Edm.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\Microsoft.Data.OData.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\Microsoft.Data.Services.Client.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\System.Spatial.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\Microsoft.Data.Edm.xml
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\Microsoft.Data.OData.xml
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\Microsoft.Data.Services.Client.xml
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\System.Spatial.xml
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\de\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\es\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\it\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\de\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\es\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\fr\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\it\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\ja\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\ko\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\ru\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\de\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\es\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\fr\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\it\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\ja\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\ko\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\ru\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\de\System.Spatial.resources.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\es\System.Spatial.resources.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\fr\System.Spatial.resources.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\it\System.Spatial.resources.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\ja\System.Spatial.resources.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\ko\System.Spatial.resources.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\ru\System.Spatial.resources.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\zh-Hans\System.Spatial.resources.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\bin\zh-Hant\System.Spatial.resources.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\obj\Debug\StudentManagementASPX.csprojResolveAssemblyReference.cache
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\obj\Debug\StudentManagementASPX.dll
+D:\C#projects\Clients\KASNEB\student version 1.1\studentmanagementv1\StudentManagementASPX\obj\Debug\StudentManagementASPX.pdb
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\ApplicationInsights.config
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\roslyn\csc.exe
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\roslyn\System.Collections.Immutable.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\roslyn\System.Reflection.Metadata.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\roslyn\vbc.exe
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\roslyn\VBCSCompiler.exe
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\roslyn\VBCSCompiler.exe.config
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\StudentManagementASPX.dll.config
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\StudentManagementASPX.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\StudentManagementASPX.pdb
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\Microsoft.Data.Edm.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\Microsoft.Data.OData.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\Microsoft.Data.Services.Client.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\System.Spatial.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\Microsoft.Data.Edm.xml
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\Microsoft.Data.OData.xml
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\Microsoft.Data.Services.Client.xml
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\System.Spatial.xml
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\de\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\es\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\it\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\de\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\es\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\fr\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\it\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\ja\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\ko\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\ru\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\de\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\es\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\fr\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\it\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\ja\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\ko\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\ru\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\de\System.Spatial.resources.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\es\System.Spatial.resources.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\fr\System.Spatial.resources.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\it\System.Spatial.resources.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\ja\System.Spatial.resources.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\ko\System.Spatial.resources.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\ru\System.Spatial.resources.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\zh-Hans\System.Spatial.resources.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\bin\zh-Hant\System.Spatial.resources.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\obj\Debug\StudentManagementASPX.csprojResolveAssemblyReference.cache
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\obj\Debug\StudentManagementASPX.dll
+D:\Dynasoft Portals\studentmanagementv1\StudentManagementASPX\obj\Debug\StudentManagementASPX.pdb
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\ApplicationInsights.config
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\roslyn\csc.exe
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\roslyn\System.Collections.Immutable.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\roslyn\System.Reflection.Metadata.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\roslyn\vbc.exe
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\roslyn\VBCSCompiler.exe
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\roslyn\VBCSCompiler.exe.config
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\StudentManagementASPX.dll.config
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\StudentManagementASPX.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\StudentManagementASPX.pdb
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\obj\Debug\StudentManagementASPX.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\obj\Debug\StudentManagementASPX.pdb
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\de\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\es\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\it\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\de\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\es\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\fr\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\it\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\ja\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\ko\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\ru\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\de\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\es\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\fr\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\it\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\ja\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\ko\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\ru\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\de\System.Spatial.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\es\System.Spatial.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\fr\System.Spatial.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\it\System.Spatial.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\ja\System.Spatial.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\ko\System.Spatial.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\ru\System.Spatial.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\zh-Hans\System.Spatial.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\bin\zh-Hant\System.Spatial.resources.dll
+D:\C#projects\Clients\KASNEB\studentMurkomen\studentmanagementv1\StudentManagementASPX\obj\Debug\StudentManagementASPX.csprojResolveAssemblyReference.cache

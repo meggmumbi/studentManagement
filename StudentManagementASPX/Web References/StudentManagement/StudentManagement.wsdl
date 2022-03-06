@@ -1,0 +1,2788 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="urn:microsoft-dynamics-schemas/codeunit/StudentManagement" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="FnRegistration">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="firstname" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="middlename" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="lastname" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="address" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="postcode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="city" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="phoneNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="email" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="country" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnRegistration_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnCreateApplicantAccountRequest">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="emailaddress" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnCreateApplicantAccountRequest_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnResetPassword">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="emailaddress" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnResetPassword_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ResetSendEmail">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="emailaddress" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ResetSendEmail_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="FnChangeStudentPassword">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="emailaddress" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="currentPassword" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="newPassword" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="confirmNewPassword" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnChangeStudentPassword_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnApplicantProfileRegistration">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicantNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="surname" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="firstname" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="othernames" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="gender" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="idnumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="dateofbirth" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="county" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="address" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="postalcodes" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="email" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="city" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="phoneNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="fileName" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="project" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="courseId" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="countryId" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnApplicantProfileRegistration_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnExistingStudent">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicantNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="examCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="studentNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="trainingInst" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="project" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnExistingStudent_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateDeffermentLine">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="bookingtype" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="part" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="section" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="paper" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="currency" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateDeffermentLine_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateDefferment">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="studentNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="regNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="withdrawalReason" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="examCycle" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateDefferment_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateWithdrawalLine">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="bookingtype" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="part" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="section" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="paper" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="currency" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateWithdrawalLine_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateStudentBookingLine">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="bookingtype" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="part" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="section" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="paper" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="currency" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateStudentBookingLine_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateStudentBooking">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="studentNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="regNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="examCenters" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="examCycle" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="currency" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateStudentBooking_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="InstitutionBookingLine">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="bookingtype" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="part" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="section" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="paper" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="project" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="registrationNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="InstitutionBookingLine_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnRegistrationStudent">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="firstname" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="middlename" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="lastname" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="phoneNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="email" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="idNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnRegistrationStudent_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnUploadProfilePhoto">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="studentNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnUploadProfilePhoto_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PrintInvoice">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="studentNoFilter" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="invoicenumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PrintInvoice_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ConfirmPaymentsStudent">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="paymentDocument" type="boolean" />
+            <element minOccurs="1" maxOccurs="1" name="paymentRef" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="studentNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="mode" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ConfirmPaymentsStudent_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PrintReceipt">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="receiptNoFilter" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PrintReceipt_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PrintDeffermentSummery">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PrintDeffermentSummery_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PrintInvoiceExemption">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="studentNoFilter" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="invoiceNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PrintInvoiceExemption_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ConfirmPaymentStudentRegistration">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="paymentDocument" type="boolean" />
+            <element minOccurs="1" maxOccurs="1" name="paymentRef" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="studentNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="mode" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ConfirmPaymentStudentRegistration_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ConfirmPaymentsStudentBooking">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="paymentDocument" type="boolean" />
+            <element minOccurs="1" maxOccurs="1" name="paymentRef" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="studentNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="mode" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ConfirmPaymentsStudentBooking_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PrintInvoiceBooking">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="invoicenumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="studentNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PrintInvoiceBooking_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnApplicantProfileRegistrationLines">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicantNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="isdisable" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="examination" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="highestAcademicQualification" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="information" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="kinRelationship" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="kinname" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="kinemail" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="kinphone" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="trainingInst" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnApplicantProfileRegistrationLines_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PrintInvoiceInstReg">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="invoicenumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="custNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PrintInvoiceInstReg_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PrintWithdrawalSummery">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PrintWithdrawalSummery_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnInstitutionStudentRegistration">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicantNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="surname" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="firstname" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="othernames" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="gender" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="idnumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="dateofbirth" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="county" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="address" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="isdisable" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="postalcodes" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="email" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="city" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="examcenters" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="examination" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="phoneNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="highestAcademicQualification" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="examCycle" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="currency" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnInstitutionStudentRegistration_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="InstitutionRegistartionHeader">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="docType" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="institutionNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="currencyCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="InstitutionRegistartionHeader_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="InstitutionExamBooking">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="institutionNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="date" type="date" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="InstitutionExamBooking_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateExemptionLine">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="itmType" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="item" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="currency" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="apllicationNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateExemptionLine_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateExemption">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="studentNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="regNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateExemption_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateWithdrawal">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="studentNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="regNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="withdrawalReason" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="examCycle" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateWithdrawal_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnInsertMultipleSurveys">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="surveyno" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="sectioncode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="questionid" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="responsevalue" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnInsertMultipleSurveys_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnInsertBranchingResponses">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="surveyno" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="sectioncode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="parentquestionid" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="parentresponse" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="questionid" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="question" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="generalresponse" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnInsertBranchingResponses_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnSubmitSurvey">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="surveyno" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnSubmitSurvey_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnCreateBRResponseQuestions">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="surveyno" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="scectioncode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="question" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="ratingoption" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="generalresponse" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnCreateBRResponseQuestions_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateRenewal">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="studentNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="regNos" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="amount" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateRenewal_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateReactivation">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="studentNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateReactivation_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateRenewalLine">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="studentNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="regNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="amount" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateRenewalLine_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateReactivationLine">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="regNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="amt" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="studentNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateReactivationLine_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnAddDisability">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="disatilityType" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="description" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnAddDisability_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GenerateTimetable">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="code" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GenerateTimetable_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnSubmitApplication">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnSubmitApplication_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="StudentTimetable">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="code" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="StudentTimetable_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Invoice">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="code" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Invoice_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="AddRegistrationSharepointLinks">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="filename" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="sharepointlink" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="AddRegistrationSharepointLinks_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnConfirmPayment">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="phoneNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="amount" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnConfirmPayment_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateExemptionQualifications">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="qualificationType" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="qulificatioCode" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateExemptionQualifications_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ExemptionLetter">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="code" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ExemptionLetter_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnSubmitExeptionApplication">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnSubmitExeptionApplication_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="EditRegistrationApplication">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="gender" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="dob" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="address" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="phoneNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="EditRegistrationApplication_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnConfirmAttendance">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicantNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="studentNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="trainingNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnConfirmAttendance_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnApplyJob">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicantNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="studentNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="trainingNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnApplyJob_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="AddExemptionSharepointLinks">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="filename" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="sharepointlink" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="AddExemptionSharepointLinks_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnInsertBookingLines">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="part" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="paper" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnInsertBookingLines_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="RemoveExaminationPaper">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="entryNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="RemoveExaminationPaper_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnConfirmExamCenter">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="examCenter" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnConfirmExamCenter_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnConfirmBookingPayment">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="phoneNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="amount" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnConfirmBookingPayment_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="AddVacancySharepointLinks">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="filename" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="sharepointlink" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="AddVacancySharepointLinks_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="BookingInvoice">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="code" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="BookingInvoice_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnCaseManagement">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicantNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="casetype" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="subject" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="description" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="studentNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnCaseManagement_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnCenterRecollocate">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="regNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="region" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="zone" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="examcenter" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="newexamcenter" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnCenterRecollocate_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnEditProfile">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="iDNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="address" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="address2" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="city" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="postcode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="country" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="phoneNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="email" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="county" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnEditProfile_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnEditstudent">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="idNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="phoneNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="email" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="regNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnEditstudent_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnUploadProfilePhotoprofile">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="studentNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnUploadProfilePhotoprofile_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnDisplayPapers">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnDisplayPapers_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="RemoveExemptionPaper">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="entryNo" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="RemoveExemptionPaper_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="RemoveQualificationPaper">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="entryNo" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="RemoveQualificationPaper_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnConfirmPayments">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnConfirmPayments_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnsuggestPapers">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnsuggestPapers_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="RenewalInvoice">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="code" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="RenewalInvoice_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="AddWithdrawalSharepointLinks">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="filename" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="sharepointlink" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="AddWithdrawalSharepointLinks_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="AddDefermentSharepointLinks">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="filename" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="sharepointlink" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="AddDefermentSharepointLinks_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PrintReceiptBookin">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="receiptNoFilter" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PrintReceiptBookin_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PrintReceiptExemption">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="receiptNoFilter" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PrintReceiptExemption_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnGetCustomerPicture">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="custNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnGetCustomerPicture_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetStudentsImages">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="idNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetStudentsImages_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ResultSlip">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="studentRegNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="examSittingId" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ResultSlip_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </types>
+  <message name="FnRegistration">
+    <part name="parameters" element="tns:FnRegistration" />
+  </message>
+  <message name="FnRegistration_Result">
+    <part name="parameters" element="tns:FnRegistration_Result" />
+  </message>
+  <message name="FnCreateApplicantAccountRequest">
+    <part name="parameters" element="tns:FnCreateApplicantAccountRequest" />
+  </message>
+  <message name="FnCreateApplicantAccountRequest_Result">
+    <part name="parameters" element="tns:FnCreateApplicantAccountRequest_Result" />
+  </message>
+  <message name="FnResetPassword">
+    <part name="parameters" element="tns:FnResetPassword" />
+  </message>
+  <message name="FnResetPassword_Result">
+    <part name="parameters" element="tns:FnResetPassword_Result" />
+  </message>
+  <message name="ResetSendEmail">
+    <part name="parameters" element="tns:ResetSendEmail" />
+  </message>
+  <message name="ResetSendEmail_Result">
+    <part name="parameters" element="tns:ResetSendEmail_Result" />
+  </message>
+  <message name="FnChangeStudentPassword">
+    <part name="parameters" element="tns:FnChangeStudentPassword" />
+  </message>
+  <message name="FnChangeStudentPassword_Result">
+    <part name="parameters" element="tns:FnChangeStudentPassword_Result" />
+  </message>
+  <message name="FnApplicantProfileRegistration">
+    <part name="parameters" element="tns:FnApplicantProfileRegistration" />
+  </message>
+  <message name="FnApplicantProfileRegistration_Result">
+    <part name="parameters" element="tns:FnApplicantProfileRegistration_Result" />
+  </message>
+  <message name="FnExistingStudent">
+    <part name="parameters" element="tns:FnExistingStudent" />
+  </message>
+  <message name="FnExistingStudent_Result">
+    <part name="parameters" element="tns:FnExistingStudent_Result" />
+  </message>
+  <message name="CreateDeffermentLine">
+    <part name="parameters" element="tns:CreateDeffermentLine" />
+  </message>
+  <message name="CreateDeffermentLine_Result">
+    <part name="parameters" element="tns:CreateDeffermentLine_Result" />
+  </message>
+  <message name="CreateDefferment">
+    <part name="parameters" element="tns:CreateDefferment" />
+  </message>
+  <message name="CreateDefferment_Result">
+    <part name="parameters" element="tns:CreateDefferment_Result" />
+  </message>
+  <message name="CreateWithdrawalLine">
+    <part name="parameters" element="tns:CreateWithdrawalLine" />
+  </message>
+  <message name="CreateWithdrawalLine_Result">
+    <part name="parameters" element="tns:CreateWithdrawalLine_Result" />
+  </message>
+  <message name="CreateStudentBookingLine">
+    <part name="parameters" element="tns:CreateStudentBookingLine" />
+  </message>
+  <message name="CreateStudentBookingLine_Result">
+    <part name="parameters" element="tns:CreateStudentBookingLine_Result" />
+  </message>
+  <message name="CreateStudentBooking">
+    <part name="parameters" element="tns:CreateStudentBooking" />
+  </message>
+  <message name="CreateStudentBooking_Result">
+    <part name="parameters" element="tns:CreateStudentBooking_Result" />
+  </message>
+  <message name="InstitutionBookingLine">
+    <part name="parameters" element="tns:InstitutionBookingLine" />
+  </message>
+  <message name="InstitutionBookingLine_Result">
+    <part name="parameters" element="tns:InstitutionBookingLine_Result" />
+  </message>
+  <message name="FnRegistrationStudent">
+    <part name="parameters" element="tns:FnRegistrationStudent" />
+  </message>
+  <message name="FnRegistrationStudent_Result">
+    <part name="parameters" element="tns:FnRegistrationStudent_Result" />
+  </message>
+  <message name="FnUploadProfilePhoto">
+    <part name="parameters" element="tns:FnUploadProfilePhoto" />
+  </message>
+  <message name="FnUploadProfilePhoto_Result">
+    <part name="parameters" element="tns:FnUploadProfilePhoto_Result" />
+  </message>
+  <message name="PrintInvoice">
+    <part name="parameters" element="tns:PrintInvoice" />
+  </message>
+  <message name="PrintInvoice_Result">
+    <part name="parameters" element="tns:PrintInvoice_Result" />
+  </message>
+  <message name="ConfirmPaymentsStudent">
+    <part name="parameters" element="tns:ConfirmPaymentsStudent" />
+  </message>
+  <message name="ConfirmPaymentsStudent_Result">
+    <part name="parameters" element="tns:ConfirmPaymentsStudent_Result" />
+  </message>
+  <message name="PrintReceipt">
+    <part name="parameters" element="tns:PrintReceipt" />
+  </message>
+  <message name="PrintReceipt_Result">
+    <part name="parameters" element="tns:PrintReceipt_Result" />
+  </message>
+  <message name="PrintDeffermentSummery">
+    <part name="parameters" element="tns:PrintDeffermentSummery" />
+  </message>
+  <message name="PrintDeffermentSummery_Result">
+    <part name="parameters" element="tns:PrintDeffermentSummery_Result" />
+  </message>
+  <message name="PrintInvoiceExemption">
+    <part name="parameters" element="tns:PrintInvoiceExemption" />
+  </message>
+  <message name="PrintInvoiceExemption_Result">
+    <part name="parameters" element="tns:PrintInvoiceExemption_Result" />
+  </message>
+  <message name="ConfirmPaymentStudentRegistration">
+    <part name="parameters" element="tns:ConfirmPaymentStudentRegistration" />
+  </message>
+  <message name="ConfirmPaymentStudentRegistration_Result">
+    <part name="parameters" element="tns:ConfirmPaymentStudentRegistration_Result" />
+  </message>
+  <message name="ConfirmPaymentsStudentBooking">
+    <part name="parameters" element="tns:ConfirmPaymentsStudentBooking" />
+  </message>
+  <message name="ConfirmPaymentsStudentBooking_Result">
+    <part name="parameters" element="tns:ConfirmPaymentsStudentBooking_Result" />
+  </message>
+  <message name="PrintInvoiceBooking">
+    <part name="parameters" element="tns:PrintInvoiceBooking" />
+  </message>
+  <message name="PrintInvoiceBooking_Result">
+    <part name="parameters" element="tns:PrintInvoiceBooking_Result" />
+  </message>
+  <message name="FnApplicantProfileRegistrationLines">
+    <part name="parameters" element="tns:FnApplicantProfileRegistrationLines" />
+  </message>
+  <message name="FnApplicantProfileRegistrationLines_Result">
+    <part name="parameters" element="tns:FnApplicantProfileRegistrationLines_Result" />
+  </message>
+  <message name="PrintInvoiceInstReg">
+    <part name="parameters" element="tns:PrintInvoiceInstReg" />
+  </message>
+  <message name="PrintInvoiceInstReg_Result">
+    <part name="parameters" element="tns:PrintInvoiceInstReg_Result" />
+  </message>
+  <message name="PrintWithdrawalSummery">
+    <part name="parameters" element="tns:PrintWithdrawalSummery" />
+  </message>
+  <message name="PrintWithdrawalSummery_Result">
+    <part name="parameters" element="tns:PrintWithdrawalSummery_Result" />
+  </message>
+  <message name="FnInstitutionStudentRegistration">
+    <part name="parameters" element="tns:FnInstitutionStudentRegistration" />
+  </message>
+  <message name="FnInstitutionStudentRegistration_Result">
+    <part name="parameters" element="tns:FnInstitutionStudentRegistration_Result" />
+  </message>
+  <message name="InstitutionRegistartionHeader">
+    <part name="parameters" element="tns:InstitutionRegistartionHeader" />
+  </message>
+  <message name="InstitutionRegistartionHeader_Result">
+    <part name="parameters" element="tns:InstitutionRegistartionHeader_Result" />
+  </message>
+  <message name="InstitutionExamBooking">
+    <part name="parameters" element="tns:InstitutionExamBooking" />
+  </message>
+  <message name="InstitutionExamBooking_Result">
+    <part name="parameters" element="tns:InstitutionExamBooking_Result" />
+  </message>
+  <message name="CreateExemptionLine">
+    <part name="parameters" element="tns:CreateExemptionLine" />
+  </message>
+  <message name="CreateExemptionLine_Result">
+    <part name="parameters" element="tns:CreateExemptionLine_Result" />
+  </message>
+  <message name="CreateExemption">
+    <part name="parameters" element="tns:CreateExemption" />
+  </message>
+  <message name="CreateExemption_Result">
+    <part name="parameters" element="tns:CreateExemption_Result" />
+  </message>
+  <message name="CreateWithdrawal">
+    <part name="parameters" element="tns:CreateWithdrawal" />
+  </message>
+  <message name="CreateWithdrawal_Result">
+    <part name="parameters" element="tns:CreateWithdrawal_Result" />
+  </message>
+  <message name="FnInsertMultipleSurveys">
+    <part name="parameters" element="tns:FnInsertMultipleSurveys" />
+  </message>
+  <message name="FnInsertMultipleSurveys_Result">
+    <part name="parameters" element="tns:FnInsertMultipleSurveys_Result" />
+  </message>
+  <message name="FnInsertBranchingResponses">
+    <part name="parameters" element="tns:FnInsertBranchingResponses" />
+  </message>
+  <message name="FnInsertBranchingResponses_Result">
+    <part name="parameters" element="tns:FnInsertBranchingResponses_Result" />
+  </message>
+  <message name="FnSubmitSurvey">
+    <part name="parameters" element="tns:FnSubmitSurvey" />
+  </message>
+  <message name="FnSubmitSurvey_Result">
+    <part name="parameters" element="tns:FnSubmitSurvey_Result" />
+  </message>
+  <message name="FnCreateBRResponseQuestions">
+    <part name="parameters" element="tns:FnCreateBRResponseQuestions" />
+  </message>
+  <message name="FnCreateBRResponseQuestions_Result">
+    <part name="parameters" element="tns:FnCreateBRResponseQuestions_Result" />
+  </message>
+  <message name="CreateRenewal">
+    <part name="parameters" element="tns:CreateRenewal" />
+  </message>
+  <message name="CreateRenewal_Result">
+    <part name="parameters" element="tns:CreateRenewal_Result" />
+  </message>
+  <message name="CreateReactivation">
+    <part name="parameters" element="tns:CreateReactivation" />
+  </message>
+  <message name="CreateReactivation_Result">
+    <part name="parameters" element="tns:CreateReactivation_Result" />
+  </message>
+  <message name="CreateRenewalLine">
+    <part name="parameters" element="tns:CreateRenewalLine" />
+  </message>
+  <message name="CreateRenewalLine_Result">
+    <part name="parameters" element="tns:CreateRenewalLine_Result" />
+  </message>
+  <message name="CreateReactivationLine">
+    <part name="parameters" element="tns:CreateReactivationLine" />
+  </message>
+  <message name="CreateReactivationLine_Result">
+    <part name="parameters" element="tns:CreateReactivationLine_Result" />
+  </message>
+  <message name="FnAddDisability">
+    <part name="parameters" element="tns:FnAddDisability" />
+  </message>
+  <message name="FnAddDisability_Result">
+    <part name="parameters" element="tns:FnAddDisability_Result" />
+  </message>
+  <message name="GenerateTimetable">
+    <part name="parameters" element="tns:GenerateTimetable" />
+  </message>
+  <message name="GenerateTimetable_Result">
+    <part name="parameters" element="tns:GenerateTimetable_Result" />
+  </message>
+  <message name="FnSubmitApplication">
+    <part name="parameters" element="tns:FnSubmitApplication" />
+  </message>
+  <message name="FnSubmitApplication_Result">
+    <part name="parameters" element="tns:FnSubmitApplication_Result" />
+  </message>
+  <message name="StudentTimetable">
+    <part name="parameters" element="tns:StudentTimetable" />
+  </message>
+  <message name="StudentTimetable_Result">
+    <part name="parameters" element="tns:StudentTimetable_Result" />
+  </message>
+  <message name="Invoice">
+    <part name="parameters" element="tns:Invoice" />
+  </message>
+  <message name="Invoice_Result">
+    <part name="parameters" element="tns:Invoice_Result" />
+  </message>
+  <message name="AddRegistrationSharepointLinks">
+    <part name="parameters" element="tns:AddRegistrationSharepointLinks" />
+  </message>
+  <message name="AddRegistrationSharepointLinks_Result">
+    <part name="parameters" element="tns:AddRegistrationSharepointLinks_Result" />
+  </message>
+  <message name="FnConfirmPayment">
+    <part name="parameters" element="tns:FnConfirmPayment" />
+  </message>
+  <message name="FnConfirmPayment_Result">
+    <part name="parameters" element="tns:FnConfirmPayment_Result" />
+  </message>
+  <message name="CreateExemptionQualifications">
+    <part name="parameters" element="tns:CreateExemptionQualifications" />
+  </message>
+  <message name="CreateExemptionQualifications_Result">
+    <part name="parameters" element="tns:CreateExemptionQualifications_Result" />
+  </message>
+  <message name="ExemptionLetter">
+    <part name="parameters" element="tns:ExemptionLetter" />
+  </message>
+  <message name="ExemptionLetter_Result">
+    <part name="parameters" element="tns:ExemptionLetter_Result" />
+  </message>
+  <message name="FnSubmitExeptionApplication">
+    <part name="parameters" element="tns:FnSubmitExeptionApplication" />
+  </message>
+  <message name="FnSubmitExeptionApplication_Result">
+    <part name="parameters" element="tns:FnSubmitExeptionApplication_Result" />
+  </message>
+  <message name="EditRegistrationApplication">
+    <part name="parameters" element="tns:EditRegistrationApplication" />
+  </message>
+  <message name="EditRegistrationApplication_Result">
+    <part name="parameters" element="tns:EditRegistrationApplication_Result" />
+  </message>
+  <message name="FnConfirmAttendance">
+    <part name="parameters" element="tns:FnConfirmAttendance" />
+  </message>
+  <message name="FnConfirmAttendance_Result">
+    <part name="parameters" element="tns:FnConfirmAttendance_Result" />
+  </message>
+  <message name="FnApplyJob">
+    <part name="parameters" element="tns:FnApplyJob" />
+  </message>
+  <message name="FnApplyJob_Result">
+    <part name="parameters" element="tns:FnApplyJob_Result" />
+  </message>
+  <message name="AddExemptionSharepointLinks">
+    <part name="parameters" element="tns:AddExemptionSharepointLinks" />
+  </message>
+  <message name="AddExemptionSharepointLinks_Result">
+    <part name="parameters" element="tns:AddExemptionSharepointLinks_Result" />
+  </message>
+  <message name="FnInsertBookingLines">
+    <part name="parameters" element="tns:FnInsertBookingLines" />
+  </message>
+  <message name="FnInsertBookingLines_Result">
+    <part name="parameters" element="tns:FnInsertBookingLines_Result" />
+  </message>
+  <message name="RemoveExaminationPaper">
+    <part name="parameters" element="tns:RemoveExaminationPaper" />
+  </message>
+  <message name="RemoveExaminationPaper_Result">
+    <part name="parameters" element="tns:RemoveExaminationPaper_Result" />
+  </message>
+  <message name="FnConfirmExamCenter">
+    <part name="parameters" element="tns:FnConfirmExamCenter" />
+  </message>
+  <message name="FnConfirmExamCenter_Result">
+    <part name="parameters" element="tns:FnConfirmExamCenter_Result" />
+  </message>
+  <message name="FnConfirmBookingPayment">
+    <part name="parameters" element="tns:FnConfirmBookingPayment" />
+  </message>
+  <message name="FnConfirmBookingPayment_Result">
+    <part name="parameters" element="tns:FnConfirmBookingPayment_Result" />
+  </message>
+  <message name="AddVacancySharepointLinks">
+    <part name="parameters" element="tns:AddVacancySharepointLinks" />
+  </message>
+  <message name="AddVacancySharepointLinks_Result">
+    <part name="parameters" element="tns:AddVacancySharepointLinks_Result" />
+  </message>
+  <message name="BookingInvoice">
+    <part name="parameters" element="tns:BookingInvoice" />
+  </message>
+  <message name="BookingInvoice_Result">
+    <part name="parameters" element="tns:BookingInvoice_Result" />
+  </message>
+  <message name="FnCaseManagement">
+    <part name="parameters" element="tns:FnCaseManagement" />
+  </message>
+  <message name="FnCaseManagement_Result">
+    <part name="parameters" element="tns:FnCaseManagement_Result" />
+  </message>
+  <message name="FnCenterRecollocate">
+    <part name="parameters" element="tns:FnCenterRecollocate" />
+  </message>
+  <message name="FnCenterRecollocate_Result">
+    <part name="parameters" element="tns:FnCenterRecollocate_Result" />
+  </message>
+  <message name="FnEditProfile">
+    <part name="parameters" element="tns:FnEditProfile" />
+  </message>
+  <message name="FnEditProfile_Result">
+    <part name="parameters" element="tns:FnEditProfile_Result" />
+  </message>
+  <message name="FnEditstudent">
+    <part name="parameters" element="tns:FnEditstudent" />
+  </message>
+  <message name="FnEditstudent_Result">
+    <part name="parameters" element="tns:FnEditstudent_Result" />
+  </message>
+  <message name="FnUploadProfilePhotoprofile">
+    <part name="parameters" element="tns:FnUploadProfilePhotoprofile" />
+  </message>
+  <message name="FnUploadProfilePhotoprofile_Result">
+    <part name="parameters" element="tns:FnUploadProfilePhotoprofile_Result" />
+  </message>
+  <message name="FnDisplayPapers">
+    <part name="parameters" element="tns:FnDisplayPapers" />
+  </message>
+  <message name="FnDisplayPapers_Result">
+    <part name="parameters" element="tns:FnDisplayPapers_Result" />
+  </message>
+  <message name="RemoveExemptionPaper">
+    <part name="parameters" element="tns:RemoveExemptionPaper" />
+  </message>
+  <message name="RemoveExemptionPaper_Result">
+    <part name="parameters" element="tns:RemoveExemptionPaper_Result" />
+  </message>
+  <message name="RemoveQualificationPaper">
+    <part name="parameters" element="tns:RemoveQualificationPaper" />
+  </message>
+  <message name="RemoveQualificationPaper_Result">
+    <part name="parameters" element="tns:RemoveQualificationPaper_Result" />
+  </message>
+  <message name="FnConfirmPayments">
+    <part name="parameters" element="tns:FnConfirmPayments" />
+  </message>
+  <message name="FnConfirmPayments_Result">
+    <part name="parameters" element="tns:FnConfirmPayments_Result" />
+  </message>
+  <message name="FnsuggestPapers">
+    <part name="parameters" element="tns:FnsuggestPapers" />
+  </message>
+  <message name="FnsuggestPapers_Result">
+    <part name="parameters" element="tns:FnsuggestPapers_Result" />
+  </message>
+  <message name="RenewalInvoice">
+    <part name="parameters" element="tns:RenewalInvoice" />
+  </message>
+  <message name="RenewalInvoice_Result">
+    <part name="parameters" element="tns:RenewalInvoice_Result" />
+  </message>
+  <message name="AddWithdrawalSharepointLinks">
+    <part name="parameters" element="tns:AddWithdrawalSharepointLinks" />
+  </message>
+  <message name="AddWithdrawalSharepointLinks_Result">
+    <part name="parameters" element="tns:AddWithdrawalSharepointLinks_Result" />
+  </message>
+  <message name="AddDefermentSharepointLinks">
+    <part name="parameters" element="tns:AddDefermentSharepointLinks" />
+  </message>
+  <message name="AddDefermentSharepointLinks_Result">
+    <part name="parameters" element="tns:AddDefermentSharepointLinks_Result" />
+  </message>
+  <message name="PrintReceiptBookin">
+    <part name="parameters" element="tns:PrintReceiptBookin" />
+  </message>
+  <message name="PrintReceiptBookin_Result">
+    <part name="parameters" element="tns:PrintReceiptBookin_Result" />
+  </message>
+  <message name="PrintReceiptExemption">
+    <part name="parameters" element="tns:PrintReceiptExemption" />
+  </message>
+  <message name="PrintReceiptExemption_Result">
+    <part name="parameters" element="tns:PrintReceiptExemption_Result" />
+  </message>
+  <message name="FnGetCustomerPicture">
+    <part name="parameters" element="tns:FnGetCustomerPicture" />
+  </message>
+  <message name="FnGetCustomerPicture_Result">
+    <part name="parameters" element="tns:FnGetCustomerPicture_Result" />
+  </message>
+  <message name="GetStudentsImages">
+    <part name="parameters" element="tns:GetStudentsImages" />
+  </message>
+  <message name="GetStudentsImages_Result">
+    <part name="parameters" element="tns:GetStudentsImages_Result" />
+  </message>
+  <message name="ResultSlip">
+    <part name="parameters" element="tns:ResultSlip" />
+  </message>
+  <message name="ResultSlip_Result">
+    <part name="parameters" element="tns:ResultSlip_Result" />
+  </message>
+  <portType name="StudentManagement_Port">
+    <operation name="FnRegistration">
+      <input name="FnRegistration" message="tns:FnRegistration" />
+      <output name="FnRegistration_Result" message="tns:FnRegistration_Result" />
+    </operation>
+    <operation name="FnCreateApplicantAccountRequest">
+      <input name="FnCreateApplicantAccountRequest" message="tns:FnCreateApplicantAccountRequest" />
+      <output name="FnCreateApplicantAccountRequest_Result" message="tns:FnCreateApplicantAccountRequest_Result" />
+    </operation>
+    <operation name="FnResetPassword">
+      <input name="FnResetPassword" message="tns:FnResetPassword" />
+      <output name="FnResetPassword_Result" message="tns:FnResetPassword_Result" />
+    </operation>
+    <operation name="ResetSendEmail">
+      <input name="ResetSendEmail" message="tns:ResetSendEmail" />
+      <output name="ResetSendEmail_Result" message="tns:ResetSendEmail_Result" />
+    </operation>
+    <operation name="FnChangeStudentPassword">
+      <input name="FnChangeStudentPassword" message="tns:FnChangeStudentPassword" />
+      <output name="FnChangeStudentPassword_Result" message="tns:FnChangeStudentPassword_Result" />
+    </operation>
+    <operation name="FnApplicantProfileRegistration">
+      <input name="FnApplicantProfileRegistration" message="tns:FnApplicantProfileRegistration" />
+      <output name="FnApplicantProfileRegistration_Result" message="tns:FnApplicantProfileRegistration_Result" />
+    </operation>
+    <operation name="FnExistingStudent">
+      <input name="FnExistingStudent" message="tns:FnExistingStudent" />
+      <output name="FnExistingStudent_Result" message="tns:FnExistingStudent_Result" />
+    </operation>
+    <operation name="CreateDeffermentLine">
+      <input name="CreateDeffermentLine" message="tns:CreateDeffermentLine" />
+      <output name="CreateDeffermentLine_Result" message="tns:CreateDeffermentLine_Result" />
+    </operation>
+    <operation name="CreateDefferment">
+      <input name="CreateDefferment" message="tns:CreateDefferment" />
+      <output name="CreateDefferment_Result" message="tns:CreateDefferment_Result" />
+    </operation>
+    <operation name="CreateWithdrawalLine">
+      <input name="CreateWithdrawalLine" message="tns:CreateWithdrawalLine" />
+      <output name="CreateWithdrawalLine_Result" message="tns:CreateWithdrawalLine_Result" />
+    </operation>
+    <operation name="CreateStudentBookingLine">
+      <input name="CreateStudentBookingLine" message="tns:CreateStudentBookingLine" />
+      <output name="CreateStudentBookingLine_Result" message="tns:CreateStudentBookingLine_Result" />
+    </operation>
+    <operation name="CreateStudentBooking">
+      <input name="CreateStudentBooking" message="tns:CreateStudentBooking" />
+      <output name="CreateStudentBooking_Result" message="tns:CreateStudentBooking_Result" />
+    </operation>
+    <operation name="InstitutionBookingLine">
+      <input name="InstitutionBookingLine" message="tns:InstitutionBookingLine" />
+      <output name="InstitutionBookingLine_Result" message="tns:InstitutionBookingLine_Result" />
+    </operation>
+    <operation name="FnRegistrationStudent">
+      <input name="FnRegistrationStudent" message="tns:FnRegistrationStudent" />
+      <output name="FnRegistrationStudent_Result" message="tns:FnRegistrationStudent_Result" />
+    </operation>
+    <operation name="FnUploadProfilePhoto">
+      <input name="FnUploadProfilePhoto" message="tns:FnUploadProfilePhoto" />
+      <output name="FnUploadProfilePhoto_Result" message="tns:FnUploadProfilePhoto_Result" />
+    </operation>
+    <operation name="PrintInvoice">
+      <input name="PrintInvoice" message="tns:PrintInvoice" />
+      <output name="PrintInvoice_Result" message="tns:PrintInvoice_Result" />
+    </operation>
+    <operation name="ConfirmPaymentsStudent">
+      <input name="ConfirmPaymentsStudent" message="tns:ConfirmPaymentsStudent" />
+      <output name="ConfirmPaymentsStudent_Result" message="tns:ConfirmPaymentsStudent_Result" />
+    </operation>
+    <operation name="PrintReceipt">
+      <input name="PrintReceipt" message="tns:PrintReceipt" />
+      <output name="PrintReceipt_Result" message="tns:PrintReceipt_Result" />
+    </operation>
+    <operation name="PrintDeffermentSummery">
+      <input name="PrintDeffermentSummery" message="tns:PrintDeffermentSummery" />
+      <output name="PrintDeffermentSummery_Result" message="tns:PrintDeffermentSummery_Result" />
+    </operation>
+    <operation name="PrintInvoiceExemption">
+      <input name="PrintInvoiceExemption" message="tns:PrintInvoiceExemption" />
+      <output name="PrintInvoiceExemption_Result" message="tns:PrintInvoiceExemption_Result" />
+    </operation>
+    <operation name="ConfirmPaymentStudentRegistration">
+      <input name="ConfirmPaymentStudentRegistration" message="tns:ConfirmPaymentStudentRegistration" />
+      <output name="ConfirmPaymentStudentRegistration_Result" message="tns:ConfirmPaymentStudentRegistration_Result" />
+    </operation>
+    <operation name="ConfirmPaymentsStudentBooking">
+      <input name="ConfirmPaymentsStudentBooking" message="tns:ConfirmPaymentsStudentBooking" />
+      <output name="ConfirmPaymentsStudentBooking_Result" message="tns:ConfirmPaymentsStudentBooking_Result" />
+    </operation>
+    <operation name="PrintInvoiceBooking">
+      <input name="PrintInvoiceBooking" message="tns:PrintInvoiceBooking" />
+      <output name="PrintInvoiceBooking_Result" message="tns:PrintInvoiceBooking_Result" />
+    </operation>
+    <operation name="FnApplicantProfileRegistrationLines">
+      <input name="FnApplicantProfileRegistrationLines" message="tns:FnApplicantProfileRegistrationLines" />
+      <output name="FnApplicantProfileRegistrationLines_Result" message="tns:FnApplicantProfileRegistrationLines_Result" />
+    </operation>
+    <operation name="PrintInvoiceInstReg">
+      <input name="PrintInvoiceInstReg" message="tns:PrintInvoiceInstReg" />
+      <output name="PrintInvoiceInstReg_Result" message="tns:PrintInvoiceInstReg_Result" />
+    </operation>
+    <operation name="PrintWithdrawalSummery">
+      <input name="PrintWithdrawalSummery" message="tns:PrintWithdrawalSummery" />
+      <output name="PrintWithdrawalSummery_Result" message="tns:PrintWithdrawalSummery_Result" />
+    </operation>
+    <operation name="FnInstitutionStudentRegistration">
+      <input name="FnInstitutionStudentRegistration" message="tns:FnInstitutionStudentRegistration" />
+      <output name="FnInstitutionStudentRegistration_Result" message="tns:FnInstitutionStudentRegistration_Result" />
+    </operation>
+    <operation name="InstitutionRegistartionHeader">
+      <input name="InstitutionRegistartionHeader" message="tns:InstitutionRegistartionHeader" />
+      <output name="InstitutionRegistartionHeader_Result" message="tns:InstitutionRegistartionHeader_Result" />
+    </operation>
+    <operation name="InstitutionExamBooking">
+      <input name="InstitutionExamBooking" message="tns:InstitutionExamBooking" />
+      <output name="InstitutionExamBooking_Result" message="tns:InstitutionExamBooking_Result" />
+    </operation>
+    <operation name="CreateExemptionLine">
+      <input name="CreateExemptionLine" message="tns:CreateExemptionLine" />
+      <output name="CreateExemptionLine_Result" message="tns:CreateExemptionLine_Result" />
+    </operation>
+    <operation name="CreateExemption">
+      <input name="CreateExemption" message="tns:CreateExemption" />
+      <output name="CreateExemption_Result" message="tns:CreateExemption_Result" />
+    </operation>
+    <operation name="CreateWithdrawal">
+      <input name="CreateWithdrawal" message="tns:CreateWithdrawal" />
+      <output name="CreateWithdrawal_Result" message="tns:CreateWithdrawal_Result" />
+    </operation>
+    <operation name="FnInsertMultipleSurveys">
+      <input name="FnInsertMultipleSurveys" message="tns:FnInsertMultipleSurveys" />
+      <output name="FnInsertMultipleSurveys_Result" message="tns:FnInsertMultipleSurveys_Result" />
+    </operation>
+    <operation name="FnInsertBranchingResponses">
+      <input name="FnInsertBranchingResponses" message="tns:FnInsertBranchingResponses" />
+      <output name="FnInsertBranchingResponses_Result" message="tns:FnInsertBranchingResponses_Result" />
+    </operation>
+    <operation name="FnSubmitSurvey">
+      <input name="FnSubmitSurvey" message="tns:FnSubmitSurvey" />
+      <output name="FnSubmitSurvey_Result" message="tns:FnSubmitSurvey_Result" />
+    </operation>
+    <operation name="FnCreateBRResponseQuestions">
+      <input name="FnCreateBRResponseQuestions" message="tns:FnCreateBRResponseQuestions" />
+      <output name="FnCreateBRResponseQuestions_Result" message="tns:FnCreateBRResponseQuestions_Result" />
+    </operation>
+    <operation name="CreateRenewal">
+      <input name="CreateRenewal" message="tns:CreateRenewal" />
+      <output name="CreateRenewal_Result" message="tns:CreateRenewal_Result" />
+    </operation>
+    <operation name="CreateReactivation">
+      <input name="CreateReactivation" message="tns:CreateReactivation" />
+      <output name="CreateReactivation_Result" message="tns:CreateReactivation_Result" />
+    </operation>
+    <operation name="CreateRenewalLine">
+      <input name="CreateRenewalLine" message="tns:CreateRenewalLine" />
+      <output name="CreateRenewalLine_Result" message="tns:CreateRenewalLine_Result" />
+    </operation>
+    <operation name="CreateReactivationLine">
+      <input name="CreateReactivationLine" message="tns:CreateReactivationLine" />
+      <output name="CreateReactivationLine_Result" message="tns:CreateReactivationLine_Result" />
+    </operation>
+    <operation name="FnAddDisability">
+      <input name="FnAddDisability" message="tns:FnAddDisability" />
+      <output name="FnAddDisability_Result" message="tns:FnAddDisability_Result" />
+    </operation>
+    <operation name="GenerateTimetable">
+      <input name="GenerateTimetable" message="tns:GenerateTimetable" />
+      <output name="GenerateTimetable_Result" message="tns:GenerateTimetable_Result" />
+    </operation>
+    <operation name="FnSubmitApplication">
+      <input name="FnSubmitApplication" message="tns:FnSubmitApplication" />
+      <output name="FnSubmitApplication_Result" message="tns:FnSubmitApplication_Result" />
+    </operation>
+    <operation name="StudentTimetable">
+      <input name="StudentTimetable" message="tns:StudentTimetable" />
+      <output name="StudentTimetable_Result" message="tns:StudentTimetable_Result" />
+    </operation>
+    <operation name="Invoice">
+      <input name="Invoice" message="tns:Invoice" />
+      <output name="Invoice_Result" message="tns:Invoice_Result" />
+    </operation>
+    <operation name="AddRegistrationSharepointLinks">
+      <input name="AddRegistrationSharepointLinks" message="tns:AddRegistrationSharepointLinks" />
+      <output name="AddRegistrationSharepointLinks_Result" message="tns:AddRegistrationSharepointLinks_Result" />
+    </operation>
+    <operation name="FnConfirmPayment">
+      <input name="FnConfirmPayment" message="tns:FnConfirmPayment" />
+      <output name="FnConfirmPayment_Result" message="tns:FnConfirmPayment_Result" />
+    </operation>
+    <operation name="CreateExemptionQualifications">
+      <input name="CreateExemptionQualifications" message="tns:CreateExemptionQualifications" />
+      <output name="CreateExemptionQualifications_Result" message="tns:CreateExemptionQualifications_Result" />
+    </operation>
+    <operation name="ExemptionLetter">
+      <input name="ExemptionLetter" message="tns:ExemptionLetter" />
+      <output name="ExemptionLetter_Result" message="tns:ExemptionLetter_Result" />
+    </operation>
+    <operation name="FnSubmitExeptionApplication">
+      <input name="FnSubmitExeptionApplication" message="tns:FnSubmitExeptionApplication" />
+      <output name="FnSubmitExeptionApplication_Result" message="tns:FnSubmitExeptionApplication_Result" />
+    </operation>
+    <operation name="EditRegistrationApplication">
+      <input name="EditRegistrationApplication" message="tns:EditRegistrationApplication" />
+      <output name="EditRegistrationApplication_Result" message="tns:EditRegistrationApplication_Result" />
+    </operation>
+    <operation name="FnConfirmAttendance">
+      <input name="FnConfirmAttendance" message="tns:FnConfirmAttendance" />
+      <output name="FnConfirmAttendance_Result" message="tns:FnConfirmAttendance_Result" />
+    </operation>
+    <operation name="FnApplyJob">
+      <input name="FnApplyJob" message="tns:FnApplyJob" />
+      <output name="FnApplyJob_Result" message="tns:FnApplyJob_Result" />
+    </operation>
+    <operation name="AddExemptionSharepointLinks">
+      <input name="AddExemptionSharepointLinks" message="tns:AddExemptionSharepointLinks" />
+      <output name="AddExemptionSharepointLinks_Result" message="tns:AddExemptionSharepointLinks_Result" />
+    </operation>
+    <operation name="FnInsertBookingLines">
+      <input name="FnInsertBookingLines" message="tns:FnInsertBookingLines" />
+      <output name="FnInsertBookingLines_Result" message="tns:FnInsertBookingLines_Result" />
+    </operation>
+    <operation name="RemoveExaminationPaper">
+      <input name="RemoveExaminationPaper" message="tns:RemoveExaminationPaper" />
+      <output name="RemoveExaminationPaper_Result" message="tns:RemoveExaminationPaper_Result" />
+    </operation>
+    <operation name="FnConfirmExamCenter">
+      <input name="FnConfirmExamCenter" message="tns:FnConfirmExamCenter" />
+      <output name="FnConfirmExamCenter_Result" message="tns:FnConfirmExamCenter_Result" />
+    </operation>
+    <operation name="FnConfirmBookingPayment">
+      <input name="FnConfirmBookingPayment" message="tns:FnConfirmBookingPayment" />
+      <output name="FnConfirmBookingPayment_Result" message="tns:FnConfirmBookingPayment_Result" />
+    </operation>
+    <operation name="AddVacancySharepointLinks">
+      <input name="AddVacancySharepointLinks" message="tns:AddVacancySharepointLinks" />
+      <output name="AddVacancySharepointLinks_Result" message="tns:AddVacancySharepointLinks_Result" />
+    </operation>
+    <operation name="BookingInvoice">
+      <input name="BookingInvoice" message="tns:BookingInvoice" />
+      <output name="BookingInvoice_Result" message="tns:BookingInvoice_Result" />
+    </operation>
+    <operation name="FnCaseManagement">
+      <input name="FnCaseManagement" message="tns:FnCaseManagement" />
+      <output name="FnCaseManagement_Result" message="tns:FnCaseManagement_Result" />
+    </operation>
+    <operation name="FnCenterRecollocate">
+      <input name="FnCenterRecollocate" message="tns:FnCenterRecollocate" />
+      <output name="FnCenterRecollocate_Result" message="tns:FnCenterRecollocate_Result" />
+    </operation>
+    <operation name="FnEditProfile">
+      <input name="FnEditProfile" message="tns:FnEditProfile" />
+      <output name="FnEditProfile_Result" message="tns:FnEditProfile_Result" />
+    </operation>
+    <operation name="FnEditstudent">
+      <input name="FnEditstudent" message="tns:FnEditstudent" />
+      <output name="FnEditstudent_Result" message="tns:FnEditstudent_Result" />
+    </operation>
+    <operation name="FnUploadProfilePhotoprofile">
+      <input name="FnUploadProfilePhotoprofile" message="tns:FnUploadProfilePhotoprofile" />
+      <output name="FnUploadProfilePhotoprofile_Result" message="tns:FnUploadProfilePhotoprofile_Result" />
+    </operation>
+    <operation name="FnDisplayPapers">
+      <input name="FnDisplayPapers" message="tns:FnDisplayPapers" />
+      <output name="FnDisplayPapers_Result" message="tns:FnDisplayPapers_Result" />
+    </operation>
+    <operation name="RemoveExemptionPaper">
+      <input name="RemoveExemptionPaper" message="tns:RemoveExemptionPaper" />
+      <output name="RemoveExemptionPaper_Result" message="tns:RemoveExemptionPaper_Result" />
+    </operation>
+    <operation name="RemoveQualificationPaper">
+      <input name="RemoveQualificationPaper" message="tns:RemoveQualificationPaper" />
+      <output name="RemoveQualificationPaper_Result" message="tns:RemoveQualificationPaper_Result" />
+    </operation>
+    <operation name="FnConfirmPayments">
+      <input name="FnConfirmPayments" message="tns:FnConfirmPayments" />
+      <output name="FnConfirmPayments_Result" message="tns:FnConfirmPayments_Result" />
+    </operation>
+    <operation name="FnsuggestPapers">
+      <input name="FnsuggestPapers" message="tns:FnsuggestPapers" />
+      <output name="FnsuggestPapers_Result" message="tns:FnsuggestPapers_Result" />
+    </operation>
+    <operation name="RenewalInvoice">
+      <input name="RenewalInvoice" message="tns:RenewalInvoice" />
+      <output name="RenewalInvoice_Result" message="tns:RenewalInvoice_Result" />
+    </operation>
+    <operation name="AddWithdrawalSharepointLinks">
+      <input name="AddWithdrawalSharepointLinks" message="tns:AddWithdrawalSharepointLinks" />
+      <output name="AddWithdrawalSharepointLinks_Result" message="tns:AddWithdrawalSharepointLinks_Result" />
+    </operation>
+    <operation name="AddDefermentSharepointLinks">
+      <input name="AddDefermentSharepointLinks" message="tns:AddDefermentSharepointLinks" />
+      <output name="AddDefermentSharepointLinks_Result" message="tns:AddDefermentSharepointLinks_Result" />
+    </operation>
+    <operation name="PrintReceiptBookin">
+      <input name="PrintReceiptBookin" message="tns:PrintReceiptBookin" />
+      <output name="PrintReceiptBookin_Result" message="tns:PrintReceiptBookin_Result" />
+    </operation>
+    <operation name="PrintReceiptExemption">
+      <input name="PrintReceiptExemption" message="tns:PrintReceiptExemption" />
+      <output name="PrintReceiptExemption_Result" message="tns:PrintReceiptExemption_Result" />
+    </operation>
+    <operation name="FnGetCustomerPicture">
+      <input name="FnGetCustomerPicture" message="tns:FnGetCustomerPicture" />
+      <output name="FnGetCustomerPicture_Result" message="tns:FnGetCustomerPicture_Result" />
+    </operation>
+    <operation name="GetStudentsImages">
+      <input name="GetStudentsImages" message="tns:GetStudentsImages" />
+      <output name="GetStudentsImages_Result" message="tns:GetStudentsImages_Result" />
+    </operation>
+    <operation name="ResultSlip">
+      <input name="ResultSlip" message="tns:ResultSlip" />
+      <output name="ResultSlip_Result" message="tns:ResultSlip_Result" />
+    </operation>
+  </portType>
+  <binding name="StudentManagement_Binding" type="tns:StudentManagement_Port">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="FnRegistration">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnRegistration" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnRegistration">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnRegistration_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnCreateApplicantAccountRequest">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnCreateApplicantAccountRequest" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnCreateApplicantAccountRequest">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnCreateApplicantAccountRequest_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnResetPassword">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnResetPassword" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnResetPassword">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnResetPassword_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ResetSendEmail">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:ResetSendEmail" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ResetSendEmail">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ResetSendEmail_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnChangeStudentPassword">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnChangeStudentPassword" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnChangeStudentPassword">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnChangeStudentPassword_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnApplicantProfileRegistration">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnApplicantProfileRegistration" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnApplicantProfileRegistration">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnApplicantProfileRegistration_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnExistingStudent">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnExistingStudent" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnExistingStudent">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnExistingStudent_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="CreateDeffermentLine">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:CreateDeffermentLine" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="CreateDeffermentLine">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="CreateDeffermentLine_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="CreateDefferment">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:CreateDefferment" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="CreateDefferment">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="CreateDefferment_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="CreateWithdrawalLine">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:CreateWithdrawalLine" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="CreateWithdrawalLine">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="CreateWithdrawalLine_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="CreateStudentBookingLine">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:CreateStudentBookingLine" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="CreateStudentBookingLine">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="CreateStudentBookingLine_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="CreateStudentBooking">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:CreateStudentBooking" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="CreateStudentBooking">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="CreateStudentBooking_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="InstitutionBookingLine">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:InstitutionBookingLine" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="InstitutionBookingLine">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="InstitutionBookingLine_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnRegistrationStudent">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnRegistrationStudent" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnRegistrationStudent">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnRegistrationStudent_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnUploadProfilePhoto">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnUploadProfilePhoto" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnUploadProfilePhoto">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnUploadProfilePhoto_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="PrintInvoice">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:PrintInvoice" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="PrintInvoice">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="PrintInvoice_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ConfirmPaymentsStudent">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:ConfirmPaymentsStudent" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ConfirmPaymentsStudent">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ConfirmPaymentsStudent_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="PrintReceipt">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:PrintReceipt" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="PrintReceipt">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="PrintReceipt_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="PrintDeffermentSummery">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:PrintDeffermentSummery" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="PrintDeffermentSummery">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="PrintDeffermentSummery_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="PrintInvoiceExemption">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:PrintInvoiceExemption" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="PrintInvoiceExemption">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="PrintInvoiceExemption_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ConfirmPaymentStudentRegistration">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:ConfirmPaymentStudentRegistration" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ConfirmPaymentStudentRegistration">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ConfirmPaymentStudentRegistration_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ConfirmPaymentsStudentBooking">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:ConfirmPaymentsStudentBooking" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ConfirmPaymentsStudentBooking">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ConfirmPaymentsStudentBooking_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="PrintInvoiceBooking">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:PrintInvoiceBooking" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="PrintInvoiceBooking">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="PrintInvoiceBooking_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnApplicantProfileRegistrationLines">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnApplicantProfileRegistrationLines" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnApplicantProfileRegistrationLines">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnApplicantProfileRegistrationLines_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="PrintInvoiceInstReg">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:PrintInvoiceInstReg" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="PrintInvoiceInstReg">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="PrintInvoiceInstReg_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="PrintWithdrawalSummery">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:PrintWithdrawalSummery" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="PrintWithdrawalSummery">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="PrintWithdrawalSummery_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnInstitutionStudentRegistration">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnInstitutionStudentRegistration" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnInstitutionStudentRegistration">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnInstitutionStudentRegistration_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="InstitutionRegistartionHeader">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:InstitutionRegistartionHeader" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="InstitutionRegistartionHeader">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="InstitutionRegistartionHeader_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="InstitutionExamBooking">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:InstitutionExamBooking" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="InstitutionExamBooking">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="InstitutionExamBooking_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="CreateExemptionLine">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:CreateExemptionLine" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="CreateExemptionLine">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="CreateExemptionLine_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="CreateExemption">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:CreateExemption" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="CreateExemption">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="CreateExemption_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="CreateWithdrawal">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:CreateWithdrawal" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="CreateWithdrawal">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="CreateWithdrawal_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnInsertMultipleSurveys">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnInsertMultipleSurveys" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnInsertMultipleSurveys">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnInsertMultipleSurveys_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnInsertBranchingResponses">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnInsertBranchingResponses" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnInsertBranchingResponses">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnInsertBranchingResponses_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnSubmitSurvey">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnSubmitSurvey" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnSubmitSurvey">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnSubmitSurvey_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnCreateBRResponseQuestions">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnCreateBRResponseQuestions" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnCreateBRResponseQuestions">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnCreateBRResponseQuestions_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="CreateRenewal">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:CreateRenewal" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="CreateRenewal">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="CreateRenewal_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="CreateReactivation">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:CreateReactivation" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="CreateReactivation">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="CreateReactivation_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="CreateRenewalLine">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:CreateRenewalLine" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="CreateRenewalLine">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="CreateRenewalLine_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="CreateReactivationLine">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:CreateReactivationLine" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="CreateReactivationLine">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="CreateReactivationLine_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnAddDisability">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnAddDisability" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnAddDisability">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnAddDisability_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="GenerateTimetable">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:GenerateTimetable" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GenerateTimetable">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GenerateTimetable_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnSubmitApplication">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnSubmitApplication" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnSubmitApplication">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnSubmitApplication_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="StudentTimetable">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:StudentTimetable" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="StudentTimetable">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="StudentTimetable_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Invoice">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:Invoice" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Invoice">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Invoice_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="AddRegistrationSharepointLinks">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:AddRegistrationSharepointLinks" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="AddRegistrationSharepointLinks">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="AddRegistrationSharepointLinks_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnConfirmPayment">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnConfirmPayment" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnConfirmPayment">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnConfirmPayment_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="CreateExemptionQualifications">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:CreateExemptionQualifications" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="CreateExemptionQualifications">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="CreateExemptionQualifications_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ExemptionLetter">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:ExemptionLetter" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ExemptionLetter">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ExemptionLetter_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnSubmitExeptionApplication">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnSubmitExeptionApplication" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnSubmitExeptionApplication">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnSubmitExeptionApplication_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="EditRegistrationApplication">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:EditRegistrationApplication" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="EditRegistrationApplication">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="EditRegistrationApplication_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnConfirmAttendance">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnConfirmAttendance" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnConfirmAttendance">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnConfirmAttendance_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnApplyJob">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnApplyJob" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnApplyJob">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnApplyJob_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="AddExemptionSharepointLinks">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:AddExemptionSharepointLinks" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="AddExemptionSharepointLinks">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="AddExemptionSharepointLinks_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnInsertBookingLines">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnInsertBookingLines" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnInsertBookingLines">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnInsertBookingLines_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="RemoveExaminationPaper">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:RemoveExaminationPaper" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="RemoveExaminationPaper">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="RemoveExaminationPaper_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnConfirmExamCenter">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnConfirmExamCenter" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnConfirmExamCenter">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnConfirmExamCenter_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnConfirmBookingPayment">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnConfirmBookingPayment" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnConfirmBookingPayment">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnConfirmBookingPayment_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="AddVacancySharepointLinks">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:AddVacancySharepointLinks" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="AddVacancySharepointLinks">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="AddVacancySharepointLinks_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="BookingInvoice">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:BookingInvoice" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="BookingInvoice">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="BookingInvoice_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnCaseManagement">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnCaseManagement" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnCaseManagement">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnCaseManagement_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnCenterRecollocate">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnCenterRecollocate" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnCenterRecollocate">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnCenterRecollocate_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnEditProfile">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnEditProfile" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnEditProfile">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnEditProfile_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnEditstudent">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnEditstudent" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnEditstudent">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnEditstudent_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnUploadProfilePhotoprofile">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnUploadProfilePhotoprofile" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnUploadProfilePhotoprofile">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnUploadProfilePhotoprofile_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnDisplayPapers">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnDisplayPapers" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnDisplayPapers">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnDisplayPapers_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="RemoveExemptionPaper">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:RemoveExemptionPaper" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="RemoveExemptionPaper">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="RemoveExemptionPaper_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="RemoveQualificationPaper">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:RemoveQualificationPaper" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="RemoveQualificationPaper">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="RemoveQualificationPaper_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnConfirmPayments">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnConfirmPayments" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnConfirmPayments">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnConfirmPayments_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnsuggestPapers">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnsuggestPapers" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnsuggestPapers">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnsuggestPapers_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="RenewalInvoice">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:RenewalInvoice" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="RenewalInvoice">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="RenewalInvoice_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="AddWithdrawalSharepointLinks">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:AddWithdrawalSharepointLinks" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="AddWithdrawalSharepointLinks">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="AddWithdrawalSharepointLinks_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="AddDefermentSharepointLinks">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:AddDefermentSharepointLinks" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="AddDefermentSharepointLinks">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="AddDefermentSharepointLinks_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="PrintReceiptBookin">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:PrintReceiptBookin" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="PrintReceiptBookin">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="PrintReceiptBookin_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="PrintReceiptExemption">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:PrintReceiptExemption" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="PrintReceiptExemption">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="PrintReceiptExemption_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnGetCustomerPicture">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnGetCustomerPicture" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnGetCustomerPicture">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnGetCustomerPicture_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="GetStudentsImages">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:GetStudentsImages" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GetStudentsImages">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GetStudentsImages_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ResultSlip">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:ResultSlip" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ResultSlip">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ResultSlip_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="StudentManagement">
+    <port name="StudentManagement_Port" binding="tns:StudentManagement_Binding">
+      <address location="http://192.168.0.95:6052/Kasneb/WS/kasneb/Codeunit/StudentManagement" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </port>
+  </service>
+</definitions>
