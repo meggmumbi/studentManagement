@@ -42,6 +42,7 @@
                     <% 
                         //String applicationNo = Request.QueryString["applicationNo"];
                         var nav = Config.ReturnNav();
+                        string application = "";
                         string studentNo = Convert.ToString(Session["idNumber"]);
                         var details = nav.StudentProcessing.Where(r => r.ID_Number_Passport_No == studentNo && r.Document_Type == "Registration");
                         //string university = Convert.ToString(Session["UniversityCode"]);
@@ -56,32 +57,48 @@
                         <td><%=detail.Student_Name %></td>
                         <td><%=detail.ID_Number_Passport_No %></td>
                         <td><%=detail.Examination_Description %></td>
-                        <%if  (detail.Approval_Status == "Open" && detail.Submitted==true)
+                        <%if (detail.Approval_Status == "Open" && detail.Submitted == true)
                             {
-                        %>
-                          <td>
-                            <p>Application Awaiting Processing</p>
-                        </td>
-                       
+                                var detailz = nav.StudentProcessing.Where(r => r.ID_Number_Passport_No == studentNo && r.Document_Type == "Registration" && r.Submitted == true).ToList();
+                                if (detailz.Count > 0)
+                                {
+                                    foreach (var detailsz in detailz)
+                                    {
+                                        application = detailsz.No;
+                                    }
 
-                        <%}  
-                                 else if (detail.Submitted == false)
+                                    var mpesa = nav.MpesaTransaction.Where(r => r.ACCOUNT_NUMBER == application).ToList();
+                                    if (mpesa.Count == 0)
+                                    {
+                        %>
+                        <td>
+                            <p>Application Awaiting payment</p>
+                        </td>
+
+                        <%}
+                           }
+                            }
+                            else if (detail.Submitted == false)
                             {
                         %>
-                       <td style="color: green"><strong>Please Complete Your Application</strong></td>
-                        <%}                   
-                    
+                        <td style="color: green"><strong>Please Complete Your Application</strong></td>
+                        <%}
+
                             else if (detail.Posted == true)
                             {
                         %>
-                       <td style="color: green"><strong>Registration Successful</strong></td>
-                        <%} %>
+                        <td style="color: green"><strong>Registration Successful</strong></td>
+                        <%}
+
+
+
+                        %>
                     </tr>
                     <%  
                         } %>
                 </tbody>
             </table>
-                 </div>
+             </div>
 
 
 

@@ -2,6 +2,99 @@
 <definitions xmlns:tns="urn:microsoft-dynamics-schemas/codeunit/StudentManagement" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <types>
     <schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="GetStudentsImages">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="idNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetStudentsImages_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PrintWithdrawalSummery">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PrintWithdrawalSummery_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ResultSlip">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="studentRegNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="examSittingId" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ResultSlip_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnChangeStudentPassword">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="emailaddress" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="currentPassword" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="newPassword" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="confirmNewPassword" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnChangeStudentPassword_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnResetPassword">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="emailaddress" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnResetPassword_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnRegistrationStudent">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="firstname" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="middlename" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="lastname" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="phoneNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="email" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="idNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnRegistrationStudent_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
       <element name="FnRegistration">
         <complexType>
           <sequence>
@@ -38,20 +131,6 @@
           </sequence>
         </complexType>
       </element>
-      <element name="FnResetPassword">
-        <complexType>
-          <sequence>
-            <element minOccurs="1" maxOccurs="1" name="emailaddress" type="string" />
-          </sequence>
-        </complexType>
-      </element>
-      <element name="FnResetPassword_Result">
-        <complexType>
-          <sequence>
-            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
-          </sequence>
-        </complexType>
-      </element>
       <element name="ResetSendEmail">
         <complexType>
           <sequence>
@@ -62,23 +141,6 @@
       <element name="ResetSendEmail_Result">
         <complexType>
           <sequence />
-        </complexType>
-      </element>
-      <element name="FnChangeStudentPassword">
-        <complexType>
-          <sequence>
-            <element minOccurs="1" maxOccurs="1" name="emailaddress" type="string" />
-            <element minOccurs="1" maxOccurs="1" name="currentPassword" type="string" />
-            <element minOccurs="1" maxOccurs="1" name="newPassword" type="string" />
-            <element minOccurs="1" maxOccurs="1" name="confirmNewPassword" type="string" />
-          </sequence>
-        </complexType>
-      </element>
-      <element name="FnChangeStudentPassword_Result">
-        <complexType>
-          <sequence>
-            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
-          </sequence>
         </complexType>
       </element>
       <element name="FnApplicantProfileRegistration">
@@ -156,6 +218,7 @@
             <element minOccurs="1" maxOccurs="1" name="regNo" type="string" />
             <element minOccurs="1" maxOccurs="1" name="withdrawalReason" type="string" />
             <element minOccurs="1" maxOccurs="1" name="examCycle" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="preferedExamCenter" type="string" />
           </sequence>
         </complexType>
       </element>
@@ -237,25 +300,6 @@
         </complexType>
       </element>
       <element name="InstitutionBookingLine_Result">
-        <complexType>
-          <sequence>
-            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
-          </sequence>
-        </complexType>
-      </element>
-      <element name="FnRegistrationStudent">
-        <complexType>
-          <sequence>
-            <element minOccurs="1" maxOccurs="1" name="firstname" type="string" />
-            <element minOccurs="1" maxOccurs="1" name="middlename" type="string" />
-            <element minOccurs="1" maxOccurs="1" name="lastname" type="string" />
-            <element minOccurs="1" maxOccurs="1" name="phoneNumber" type="string" />
-            <element minOccurs="1" maxOccurs="1" name="email" type="string" />
-            <element minOccurs="1" maxOccurs="1" name="idNumber" type="string" />
-          </sequence>
-        </complexType>
-      </element>
-      <element name="FnRegistrationStudent_Result">
         <complexType>
           <sequence>
             <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
@@ -435,20 +479,6 @@
         </complexType>
       </element>
       <element name="PrintInvoiceInstReg_Result">
-        <complexType>
-          <sequence>
-            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
-          </sequence>
-        </complexType>
-      </element>
-      <element name="PrintWithdrawalSummery">
-        <complexType>
-          <sequence>
-            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
-          </sequence>
-        </complexType>
-      </element>
-      <element name="PrintWithdrawalSummery_Result">
         <complexType>
           <sequence>
             <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
@@ -1071,6 +1101,22 @@
           </sequence>
         </complexType>
       </element>
+      <element name="FnEditstudentEMAIL">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="idNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="phoneNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="email" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnEditstudentEMAIL_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
       <element name="FnEditstudent">
         <complexType>
           <sequence>
@@ -1262,37 +1308,44 @@
           </sequence>
         </complexType>
       </element>
-      <element name="GetStudentsImages">
-        <complexType>
-          <sequence>
-            <element minOccurs="1" maxOccurs="1" name="idNumber" type="string" />
-          </sequence>
-        </complexType>
-      </element>
-      <element name="GetStudentsImages_Result">
-        <complexType>
-          <sequence>
-            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
-          </sequence>
-        </complexType>
-      </element>
-      <element name="ResultSlip">
-        <complexType>
-          <sequence>
-            <element minOccurs="1" maxOccurs="1" name="studentRegNo" type="string" />
-            <element minOccurs="1" maxOccurs="1" name="examSittingId" type="string" />
-          </sequence>
-        </complexType>
-      </element>
-      <element name="ResultSlip_Result">
-        <complexType>
-          <sequence>
-            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
-          </sequence>
-        </complexType>
-      </element>
     </schema>
   </types>
+  <message name="GetStudentsImages">
+    <part name="parameters" element="tns:GetStudentsImages" />
+  </message>
+  <message name="GetStudentsImages_Result">
+    <part name="parameters" element="tns:GetStudentsImages_Result" />
+  </message>
+  <message name="PrintWithdrawalSummery">
+    <part name="parameters" element="tns:PrintWithdrawalSummery" />
+  </message>
+  <message name="PrintWithdrawalSummery_Result">
+    <part name="parameters" element="tns:PrintWithdrawalSummery_Result" />
+  </message>
+  <message name="ResultSlip">
+    <part name="parameters" element="tns:ResultSlip" />
+  </message>
+  <message name="ResultSlip_Result">
+    <part name="parameters" element="tns:ResultSlip_Result" />
+  </message>
+  <message name="FnChangeStudentPassword">
+    <part name="parameters" element="tns:FnChangeStudentPassword" />
+  </message>
+  <message name="FnChangeStudentPassword_Result">
+    <part name="parameters" element="tns:FnChangeStudentPassword_Result" />
+  </message>
+  <message name="FnResetPassword">
+    <part name="parameters" element="tns:FnResetPassword" />
+  </message>
+  <message name="FnResetPassword_Result">
+    <part name="parameters" element="tns:FnResetPassword_Result" />
+  </message>
+  <message name="FnRegistrationStudent">
+    <part name="parameters" element="tns:FnRegistrationStudent" />
+  </message>
+  <message name="FnRegistrationStudent_Result">
+    <part name="parameters" element="tns:FnRegistrationStudent_Result" />
+  </message>
   <message name="FnRegistration">
     <part name="parameters" element="tns:FnRegistration" />
   </message>
@@ -1305,23 +1358,11 @@
   <message name="FnCreateApplicantAccountRequest_Result">
     <part name="parameters" element="tns:FnCreateApplicantAccountRequest_Result" />
   </message>
-  <message name="FnResetPassword">
-    <part name="parameters" element="tns:FnResetPassword" />
-  </message>
-  <message name="FnResetPassword_Result">
-    <part name="parameters" element="tns:FnResetPassword_Result" />
-  </message>
   <message name="ResetSendEmail">
     <part name="parameters" element="tns:ResetSendEmail" />
   </message>
   <message name="ResetSendEmail_Result">
     <part name="parameters" element="tns:ResetSendEmail_Result" />
-  </message>
-  <message name="FnChangeStudentPassword">
-    <part name="parameters" element="tns:FnChangeStudentPassword" />
-  </message>
-  <message name="FnChangeStudentPassword_Result">
-    <part name="parameters" element="tns:FnChangeStudentPassword_Result" />
   </message>
   <message name="FnApplicantProfileRegistration">
     <part name="parameters" element="tns:FnApplicantProfileRegistration" />
@@ -1370,12 +1411,6 @@
   </message>
   <message name="InstitutionBookingLine_Result">
     <part name="parameters" element="tns:InstitutionBookingLine_Result" />
-  </message>
-  <message name="FnRegistrationStudent">
-    <part name="parameters" element="tns:FnRegistrationStudent" />
-  </message>
-  <message name="FnRegistrationStudent_Result">
-    <part name="parameters" element="tns:FnRegistrationStudent_Result" />
   </message>
   <message name="FnUploadProfilePhoto">
     <part name="parameters" element="tns:FnUploadProfilePhoto" />
@@ -1442,12 +1477,6 @@
   </message>
   <message name="PrintInvoiceInstReg_Result">
     <part name="parameters" element="tns:PrintInvoiceInstReg_Result" />
-  </message>
-  <message name="PrintWithdrawalSummery">
-    <part name="parameters" element="tns:PrintWithdrawalSummery" />
-  </message>
-  <message name="PrintWithdrawalSummery_Result">
-    <part name="parameters" element="tns:PrintWithdrawalSummery_Result" />
   </message>
   <message name="FnInstitutionStudentRegistration">
     <part name="parameters" element="tns:FnInstitutionStudentRegistration" />
@@ -1671,6 +1700,12 @@
   <message name="FnEditProfile_Result">
     <part name="parameters" element="tns:FnEditProfile_Result" />
   </message>
+  <message name="FnEditstudentEMAIL">
+    <part name="parameters" element="tns:FnEditstudentEMAIL" />
+  </message>
+  <message name="FnEditstudentEMAIL_Result">
+    <part name="parameters" element="tns:FnEditstudentEMAIL_Result" />
+  </message>
   <message name="FnEditstudent">
     <part name="parameters" element="tns:FnEditstudent" />
   </message>
@@ -1749,19 +1784,31 @@
   <message name="FnGetCustomerPicture_Result">
     <part name="parameters" element="tns:FnGetCustomerPicture_Result" />
   </message>
-  <message name="GetStudentsImages">
-    <part name="parameters" element="tns:GetStudentsImages" />
-  </message>
-  <message name="GetStudentsImages_Result">
-    <part name="parameters" element="tns:GetStudentsImages_Result" />
-  </message>
-  <message name="ResultSlip">
-    <part name="parameters" element="tns:ResultSlip" />
-  </message>
-  <message name="ResultSlip_Result">
-    <part name="parameters" element="tns:ResultSlip_Result" />
-  </message>
   <portType name="StudentManagement_Port">
+    <operation name="GetStudentsImages">
+      <input name="GetStudentsImages" message="tns:GetStudentsImages" />
+      <output name="GetStudentsImages_Result" message="tns:GetStudentsImages_Result" />
+    </operation>
+    <operation name="PrintWithdrawalSummery">
+      <input name="PrintWithdrawalSummery" message="tns:PrintWithdrawalSummery" />
+      <output name="PrintWithdrawalSummery_Result" message="tns:PrintWithdrawalSummery_Result" />
+    </operation>
+    <operation name="ResultSlip">
+      <input name="ResultSlip" message="tns:ResultSlip" />
+      <output name="ResultSlip_Result" message="tns:ResultSlip_Result" />
+    </operation>
+    <operation name="FnChangeStudentPassword">
+      <input name="FnChangeStudentPassword" message="tns:FnChangeStudentPassword" />
+      <output name="FnChangeStudentPassword_Result" message="tns:FnChangeStudentPassword_Result" />
+    </operation>
+    <operation name="FnResetPassword">
+      <input name="FnResetPassword" message="tns:FnResetPassword" />
+      <output name="FnResetPassword_Result" message="tns:FnResetPassword_Result" />
+    </operation>
+    <operation name="FnRegistrationStudent">
+      <input name="FnRegistrationStudent" message="tns:FnRegistrationStudent" />
+      <output name="FnRegistrationStudent_Result" message="tns:FnRegistrationStudent_Result" />
+    </operation>
     <operation name="FnRegistration">
       <input name="FnRegistration" message="tns:FnRegistration" />
       <output name="FnRegistration_Result" message="tns:FnRegistration_Result" />
@@ -1770,17 +1817,9 @@
       <input name="FnCreateApplicantAccountRequest" message="tns:FnCreateApplicantAccountRequest" />
       <output name="FnCreateApplicantAccountRequest_Result" message="tns:FnCreateApplicantAccountRequest_Result" />
     </operation>
-    <operation name="FnResetPassword">
-      <input name="FnResetPassword" message="tns:FnResetPassword" />
-      <output name="FnResetPassword_Result" message="tns:FnResetPassword_Result" />
-    </operation>
     <operation name="ResetSendEmail">
       <input name="ResetSendEmail" message="tns:ResetSendEmail" />
       <output name="ResetSendEmail_Result" message="tns:ResetSendEmail_Result" />
-    </operation>
-    <operation name="FnChangeStudentPassword">
-      <input name="FnChangeStudentPassword" message="tns:FnChangeStudentPassword" />
-      <output name="FnChangeStudentPassword_Result" message="tns:FnChangeStudentPassword_Result" />
     </operation>
     <operation name="FnApplicantProfileRegistration">
       <input name="FnApplicantProfileRegistration" message="tns:FnApplicantProfileRegistration" />
@@ -1813,10 +1852,6 @@
     <operation name="InstitutionBookingLine">
       <input name="InstitutionBookingLine" message="tns:InstitutionBookingLine" />
       <output name="InstitutionBookingLine_Result" message="tns:InstitutionBookingLine_Result" />
-    </operation>
-    <operation name="FnRegistrationStudent">
-      <input name="FnRegistrationStudent" message="tns:FnRegistrationStudent" />
-      <output name="FnRegistrationStudent_Result" message="tns:FnRegistrationStudent_Result" />
     </operation>
     <operation name="FnUploadProfilePhoto">
       <input name="FnUploadProfilePhoto" message="tns:FnUploadProfilePhoto" />
@@ -1861,10 +1896,6 @@
     <operation name="PrintInvoiceInstReg">
       <input name="PrintInvoiceInstReg" message="tns:PrintInvoiceInstReg" />
       <output name="PrintInvoiceInstReg_Result" message="tns:PrintInvoiceInstReg_Result" />
-    </operation>
-    <operation name="PrintWithdrawalSummery">
-      <input name="PrintWithdrawalSummery" message="tns:PrintWithdrawalSummery" />
-      <output name="PrintWithdrawalSummery_Result" message="tns:PrintWithdrawalSummery_Result" />
     </operation>
     <operation name="FnInstitutionStudentRegistration">
       <input name="FnInstitutionStudentRegistration" message="tns:FnInstitutionStudentRegistration" />
@@ -2014,6 +2045,10 @@
       <input name="FnEditProfile" message="tns:FnEditProfile" />
       <output name="FnEditProfile_Result" message="tns:FnEditProfile_Result" />
     </operation>
+    <operation name="FnEditstudentEMAIL">
+      <input name="FnEditstudentEMAIL" message="tns:FnEditstudentEMAIL" />
+      <output name="FnEditstudentEMAIL_Result" message="tns:FnEditstudentEMAIL_Result" />
+    </operation>
     <operation name="FnEditstudent">
       <input name="FnEditstudent" message="tns:FnEditstudent" />
       <output name="FnEditstudent_Result" message="tns:FnEditstudent_Result" />
@@ -2066,17 +2101,63 @@
       <input name="FnGetCustomerPicture" message="tns:FnGetCustomerPicture" />
       <output name="FnGetCustomerPicture_Result" message="tns:FnGetCustomerPicture_Result" />
     </operation>
-    <operation name="GetStudentsImages">
-      <input name="GetStudentsImages" message="tns:GetStudentsImages" />
-      <output name="GetStudentsImages_Result" message="tns:GetStudentsImages_Result" />
-    </operation>
-    <operation name="ResultSlip">
-      <input name="ResultSlip" message="tns:ResultSlip" />
-      <output name="ResultSlip_Result" message="tns:ResultSlip_Result" />
-    </operation>
   </portType>
   <binding name="StudentManagement_Binding" type="tns:StudentManagement_Port">
     <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="GetStudentsImages">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:GetStudentsImages" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GetStudentsImages">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GetStudentsImages_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="PrintWithdrawalSummery">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:PrintWithdrawalSummery" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="PrintWithdrawalSummery">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="PrintWithdrawalSummery_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ResultSlip">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:ResultSlip" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ResultSlip">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ResultSlip_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnChangeStudentPassword">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnChangeStudentPassword" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnChangeStudentPassword">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnChangeStudentPassword_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnResetPassword">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnResetPassword" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnResetPassword">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnResetPassword_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnRegistrationStudent">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnRegistrationStudent" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnRegistrationStudent">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnRegistrationStudent_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
     <operation name="FnRegistration">
       <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnRegistration" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       <input name="FnRegistration">
@@ -2095,30 +2176,12 @@
         <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       </output>
     </operation>
-    <operation name="FnResetPassword">
-      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnResetPassword" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
-      <input name="FnResetPassword">
-        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
-      </input>
-      <output name="FnResetPassword_Result">
-        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
-      </output>
-    </operation>
     <operation name="ResetSendEmail">
       <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:ResetSendEmail" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       <input name="ResetSendEmail">
         <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       </input>
       <output name="ResetSendEmail_Result">
-        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
-      </output>
-    </operation>
-    <operation name="FnChangeStudentPassword">
-      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnChangeStudentPassword" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
-      <input name="FnChangeStudentPassword">
-        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
-      </input>
-      <output name="FnChangeStudentPassword_Result">
         <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       </output>
     </operation>
@@ -2191,15 +2254,6 @@
         <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       </input>
       <output name="InstitutionBookingLine_Result">
-        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
-      </output>
-    </operation>
-    <operation name="FnRegistrationStudent">
-      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnRegistrationStudent" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
-      <input name="FnRegistrationStudent">
-        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
-      </input>
-      <output name="FnRegistrationStudent_Result">
         <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       </output>
     </operation>
@@ -2299,15 +2353,6 @@
         <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       </input>
       <output name="PrintInvoiceInstReg_Result">
-        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
-      </output>
-    </operation>
-    <operation name="PrintWithdrawalSummery">
-      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:PrintWithdrawalSummery" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
-      <input name="PrintWithdrawalSummery">
-        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
-      </input>
-      <output name="PrintWithdrawalSummery_Result">
         <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       </output>
     </operation>
@@ -2644,6 +2689,15 @@
         <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       </output>
     </operation>
+    <operation name="FnEditstudentEMAIL">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnEditstudentEMAIL" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnEditstudentEMAIL">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnEditstudentEMAIL_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
     <operation name="FnEditstudent">
       <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnEditstudent" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       <input name="FnEditstudent">
@@ -2758,24 +2812,6 @@
         <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       </input>
       <output name="FnGetCustomerPicture_Result">
-        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
-      </output>
-    </operation>
-    <operation name="GetStudentsImages">
-      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:GetStudentsImages" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
-      <input name="GetStudentsImages">
-        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
-      </input>
-      <output name="GetStudentsImages_Result">
-        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
-      </output>
-    </operation>
-    <operation name="ResultSlip">
-      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:ResultSlip" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
-      <input name="ResultSlip">
-        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
-      </input>
-      <output name="ResultSlip_Result">
         <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       </output>
     </operation>

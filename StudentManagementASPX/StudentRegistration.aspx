@@ -440,7 +440,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="city">Examination ID</label>
-                                    <asp:TextBox runat="server" CssClass="form-control" ID="courseIDTEXT" Enabled="false"></asp:TextBox>
+                                    <asp:DropdownList runat="server" CssClass="form-control" ID="course" OnSelectedIndexChanged="course_SelectedIndexChanged" AutoPostBack="true"></asp:DropdownList>
                                 </div>
                             </div>
 
@@ -1654,7 +1654,9 @@
                             <asp:ListItem>--Select Gender--</asp:ListItem>
                             <asp:ListItem Value="1">Male</asp:ListItem>
                             <asp:ListItem Value="2">Female</asp:ListItem>
-                            <%-- <asp:ListItem Value="2">Others</asp:ListItem>--%>
+                            
+
+
                         </asp:DropDownList>
                     </div>
                     <div class="form-group">

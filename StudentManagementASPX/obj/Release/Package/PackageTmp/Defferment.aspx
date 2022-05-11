@@ -65,7 +65,7 @@
                         <br />
                         <div class="row">
 
-                            <div class="col-md-5">
+                            <div class="col-md-6">
                                <%-- <div class="form-group">
                                     <label>Date:</label>
                                     <asp:TextBox CssClass="form-control" runat="server" ID="Date" TextMode="Date" />
@@ -101,14 +101,14 @@
 
                              
 
-                                <div class="form-group" style="display: none">
-                                    <label>Exam Cycle:</label>
+                                <div class="form-group">
+                                    <label>Exam sitting:</label>
                                     <asp:DropDownList CssClass="form-control" runat="server" ID="examCycle" />
                                     <%-- <asp:RequiredFieldValidator runat="server" ID="RequiredFieldValidator7" ControlToValidate="examCycle" ErrorMessage="Please select worktype!" ForeColor="Red" />--%>
                                 </div>
 
-                                <div class="form-group" style="display: none">
-                                    <label>Preferred Exam Center:</label>
+                                <div class="form-group">
+                                    <label>Preferred Examination Sitting:</label>
                                     <asp:DropDownList CssClass="form-control" runat="server" ID="examCenter" Placeholder="Name" />
                                     <%--  <asp:RequiredFieldValidator runat="server" ID="RequiredFieldValidator2" ControlToValidate="examCenter" ErrorMessage="Please enter the Proposed Name!" ForeColor="Red" />--%>
                                 </div>
@@ -183,7 +183,7 @@
         </div>
         <div class="panel-body">
             <div runat="server" id="Div1"></div>
-            <section class="content">
+            <%--    <section class="content">
                 <div class="box box-default">
                     <div class="box-header with-border">
                         <h3 class="box-title">Student Deferment</h3>
@@ -258,48 +258,61 @@
                             </div>
                         </div>
                     </div>
-            </section>
-            <table id="example1" class="table table-bordered table-striped">
-                <thead>
-                    <tr>
-                        <th>Booking Header</th>
-                        <th>Examination </th>
-                        <th>Section</th>
-                        <th>Part </th>
-                        <th>Paper</th>
-                        <th>Description </th>
-                        <th>Amount </th>
-                        <th>Remove </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <%
-                        String applicationNo = Request.QueryString["applicationNo"];
+            </section>--%>
+            <div class="row">
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    <p>Active Booking Papers.</p>
 
-                        var studentProcessingLine = nav.studentProcessingLines.Where(r => r.Booking_Header_No == applicationNo && r.Document_Type == "Defferment");
-                        foreach (var line in studentProcessingLine)
-                        {
-                    %>
-                    <tr>
+                </div>
+                <div class="col-md-12">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Booking Header</th>
+                                <th>Examination </th>
+                                <th>Part </th>
+                                <th>Paper</th>
+                                <th>Description </th>
+                                <th>Amount </th>
 
-                        <td><% =line.Booking_Header_No %></td>
-                        <td><% =line.Course_Id %></td>
-                        <td><% =line.Section %></td>
-                        <td><% =line.Part %></td>
-                        <td><% =line.Paper %></td>
-                        <td><% =line.Description %></td>
-                        <td><%=String.Format("{0:n}", Convert.ToDouble(line.Amount)) %></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <%
+                                String applicationNo = Request.QueryString["applicationNo"];
+                                string studentNo = Convert.ToString(Session["studentNo"]);
+                                var details = nav.StudentProcessing.Where(r => r.Student_No == studentNo && r.Document_Type == "Booking" && r.Posted == true && r.Cancelled == false);
+                                foreach (var booking in details)
+                                {
 
-                        <td>
-                            <label class="btn btn-danger" onclick="removeLine('<% =line.Description %>','<%=line.Line_No %>');"><i class="fa fa-trash"></i>Delete</label></td>
-                        <td><a href="deffermentSummery.aspx?applicationNo=<%=line.Booking_Header_No%>" class="btn btn-success"><i class="fa fa-eye"></i>Summery</a></td>
-                    </tr>
-                    <% 
-                        }
-                    %>
-                </tbody>
-            </table>
+
+                                    var studentProcessingLine = nav.studentProcessingLines.Where(r => r.Student_No == studentNo && r.Booking_Header_No == booking.No);
+                                    foreach (var line in studentProcessingLine)
+                                    {
+                            %>
+                            <tr>
+
+                                <td><% =line.Booking_Header_No %></td>
+                                <td><% =line.Course_Id %></td>
+                                <td><% =line.Part %></td>
+                                <td><% =line.Paper %></td>
+                                <td><% =line.Description %></td>
+                                <td><%=String.Format("{0:n}", Convert.ToDouble(line.Amount)) %></td>
+                                <td>
+                                    <%--   <label class="btn btn-danger" onclick="removeLine('<% =line.Description %>','<%=line.Line_No %>');"><i class="fa fa-trash"></i>Delete</label></td>--%>
+                                    <%-- <td><a href="deffermentSummery.aspx?applicationNo=<%=line.Booking_Header_No%>" class="btn btn-success"><i class="fa fa-eye"></i>Summery</a></td>--%>
+                            </tr>
+                            <% 
+                                    }
+                                }
+                            %>
+                        </tbody>
+                    </table>
+                </div>
+                <div />
+            </div>
         </div>
+
         <div class="panel-footer">
             <asp:Button runat="server" CssClass="btn btn-warning pull-left" Text="Previous" ID="previous" OnClick="previous_Click" />
             <asp:Button runat="server" CssClass="btn btn-success pull-right" Text="Next" ID="step3" OnClick="step3_Click" />
@@ -307,6 +320,7 @@
             <div class="clearfix"></div>
         </div>
     </div>
+
 
     <%
         }
@@ -325,7 +339,7 @@
             <ul class="nav nav-tabs">
                 <li class="active" style="background-color: gray">
                     <a href="#tab_1_documents" data-toggle="tab">
-                        <p style="color: black">Withdrawal Document Attachments</p>
+                        <p style="color: black">Defferment Document Attachments</p>
                     </a>
                 </li>
             <%--    <li style="background-color: gray">
@@ -351,57 +365,44 @@
                             <input type="hidden" value="<% =Request.QueryString["applicationNo"] %>" id="txtapplicationNo" class="txtapplicationNo" />
                             <asp:TextBox runat="server" ID="template" CssClass="form-control" Visible="false"></asp:TextBox>
                             <div class="table-responsive">
-                                <table class="table table-striped custom-table datatable" id="example2">
+                                              <table class="table table-striped custom-table datatable" id="example2">
                                     <thead>
                                         <tr>
-                                           <th>#</th>
+                                            <th>#</th>
                                             <th>Document Type</th>
-                                            <%--  <th>Document Type</th>--%>
                                             <th>Description</th>
                                             <th>Requirement Type</th>
                                             <th>Attach Document</th>
-                                          <%--  <th>Select</th>--%>
-                                            <%-- <th>Upload</th>--%>
-</tr>
-                                           
+                                        </tr>
+
                                     </thead>
                                     <tbody>
                                         <% 
-                                            // string studentNo = Convert.ToString(Session["studentNo"]);
                                             string courseId = Request.QueryString["courseId"];
-                                            var details = nav.AttachDocuments.Where(r => r.Template_No == template.Text && r.Examination_Process == "Exemption" && r.Examiantion_ID == courseId).ToList();
-                                            //string university = Convert.ToString(Session["UniversityCode"]);
+                                            var details = nav.AttachDocuments.Where(r => r.Template_No == template.Text  && r.Examination_Process == "Defferment" && r.Examiantion_ID == courseId).ToList();
                                             int programesCounter = 0;
+                                            int counter = 0;
                                             foreach (var detail in details)
                                             {
+
+                                                counter++;
                                                 programesCounter++;
                                         %>
                                         <tr>
-                                           <td><%=programesCounter %></td>
+                                            <td><%=programesCounter %></td>
                                             <td><%=detail.Examination_Document_Type %></td>
-                                            <%--  <td><%=detail.Examination_Document %></td>--%>
                                             <td><%=detail.Description %></td>
                                             <td><%=detail.Requirement_Type %></td>
-                                              <td>
+                                            <td>
                                                <label class="btn btn-success" onclick="studentattachdocuments('<%=detail.Entry_No %>');">Attach Document</label>
                                             </td>
-                                          <%--   <td><input class="form-control PrequalificationinputFileselectors" type="file" name="PrequalificationinputFileselectors[]"></td>--%>
-                                           <%-- <td><asp:FileUpload runat="server" ID="document" CssClass="form-control" Style="padding-top: 0px;" Visible="false"/></td>
-                                            <td><asp:Button runat="server" CssClass="btn btn-success" Text="Upload Document" ID="uploadDocument" OnClick="uploadDocument_Click" Visible="false"/></td>--%>
-
-
-
-                                            <%--<td><a href="ExistingStudents.aspx?step=2&&studentNo=<%=detail.Student_No%>&&applicationNo=<%=detail.No %>&&courseId=<%=Request.QueryString["courseId"]; %>" class="btn btn-success"><i class="fa fa-eye"></i>Proceed</a></td>--%>
                                         </tr>
                                         <%  
                                             } %>
                                     </tbody>
                                 </table>
                                 </div>
-                                  <div class="panel-footer">
-                                    <br />
-                                    <input type="button" id="btnSaveDeferment" class="btn btn-success pull-left btnSaveDeferment" name="btnSaveDeferment" value="Submit Documents" />
-                                </div>
+                                
                                 <br />
                                 <br />
                                   <div class="box-header">
@@ -529,13 +530,13 @@
 
                     <asp:Button runat="server" CssClass="btn btn-warning pull-left" Text="Previous" ID="prevstep1" OnClick="prevstep1_Click" />
                     <%
-                        if (alldocuments.Count == details.Count)
+                        if (alldocuments.Count >= details.Count)
                         {
                             attachdoc.Visible = true;
                         }
 
                     %>
-                    <asp:Button runat="server" CssClass="btn btn-success pull-right" Text="View Deferment Summery" ID="attachdoc" OnClick="attachdoc_Click" Visible="false" />
+                    <asp:Button runat="server" CssClass="btn btn-success pull-right" Text="Submit Application" ID="attachdoc" OnClick="attachdoc_Click" Visible="false" />
 
                 </div>
 

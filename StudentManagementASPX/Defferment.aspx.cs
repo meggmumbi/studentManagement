@@ -22,16 +22,13 @@ namespace StudentManagementASPX
             if (!IsPostBack)
             {
 
-            
+
 
                 var nav = Config.ReturnNav();
                 string IdNumber = Convert.ToString(Session["idNumber"]);
 
                 var studentNumb = nav.StudentProcessing.Where(r => r.ID_Number_Passport_No == IdNumber);
-                foreach (var students in studentNumb)
-                {
-                    studentNo.Text = students.Student_No;
-                }
+             
 
                 var studentNumber = Convert.ToString(Session["studentNo"]);
                 var registrationNo = nav.ExaminationAccounts.Where(r => r.Student_Cust_No == studentNumber);
@@ -40,6 +37,13 @@ namespace StudentManagementASPX
                 regNo.DataValueField = "Registration_No";
                 regNo.DataBind();
                 regNo.Items.Insert(0, new System.Web.UI.WebControls.ListItem("--select--", ""));
+
+                var coursesId = Request.QueryString["courseId"];
+                var templates = nav.DocumentsTemplate.Where(r => r.Blocked == false && r.Course_ID == coursesId);
+                foreach (var templ in templates)
+                {
+                    template.Text = templ.Code;
+                }
 
 
                 var exmcycle = nav.ExamCycle;
@@ -50,28 +54,36 @@ namespace StudentManagementASPX
                 examCycle.Items.Insert(0, new System.Web.UI.WebControls.ListItem("--select--", ""));
 
 
-                var ExamCenters = nav.ExamCenters;
-                examCenter.DataSource = ExamCenters;
-                examCenter.DataTextField = "Name";
-                examCenter.DataValueField = "Code";
+                examCenter.DataSource = exmcycle;
+                examCenter.DataTextField = "examCycle";
+                examCenter.DataValueField = "examCycle";
                 examCenter.DataBind();
                 examCenter.Items.Insert(0, new System.Web.UI.WebControls.ListItem("--select--", ""));
 
 
-                var DeffermentReasons = nav.withdrawalreasons.Where(r=>r.Reason_Category== "Defferement");
+                var DeffermentReasons = nav.withdrawalreasons.Where(r => r.Reason_Category == "Defferement");
                 withdrawal.DataSource = DeffermentReasons;
                 withdrawal.DataTextField = "Description";
                 withdrawal.DataValueField = "Code";
                 withdrawal.DataBind();
                 withdrawal.Items.Insert(0, new System.Web.UI.WebControls.ListItem("--select--", ""));
 
+                String applicationNo = Request.QueryString["applicationNo"];
+                string studentNo = Convert.ToString(Session["studentNo"]);
+                var studentProcessing = nav.StudentProcessing.Where(r => r.No == applicationNo).ToList();
+                if (studentProcessing.Count > 0)
+                {
+                    foreach (var descript in studentProcessing)
+                    {
+                        regNo.SelectedValue = descript.Student_Reg_No;
+                        withdrawal.SelectedValue = descript.Withdrawal_Code;
+                        examCycle.SelectedValue = descript.Examination_Sitting;
+                        examCenter.SelectedValue = descript.Prefered_Examination_Sitting;
 
-                var currenctH = nav.currency;
-                currency.DataSource = currenctH;
-                currency.DataTextField = "Code";
-                currency.DataValueField = "Code";
-                currency.DataBind();
 
+
+                    }
+                }
             }
         }
 
@@ -93,13 +105,13 @@ namespace StudentManagementASPX
             {
                 
                 String StudentNo = studentNo.Text.Trim();
-                string courrseID = Request.QueryString["courseid"];
+                string courseid = Request.QueryString["courseid"];
                 //DateTime applicationDate = Convert.ToDateTime(Date.Text);
                 String regNUmber = regNo.SelectedValue.Trim();
                 string examid = courseId.Text.Trim();
                 String withdrawalReason = withdrawal.SelectedValue.Trim();
                 string examCycles = examCycle.SelectedValue.Trim();
-                string examCenters = examCenter.SelectedValue.Trim();
+                string preferredExamcenter = examCenter.SelectedValue.Trim();
                 //DateTime myOrderDate = new DateTime();
                 Boolean error = false;
                 String message = "";
@@ -126,7 +138,7 @@ namespace StudentManagementASPX
                     applicationNo = "";
                     newApplicationNo = true;
                 }
-                String status = new Config().ObjNav().CreateDefferment(applicationNo,  StudentNo, regNUmber,withdrawalReason,examCycles);
+                String status = new Config().ObjNav().CreateDefferment(applicationNo,  StudentNo, regNUmber,withdrawalReason,examCycles,preferredExamcenter);
                 String[] info = status.Split('*');
                 if (info[0] == "success")
                 {
@@ -137,7 +149,7 @@ namespace StudentManagementASPX
                     }
                     //Response.Redirect("Defferment.aspx?step=2&&applicationNo=" + applicationNo);
                     generalFeedback.InnerHtml = "<div class='alert alert-" + info[0] + " '>" + info[1] + " <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a></div>";
-                    Response.Redirect("Defferment.aspx?step=3&&courseId=" + examid + "&&applicationNo=" + applicationNo);
+                    Response.Redirect("Defferment.aspx?step=2&&courseId=" + info[3] + "&&applicationNo=" + applicationNo);
                     
                 }
                 else
@@ -153,135 +165,17 @@ namespace StudentManagementASPX
             }
         }       
 
-        protected void addItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                // int tItemType = Convert.ToInt32(itemType.SelectedValue.Trim());
-                int tbookingType = Convert.ToInt32(deffermentType.SelectedValue.Trim());
-                String tpart = String.IsNullOrEmpty(part.SelectedValue.Trim()) ? "" : part.SelectedValue.Trim();
-                String tsection = String.IsNullOrEmpty(section.SelectedValue.Trim()) ? "" : section.SelectedValue.Trim();
-                String tpaper = String.IsNullOrEmpty(paper.SelectedValue.Trim()) ? "" : paper.SelectedValue.Trim();
-                String course = courseId.Text.Trim();
-               
-
-                Boolean error = false;
-
-
-
-                String applicationNo = Request.QueryString["applicationNo"];
-                // Convert.ToString(Session["employeeNo"]),
-                //Nav Funtion
-
-                String status = new Config().ObjNav().CreateDeffermentLine(tbookingType, tpart, tsection, tpaper, course, applicationNo);
-                String[] info = status.Split('*');
-                //try adding the line
-                linesFeedback.InnerHtml = "<div class='alert alert-" + info[0] + " '>" + info[1] + " <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a></div>";
-
-            }
-            catch (Exception n)
-            {
-                linesFeedback.InnerHtml = "<div class='alert alert-danger'>" + n.Message + " <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a></div>";
-            }
-        }
+       
 
         protected void previous_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Defferment.aspx?step=1");
+            string courseId = Request.QueryString["courseId"];
+            String applicationNo = Request.QueryString["applicationNo"];
+            Response.Redirect("Defferment.aspx?step=1&&applicationNo=" + applicationNo + "&&courseId=" + courseId);
+          
         }
 
-        protected void deffermentType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            loadType();
-        }
-
-        public void loadType()
-        {
-            try
-            {
-                var nav = Config.ReturnNav();
-                string examId = Request.QueryString["courseid"];
-                var itemtype = "";
-                var typ = Convert.ToInt32(deffermentType.SelectedValue);
-
-                switch (typ)
-                {
-
-                    case 0:
-                        itemtype = "Paper";
-
-                        var paper = nav.parts.Where(r => r.Course == examId).ToList();
-                        part.DataSource = paper;
-                        part.DataTextField = "Code";
-                        part.DataValueField = "Code";
-                        part.DataBind();
-                        part.Items.Insert(0, new System.Web.UI.WebControls.ListItem("--select--", ""));
-                        return;
-
-                    case 1:
-                        itemtype = "Section";
-                        var GL = nav.parts.Where(r => r.Course == examId).ToList();
-                        part.DataSource = GL;
-                        part.DataTextField = "Code";
-                        part.DataValueField = "Code";
-                        part.DataBind();
-                        part.Items.Insert(0, new System.Web.UI.WebControls.ListItem("--select--", ""));
-                        return;
-
-                    
-
-                    case 2:
-                        itemtype = "Part";
-                        var parts = nav.parts.Where(r => r.Course == examId).ToList();
-                        part.DataSource = parts;
-                        part.DataTextField = "Code";
-                        part.DataValueField = "Code";
-                        part.DataBind();
-                        part.Items.Insert(0, new System.Web.UI.WebControls.ListItem("--select--", ""));
-                        return;
-
-                    default:
-                        break;
-                }
-
-
-            }
-            catch (Exception)
-            {
-
-            }
-        }
-
-        protected void section_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string parts = part.SelectedValue.Trim();
-            string examId = Request.QueryString["courseid"];
-            string sectionId = section.SelectedValue.Trim();
-            var nav = Config.ReturnNav();
-
-            var papers = nav.Papers.Where(r => r.Course == examId && r.Level == parts && r.Section == sectionId);
-            paper.DataSource = papers;
-            paper.DataTextField = "Code";
-            paper.DataValueField = "Code";
-            paper.DataBind();
-            paper.Items.Insert(0, new System.Web.UI.WebControls.ListItem("--select--", ""));
-        }
-
-        protected void paper_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string parts = part.SelectedValue.Trim();
-            string examId = Request.QueryString["courseid"];
-            string sectionId = section.SelectedValue.Trim();
-
-            var nav = Config.ReturnNav();
-
-            var papers = nav.Papers.Where(r => r.Course == examId && r.Level == parts && r.Section == sectionId && r.Code == paper.SelectedValue);
-
-            foreach (var paperz in papers)
-            {
-                description.Text = paperz.Description;
-            }
-        }
+       
 
         protected void part_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -512,7 +406,7 @@ namespace StudentManagementASPX
                     {
                         if (bbConnected)
                         {
-                            Path.GetExtension(uploadfile.FileName);
+                            
                             string extension = Path.GetExtension(uploadfile.FileName);
                             string fileName0 = uploadfile.FileName;
                             string ext0 = Path.GetExtension(uploadfile.FileName);
@@ -683,20 +577,59 @@ namespace StudentManagementASPX
         }
         protected void prevstep1_Click(object sender, EventArgs e)
         {
-            string courrseID = Request.QueryString["courseid"];
+            string courseId = Request.QueryString["courseId"];
             String applicationNo = Request.QueryString["applicationNo"];
-            Response.Redirect("Defferment.aspx?step=1&&courseId=" + courrseID + "&&applicationNo=" + applicationNo);
+            Response.Redirect("Defferment.aspx?step=2&&courseId=" + courseId + "&&applicationNo=" + applicationNo);
         }
 
         protected void step3_Click(object sender, EventArgs e)
         {
+            string courseId = Request.QueryString["courseId"];
             String applicationNo = Request.QueryString["applicationNo"];
-            Response.Redirect("Defferment.aspx?step=3&&applicationNo=" + applicationNo);
+            Response.Redirect("Defferment.aspx?step=3&&applicationNo=" + applicationNo+ "&&courseId="+ courseId);
         }
         protected void attachdoc_Click(object sender, EventArgs e)
         {
-            String applicationNo = Request.QueryString["applicationNo"];
-            Response.Redirect("deffermentSummery.aspx?applicationNo=" + applicationNo);
+            
+
+                try
+                {
+                    String tapplicationNo = Request.QueryString["applicationNo"];
+
+                    Boolean error = false;
+                    String message = "";
+
+                    if (string.IsNullOrEmpty(tapplicationNo))
+                    {
+                        error = true;
+                        message = "An application with the given applcationNo does not exist";
+                    }
+
+                    String status = new Config().ObjNav().FnSubmitApplication(tapplicationNo);
+                    String[] info = status.Split('*');
+                    if (info[0] == "success")
+                    {
+
+                    attach.InnerHtml = "<div class='alert alert-" + info[0] + "'>" + info[1] + "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a></div>";
+                        ScriptManager.RegisterClientScriptBlock(this, typeof(Page), "redirectJS", "setTimeout(function() { window.location.replace('DeffermentApplications.aspx') }, 5000);", true);
+
+                }
+                    else
+                    {
+                    attach.InnerHtml = "<div class='alert alert-danger'>" + info[1] + " <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a></div>";
+                    }
+                }
+                catch (Exception t)
+                {
+                attach.InnerHtml = "<div class='alert alert-danger'>" + t.Message + "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a></div>";
+                }
+
+
+            
+           
+
+
+            
         }
     }
 }

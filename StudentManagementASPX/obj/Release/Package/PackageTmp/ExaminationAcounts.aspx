@@ -57,19 +57,22 @@
                         var nav = Config.ReturnNav();
                         var today = DateTime.Today;
                         var examSittings = nav.ExamSittingCycle.Where(r => r.Sitting_Status == "Active" && r.Exam_End_Date >= today).ToList();
-                         var NextexamSittings = nav.ExamSittingCycle.Where(r =>r.Exam_End_Date >= today && r.Sitting_Status=="Upcoming").ToList();
+                        var NextexamSittings = nav.ExamSittingCycle.Where(r =>r.Exam_End_Date >= today && r.Sitting_Status=="Upcoming").ToList();
 
 
                         string IdNumber = Convert.ToString(Session["idNumber"]);
 
                         string studentNo = Convert.ToString(Session["studentNo"]);
-                        //string courseId = Request.QueryString["courseId"];
-                        var details = nav.ExaminationAccounts.Where(r => r.Student_Cust_No == studentNo && r.Status == "Active");
-                        //string university = Convert.ToString(Session["UniversityCode"]);
-                        int programesCounter = 0;
-                        foreach (var detail in details)
+
+                        if (studentNo != "")
                         {
-                            programesCounter++;
+                            //string courseId = Request.QueryString["courseId"];
+                            var details = nav.ExaminationAccounts.Where(r => r.Student_Cust_No == studentNo && r.Status == "Active");
+                            //string university = Convert.ToString(Session["UniversityCode"]);
+                            int programesCounter = 0;
+                            foreach (var detail in details)
+                            {
+                                programesCounter++;
                     %>
                     <tr>
                         <td><%=programesCounter %></td>
@@ -79,30 +82,29 @@
                         <td><%=detail.Surname %></td>
                         <td><%=detail.Middle_Name %></td>
                         <td><%=detail.Course_ID %></td>
-                      
+
                         <td><%=detail.Course_Description %></td>
                         <%--<%if (examSittings.Count == 0)
                             {
                         %>
                         <td style="color:red"><strong><%=" The Current Examination sitting is Closed. Please wait for the next sitting to be activated!" %></strong></td>
                         <%}
-                            else--%> 
-                        <% if(NextexamSittings.Count > 0)
+                            else--%>
+                        <% if (NextexamSittings.Count > 0)
                             {
-                                %>
+                        %>
                         <td><a href="ExamBooking.aspx?&&courseId=<%=detail.Course_ID%>" class="btn btn-success"><i class="fa fa-plus"></i>Book Examination</a></td>
-                        
-                            <%}
 
-                         else{ %>
+                        <%}
+
+                        else
+                        { %>
                         <td><a href="ExamBooking.aspx?&&courseId=<%=detail.Course_ID%>" class="btn btn-success"><i class="fa fa-plus"></i>Book Examination</a></td>
                         <%} %>
-
-                        
-
                     </tr>
                     <%  
-                        } %>
+                        }
+                    } %>
                 </tbody>
                  </table>
                 </div>

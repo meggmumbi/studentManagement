@@ -89,6 +89,18 @@ namespace StudentManagementASPX
                 currency.DataValueField = "No";
                 currency.DataBind();
                 currency.Items.Insert(0, new System.Web.UI.WebControls.ListItem("--select--", ""));
+                var projectCode = Request.QueryString["projectCode"];
+
+                var courses = nav.ExamCourses.Where(r => r.Job_No == projectCode);
+                course.DataSource = courses;
+                course.DataTextField = "Description";
+                course.DataValueField = "Job_Task_No";
+                course.DataBind();
+                course.Items.Insert(0, new System.Web.UI.WebControls.ListItem("--select--", ""));
+                
+
+
+
 
 
                 string studentNo = Convert.ToString(Session["studentNo"]);
@@ -109,7 +121,7 @@ namespace StudentManagementASPX
                 string phneNumber = Convert.ToString(Session["phoneNumber"]);
                 phoneNumber.Text = phneNumber;
 
-                var projectCode = Request.QueryString["projectCode"];
+               
                 project.Text = projectCode;
 
 
@@ -145,7 +157,7 @@ namespace StudentManagementASPX
                 accreditationnumber.Text = applicationNo;
                 // String courseId = Request.QueryString["courseId"];
                 ExamCode.Text = courseId;
-                courseIDTEXT.Text = courseId;
+                course.SelectedValue = courseId;
                 var courseDesc = nav.ExamCourses.Where(r => r.Examination_Code == courseId);
                 foreach (var description in courseDesc)
                 {
@@ -237,7 +249,7 @@ namespace StudentManagementASPX
                             kin.SelectedValue = "3";
 
                         }
-                        var nextofkinDetails = nav.StudentProcessing.Where(r => r.No == applicationNo && r.Highest_Academic_Qualification != "" && r.Submitted == false && r.Contact_Full_Name != "").ToList();
+                        var nextofkinDetails = nav.StudentProcessing.Where(r => r.No == applicationNo && r.Highest_Academic_QCode != "" && r.Submitted == false && r.Contact_Full_Name != "").ToList();
                         if (nextofkinDetails.Count > 0)
                         {
                             AdditionalNext.Visible = true;
@@ -293,7 +305,7 @@ namespace StudentManagementASPX
             {
 
                 string education = txteducationallevel.SelectedValue.Trim();
-                string texam = courseIDTEXT.Text.Trim();
+                string texam = course.SelectedValue.Trim();
                 // string texamCycle = examCylce.SelectedValue.Trim();
                 //string tExamCenter = examCenter.SelectedValue.Trim();
                 string tDisabled = disabledchallenge.SelectedValue.Trim();
@@ -365,6 +377,7 @@ namespace StudentManagementASPX
                 {
 
                     nextofkin.InnerHtml = "<div class='alert alert-" + info[0] + " '>" + info[1] + " <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a></div>";
+                    Session["courseId"] = info[2];
                     AdditionalNext.Visible = true;
 
                 }
@@ -545,8 +558,8 @@ namespace StudentManagementASPX
 
 
                         generalFeedback.InnerHtml = "<div class='alert alert-" + info[0] + " '>" + info[1] + " <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a></div>";
-                       
-                        Response.Redirect("StudentRegistration.aspx?step=2&&applicationNo=" + applicationNo + "&&courseId=" + courseId);
+                        string projectCodes = Request.QueryString["projectCode"];
+                        Response.Redirect("StudentRegistration.aspx?step=2&&applicationNo=" + applicationNo + "&&courseId=" + courseId+ "&&projectCode="+projectCodes);
 
                     }
                     else
@@ -1717,14 +1730,24 @@ namespace StudentManagementASPX
             {
 
 
-                string courseId = Request.QueryString["courseId"];
+                string courseId = Convert.ToString(Session["courseId"]);
+
+                if (string.IsNullOrEmpty(courseId))
+                {
+                    courseId = Request.QueryString["courseId"];
+                }
+
                 string studentNo = Convert.ToString(Session["studentNo"]);
                 var applicationNo = Request.QueryString["applicationNo"];
                 Response.Redirect("StudentRegistration.aspx?step=4&&courseId=" + courseId + "&&applicationNo=" + applicationNo);
             }
             else if (isDisabled == "2")
             {
-                string courseId = Request.QueryString["courseId"];
+                string courseId = Convert.ToString(Session["courseId"]);
+                if (string.IsNullOrEmpty(courseId))
+                {
+                    courseId = Request.QueryString["courseId"];
+                }
                 string studentNo = Convert.ToString(Session["studentNo"]);
                 var applicationNo = Request.QueryString["applicationNo"];
                 Response.Redirect("StudentRegistration.aspx?step=3&&courseId=" + courseId + "&&applicationNo=" + applicationNo);
@@ -1919,5 +1942,14 @@ namespace StudentManagementASPX
             }
         }
 
+        protected void course_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var nav = Config.ReturnNav();
+            var courseDesc = nav.ExamCourses.Where(r => r.Examination_Code == course.SelectedValue);
+            foreach (var description in courseDesc)
+            {
+                courseTextBox.Text = description.Description;
+            }
+        }
     }
 }

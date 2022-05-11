@@ -49,7 +49,7 @@ namespace StudentManagementASPX.Service_References
                         }
 
                         var today = DateTime.Today;
-                        var exmcycle = nav.ExamCycle.Where(r => r.Exam_End_Date >= today && r.Sitting_Status=="Active");
+                        var exmcycle = nav.ExamCycle.Where(r => r.Exam_End_Date >= today && r.Sitting_Status=="Active" && r.Closed==false);
                         examCycle.DataSource = exmcycle;
                         examCycle.DataTextField = "examCycle";
                         examCycle.DataValueField = "examCycle";

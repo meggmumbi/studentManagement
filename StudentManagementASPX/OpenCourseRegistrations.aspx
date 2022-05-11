@@ -62,7 +62,7 @@
                         <td><%=detail.Address %></td>
                         <td><%=detail.Examination_ID %></td>
                         <%
-                            var drafts = nav.StudentProcessing.Where(r => r.ID_Number_Passport_No == IdNumber && r.Document_Type == "Registration" && r.Submitted==false).ToList();
+                            var drafts = nav.StudentProcessing.Where(r => r.ID_Number_Passport_No == IdNumber && r.Document_Type == "Registration").ToList();
                             if (drafts.Count > 0)
                             {
 
@@ -147,7 +147,7 @@
                              <td><%=detail.Address %></td>
                              <td><%=detail.Examination_ID %></td>
                              <%
-                                 var drafts = nav.StudentProcessing.Where(r => r.Student_No == studentNo && r.Document_Type == "Registration" && r.Submitted == false).ToList();
+                                 var drafts = nav.StudentProcessing.Where(r => r.Student_No == studentNo && r.Document_Type == "Registration").ToList();
                                  if (drafts.Count > 0)
                                  {
 
