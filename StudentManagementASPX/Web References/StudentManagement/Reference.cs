@@ -29,23 +29,15 @@ namespace StudentManagementASPX.StudentManagement {
     [System.Web.Services.WebServiceBindingAttribute(Name="StudentManagement_Binding", Namespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement")]
     public partial class StudentManagement : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
-        private System.Threading.SendOrPostCallback GetStudentsImagesOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback PrintWithdrawalSummeryOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback ResultSlipOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback FnChangeStudentPasswordOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback FnResetPasswordOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback FnRegistrationStudentOperationCompleted;
-        
         private System.Threading.SendOrPostCallback FnRegistrationOperationCompleted;
         
         private System.Threading.SendOrPostCallback FnCreateApplicantAccountRequestOperationCompleted;
         
+        private System.Threading.SendOrPostCallback FnResetPasswordOperationCompleted;
+        
         private System.Threading.SendOrPostCallback ResetSendEmailOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback FnChangeStudentPasswordOperationCompleted;
         
         private System.Threading.SendOrPostCallback FnApplicantProfileRegistrationOperationCompleted;
         
@@ -62,6 +54,8 @@ namespace StudentManagementASPX.StudentManagement {
         private System.Threading.SendOrPostCallback CreateStudentBookingOperationCompleted;
         
         private System.Threading.SendOrPostCallback InstitutionBookingLineOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback FnRegistrationStudentOperationCompleted;
         
         private System.Threading.SendOrPostCallback FnUploadProfilePhotoOperationCompleted;
         
@@ -84,6 +78,8 @@ namespace StudentManagementASPX.StudentManagement {
         private System.Threading.SendOrPostCallback FnApplicantProfileRegistrationLinesOperationCompleted;
         
         private System.Threading.SendOrPostCallback PrintInvoiceInstRegOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback PrintWithdrawalSummeryOperationCompleted;
         
         private System.Threading.SendOrPostCallback FnInstitutionStudentRegistrationOperationCompleted;
         
@@ -187,6 +183,20 @@ namespace StudentManagementASPX.StudentManagement {
         
         private System.Threading.SendOrPostCallback FnGetCustomerPictureOperationCompleted;
         
+        private System.Threading.SendOrPostCallback GetStudentsImagesOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ResultSlipOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback FnGetExaminationResultsOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback FnGetStudentProcessingHeaderOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback FnGetStudentProcessingHeaderRegOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback FnGetExamBookingEntriesOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback FnGetStudentUserOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -226,31 +236,19 @@ namespace StudentManagementASPX.StudentManagement {
         }
         
         /// <remarks/>
-        public event GetStudentsImagesCompletedEventHandler GetStudentsImagesCompleted;
-        
-        /// <remarks/>
-        public event PrintWithdrawalSummeryCompletedEventHandler PrintWithdrawalSummeryCompleted;
-        
-        /// <remarks/>
-        public event ResultSlipCompletedEventHandler ResultSlipCompleted;
-        
-        /// <remarks/>
-        public event FnChangeStudentPasswordCompletedEventHandler FnChangeStudentPasswordCompleted;
-        
-        /// <remarks/>
-        public event FnResetPasswordCompletedEventHandler FnResetPasswordCompleted;
-        
-        /// <remarks/>
-        public event FnRegistrationStudentCompletedEventHandler FnRegistrationStudentCompleted;
-        
-        /// <remarks/>
         public event FnRegistrationCompletedEventHandler FnRegistrationCompleted;
         
         /// <remarks/>
         public event FnCreateApplicantAccountRequestCompletedEventHandler FnCreateApplicantAccountRequestCompleted;
         
         /// <remarks/>
+        public event FnResetPasswordCompletedEventHandler FnResetPasswordCompleted;
+        
+        /// <remarks/>
         public event ResetSendEmailCompletedEventHandler ResetSendEmailCompleted;
+        
+        /// <remarks/>
+        public event FnChangeStudentPasswordCompletedEventHandler FnChangeStudentPasswordCompleted;
         
         /// <remarks/>
         public event FnApplicantProfileRegistrationCompletedEventHandler FnApplicantProfileRegistrationCompleted;
@@ -275,6 +273,9 @@ namespace StudentManagementASPX.StudentManagement {
         
         /// <remarks/>
         public event InstitutionBookingLineCompletedEventHandler InstitutionBookingLineCompleted;
+        
+        /// <remarks/>
+        public event FnRegistrationStudentCompletedEventHandler FnRegistrationStudentCompleted;
         
         /// <remarks/>
         public event FnUploadProfilePhotoCompletedEventHandler FnUploadProfilePhotoCompleted;
@@ -308,6 +309,9 @@ namespace StudentManagementASPX.StudentManagement {
         
         /// <remarks/>
         public event PrintInvoiceInstRegCompletedEventHandler PrintInvoiceInstRegCompleted;
+        
+        /// <remarks/>
+        public event PrintWithdrawalSummeryCompletedEventHandler PrintWithdrawalSummeryCompleted;
         
         /// <remarks/>
         public event FnInstitutionStudentRegistrationCompletedEventHandler FnInstitutionStudentRegistrationCompleted;
@@ -463,203 +467,25 @@ namespace StudentManagementASPX.StudentManagement {
         public event FnGetCustomerPictureCompletedEventHandler FnGetCustomerPictureCompleted;
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/StudentManagement:GetStudentsImages", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", ResponseElementName="GetStudentsImages_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
-        public string GetStudentsImages(string idNumber) {
-            object[] results = this.Invoke("GetStudentsImages", new object[] {
-                        idNumber});
-            return ((string)(results[0]));
-        }
+        public event GetStudentsImagesCompletedEventHandler GetStudentsImagesCompleted;
         
         /// <remarks/>
-        public void GetStudentsImagesAsync(string idNumber) {
-            this.GetStudentsImagesAsync(idNumber, null);
-        }
+        public event ResultSlipCompletedEventHandler ResultSlipCompleted;
         
         /// <remarks/>
-        public void GetStudentsImagesAsync(string idNumber, object userState) {
-            if ((this.GetStudentsImagesOperationCompleted == null)) {
-                this.GetStudentsImagesOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetStudentsImagesOperationCompleted);
-            }
-            this.InvokeAsync("GetStudentsImages", new object[] {
-                        idNumber}, this.GetStudentsImagesOperationCompleted, userState);
-        }
-        
-        private void OnGetStudentsImagesOperationCompleted(object arg) {
-            if ((this.GetStudentsImagesCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetStudentsImagesCompleted(this, new GetStudentsImagesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
+        public event FnGetExaminationResultsCompletedEventHandler FnGetExaminationResultsCompleted;
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/StudentManagement:PrintWithdrawalSummery", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", ResponseElementName="PrintWithdrawalSummery_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
-        public string PrintWithdrawalSummery(string applicationNo) {
-            object[] results = this.Invoke("PrintWithdrawalSummery", new object[] {
-                        applicationNo});
-            return ((string)(results[0]));
-        }
+        public event FnGetStudentProcessingHeaderCompletedEventHandler FnGetStudentProcessingHeaderCompleted;
         
         /// <remarks/>
-        public void PrintWithdrawalSummeryAsync(string applicationNo) {
-            this.PrintWithdrawalSummeryAsync(applicationNo, null);
-        }
+        public event FnGetStudentProcessingHeaderRegCompletedEventHandler FnGetStudentProcessingHeaderRegCompleted;
         
         /// <remarks/>
-        public void PrintWithdrawalSummeryAsync(string applicationNo, object userState) {
-            if ((this.PrintWithdrawalSummeryOperationCompleted == null)) {
-                this.PrintWithdrawalSummeryOperationCompleted = new System.Threading.SendOrPostCallback(this.OnPrintWithdrawalSummeryOperationCompleted);
-            }
-            this.InvokeAsync("PrintWithdrawalSummery", new object[] {
-                        applicationNo}, this.PrintWithdrawalSummeryOperationCompleted, userState);
-        }
-        
-        private void OnPrintWithdrawalSummeryOperationCompleted(object arg) {
-            if ((this.PrintWithdrawalSummeryCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.PrintWithdrawalSummeryCompleted(this, new PrintWithdrawalSummeryCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
+        public event FnGetExamBookingEntriesCompletedEventHandler FnGetExamBookingEntriesCompleted;
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/StudentManagement:ResultSlip", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", ResponseElementName="ResultSlip_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
-        public string ResultSlip(string studentRegNo, string examSittingId) {
-            object[] results = this.Invoke("ResultSlip", new object[] {
-                        studentRegNo,
-                        examSittingId});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void ResultSlipAsync(string studentRegNo, string examSittingId) {
-            this.ResultSlipAsync(studentRegNo, examSittingId, null);
-        }
-        
-        /// <remarks/>
-        public void ResultSlipAsync(string studentRegNo, string examSittingId, object userState) {
-            if ((this.ResultSlipOperationCompleted == null)) {
-                this.ResultSlipOperationCompleted = new System.Threading.SendOrPostCallback(this.OnResultSlipOperationCompleted);
-            }
-            this.InvokeAsync("ResultSlip", new object[] {
-                        studentRegNo,
-                        examSittingId}, this.ResultSlipOperationCompleted, userState);
-        }
-        
-        private void OnResultSlipOperationCompleted(object arg) {
-            if ((this.ResultSlipCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ResultSlipCompleted(this, new ResultSlipCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnChangeStudentPassword" +
-            "", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", ResponseElementName="FnChangeStudentPassword_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
-        public string FnChangeStudentPassword(string emailaddress, string currentPassword, string newPassword, string confirmNewPassword) {
-            object[] results = this.Invoke("FnChangeStudentPassword", new object[] {
-                        emailaddress,
-                        currentPassword,
-                        newPassword,
-                        confirmNewPassword});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void FnChangeStudentPasswordAsync(string emailaddress, string currentPassword, string newPassword, string confirmNewPassword) {
-            this.FnChangeStudentPasswordAsync(emailaddress, currentPassword, newPassword, confirmNewPassword, null);
-        }
-        
-        /// <remarks/>
-        public void FnChangeStudentPasswordAsync(string emailaddress, string currentPassword, string newPassword, string confirmNewPassword, object userState) {
-            if ((this.FnChangeStudentPasswordOperationCompleted == null)) {
-                this.FnChangeStudentPasswordOperationCompleted = new System.Threading.SendOrPostCallback(this.OnFnChangeStudentPasswordOperationCompleted);
-            }
-            this.InvokeAsync("FnChangeStudentPassword", new object[] {
-                        emailaddress,
-                        currentPassword,
-                        newPassword,
-                        confirmNewPassword}, this.FnChangeStudentPasswordOperationCompleted, userState);
-        }
-        
-        private void OnFnChangeStudentPasswordOperationCompleted(object arg) {
-            if ((this.FnChangeStudentPasswordCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.FnChangeStudentPasswordCompleted(this, new FnChangeStudentPasswordCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnResetPassword", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", ResponseElementName="FnResetPassword_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
-        public string FnResetPassword(string emailaddress) {
-            object[] results = this.Invoke("FnResetPassword", new object[] {
-                        emailaddress});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void FnResetPasswordAsync(string emailaddress) {
-            this.FnResetPasswordAsync(emailaddress, null);
-        }
-        
-        /// <remarks/>
-        public void FnResetPasswordAsync(string emailaddress, object userState) {
-            if ((this.FnResetPasswordOperationCompleted == null)) {
-                this.FnResetPasswordOperationCompleted = new System.Threading.SendOrPostCallback(this.OnFnResetPasswordOperationCompleted);
-            }
-            this.InvokeAsync("FnResetPassword", new object[] {
-                        emailaddress}, this.FnResetPasswordOperationCompleted, userState);
-        }
-        
-        private void OnFnResetPasswordOperationCompleted(object arg) {
-            if ((this.FnResetPasswordCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.FnResetPasswordCompleted(this, new FnResetPasswordCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnRegistrationStudent", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", ResponseElementName="FnRegistrationStudent_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
-        public string FnRegistrationStudent(string firstname, string middlename, string lastname, string phoneNumber, string email, string idNumber) {
-            object[] results = this.Invoke("FnRegistrationStudent", new object[] {
-                        firstname,
-                        middlename,
-                        lastname,
-                        phoneNumber,
-                        email,
-                        idNumber});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void FnRegistrationStudentAsync(string firstname, string middlename, string lastname, string phoneNumber, string email, string idNumber) {
-            this.FnRegistrationStudentAsync(firstname, middlename, lastname, phoneNumber, email, idNumber, null);
-        }
-        
-        /// <remarks/>
-        public void FnRegistrationStudentAsync(string firstname, string middlename, string lastname, string phoneNumber, string email, string idNumber, object userState) {
-            if ((this.FnRegistrationStudentOperationCompleted == null)) {
-                this.FnRegistrationStudentOperationCompleted = new System.Threading.SendOrPostCallback(this.OnFnRegistrationStudentOperationCompleted);
-            }
-            this.InvokeAsync("FnRegistrationStudent", new object[] {
-                        firstname,
-                        middlename,
-                        lastname,
-                        phoneNumber,
-                        email,
-                        idNumber}, this.FnRegistrationStudentOperationCompleted, userState);
-        }
-        
-        private void OnFnRegistrationStudentOperationCompleted(object arg) {
-            if ((this.FnRegistrationStudentCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.FnRegistrationStudentCompleted(this, new FnRegistrationStudentCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
+        public event FnGetStudentUserCompletedEventHandler FnGetStudentUserCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnRegistration", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", ResponseElementName="FnRegistration_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -739,6 +565,36 @@ namespace StudentManagementASPX.StudentManagement {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnResetPassword", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", ResponseElementName="FnResetPassword_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string FnResetPassword(string emailaddress) {
+            object[] results = this.Invoke("FnResetPassword", new object[] {
+                        emailaddress});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void FnResetPasswordAsync(string emailaddress) {
+            this.FnResetPasswordAsync(emailaddress, null);
+        }
+        
+        /// <remarks/>
+        public void FnResetPasswordAsync(string emailaddress, object userState) {
+            if ((this.FnResetPasswordOperationCompleted == null)) {
+                this.FnResetPasswordOperationCompleted = new System.Threading.SendOrPostCallback(this.OnFnResetPasswordOperationCompleted);
+            }
+            this.InvokeAsync("FnResetPassword", new object[] {
+                        emailaddress}, this.FnResetPasswordOperationCompleted, userState);
+        }
+        
+        private void OnFnResetPasswordOperationCompleted(object arg) {
+            if ((this.FnResetPasswordCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.FnResetPasswordCompleted(this, new FnResetPasswordCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/StudentManagement:ResetSendEmail", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", ResponseElementName="ResetSendEmail_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void ResetSendEmail(string emailaddress) {
             this.Invoke("ResetSendEmail", new object[] {
@@ -763,6 +619,43 @@ namespace StudentManagementASPX.StudentManagement {
             if ((this.ResetSendEmailCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.ResetSendEmailCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnChangeStudentPassword" +
+            "", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", ResponseElementName="FnChangeStudentPassword_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string FnChangeStudentPassword(string emailaddress, string currentPassword, string newPassword, string confirmNewPassword) {
+            object[] results = this.Invoke("FnChangeStudentPassword", new object[] {
+                        emailaddress,
+                        currentPassword,
+                        newPassword,
+                        confirmNewPassword});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void FnChangeStudentPasswordAsync(string emailaddress, string currentPassword, string newPassword, string confirmNewPassword) {
+            this.FnChangeStudentPasswordAsync(emailaddress, currentPassword, newPassword, confirmNewPassword, null);
+        }
+        
+        /// <remarks/>
+        public void FnChangeStudentPasswordAsync(string emailaddress, string currentPassword, string newPassword, string confirmNewPassword, object userState) {
+            if ((this.FnChangeStudentPasswordOperationCompleted == null)) {
+                this.FnChangeStudentPasswordOperationCompleted = new System.Threading.SendOrPostCallback(this.OnFnChangeStudentPasswordOperationCompleted);
+            }
+            this.InvokeAsync("FnChangeStudentPassword", new object[] {
+                        emailaddress,
+                        currentPassword,
+                        newPassword,
+                        confirmNewPassword}, this.FnChangeStudentPasswordOperationCompleted, userState);
+        }
+        
+        private void OnFnChangeStudentPasswordOperationCompleted(object arg) {
+            if ((this.FnChangeStudentPasswordCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.FnChangeStudentPasswordCompleted(this, new FnChangeStudentPasswordCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1163,6 +1056,46 @@ namespace StudentManagementASPX.StudentManagement {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnRegistrationStudent", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", ResponseElementName="FnRegistrationStudent_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string FnRegistrationStudent(string firstname, string middlename, string lastname, string phoneNumber, string email, string idNumber) {
+            object[] results = this.Invoke("FnRegistrationStudent", new object[] {
+                        firstname,
+                        middlename,
+                        lastname,
+                        phoneNumber,
+                        email,
+                        idNumber});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void FnRegistrationStudentAsync(string firstname, string middlename, string lastname, string phoneNumber, string email, string idNumber) {
+            this.FnRegistrationStudentAsync(firstname, middlename, lastname, phoneNumber, email, idNumber, null);
+        }
+        
+        /// <remarks/>
+        public void FnRegistrationStudentAsync(string firstname, string middlename, string lastname, string phoneNumber, string email, string idNumber, object userState) {
+            if ((this.FnRegistrationStudentOperationCompleted == null)) {
+                this.FnRegistrationStudentOperationCompleted = new System.Threading.SendOrPostCallback(this.OnFnRegistrationStudentOperationCompleted);
+            }
+            this.InvokeAsync("FnRegistrationStudent", new object[] {
+                        firstname,
+                        middlename,
+                        lastname,
+                        phoneNumber,
+                        email,
+                        idNumber}, this.FnRegistrationStudentOperationCompleted, userState);
+        }
+        
+        private void OnFnRegistrationStudentOperationCompleted(object arg) {
+            if ((this.FnRegistrationStudentCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.FnRegistrationStudentCompleted(this, new FnRegistrationStudentCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnUploadProfilePhoto", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", ResponseElementName="FnUploadProfilePhoto_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
         public string FnUploadProfilePhoto(string studentNo) {
@@ -1542,6 +1475,36 @@ namespace StudentManagementASPX.StudentManagement {
             if ((this.PrintInvoiceInstRegCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.PrintInvoiceInstRegCompleted(this, new PrintInvoiceInstRegCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/StudentManagement:PrintWithdrawalSummery", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", ResponseElementName="PrintWithdrawalSummery_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string PrintWithdrawalSummery(string applicationNo) {
+            object[] results = this.Invoke("PrintWithdrawalSummery", new object[] {
+                        applicationNo});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void PrintWithdrawalSummeryAsync(string applicationNo) {
+            this.PrintWithdrawalSummeryAsync(applicationNo, null);
+        }
+        
+        /// <remarks/>
+        public void PrintWithdrawalSummeryAsync(string applicationNo, object userState) {
+            if ((this.PrintWithdrawalSummeryOperationCompleted == null)) {
+                this.PrintWithdrawalSummeryOperationCompleted = new System.Threading.SendOrPostCallback(this.OnPrintWithdrawalSummeryOperationCompleted);
+            }
+            this.InvokeAsync("PrintWithdrawalSummery", new object[] {
+                        applicationNo}, this.PrintWithdrawalSummeryOperationCompleted, userState);
+        }
+        
+        private void OnPrintWithdrawalSummeryOperationCompleted(object arg) {
+            if ((this.PrintWithdrawalSummeryCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.PrintWithdrawalSummeryCompleted(this, new PrintWithdrawalSummeryCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -3368,6 +3331,234 @@ namespace StudentManagementASPX.StudentManagement {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/StudentManagement:GetStudentsImages", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", ResponseElementName="GetStudentsImages_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string GetStudentsImages(string idNumber) {
+            object[] results = this.Invoke("GetStudentsImages", new object[] {
+                        idNumber});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetStudentsImagesAsync(string idNumber) {
+            this.GetStudentsImagesAsync(idNumber, null);
+        }
+        
+        /// <remarks/>
+        public void GetStudentsImagesAsync(string idNumber, object userState) {
+            if ((this.GetStudentsImagesOperationCompleted == null)) {
+                this.GetStudentsImagesOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetStudentsImagesOperationCompleted);
+            }
+            this.InvokeAsync("GetStudentsImages", new object[] {
+                        idNumber}, this.GetStudentsImagesOperationCompleted, userState);
+        }
+        
+        private void OnGetStudentsImagesOperationCompleted(object arg) {
+            if ((this.GetStudentsImagesCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetStudentsImagesCompleted(this, new GetStudentsImagesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/StudentManagement:ResultSlip", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", ResponseElementName="ResultSlip_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string ResultSlip(string studentRegNo, string examSittingId) {
+            object[] results = this.Invoke("ResultSlip", new object[] {
+                        studentRegNo,
+                        examSittingId});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ResultSlipAsync(string studentRegNo, string examSittingId) {
+            this.ResultSlipAsync(studentRegNo, examSittingId, null);
+        }
+        
+        /// <remarks/>
+        public void ResultSlipAsync(string studentRegNo, string examSittingId, object userState) {
+            if ((this.ResultSlipOperationCompleted == null)) {
+                this.ResultSlipOperationCompleted = new System.Threading.SendOrPostCallback(this.OnResultSlipOperationCompleted);
+            }
+            this.InvokeAsync("ResultSlip", new object[] {
+                        studentRegNo,
+                        examSittingId}, this.ResultSlipOperationCompleted, userState);
+        }
+        
+        private void OnResultSlipOperationCompleted(object arg) {
+            if ((this.ResultSlipCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ResultSlipCompleted(this, new ResultSlipCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnGetExaminationResults" +
+            "", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", ResponseElementName="FnGetExaminationResults_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string FnGetExaminationResults(string idNumber) {
+            object[] results = this.Invoke("FnGetExaminationResults", new object[] {
+                        idNumber});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void FnGetExaminationResultsAsync(string idNumber) {
+            this.FnGetExaminationResultsAsync(idNumber, null);
+        }
+        
+        /// <remarks/>
+        public void FnGetExaminationResultsAsync(string idNumber, object userState) {
+            if ((this.FnGetExaminationResultsOperationCompleted == null)) {
+                this.FnGetExaminationResultsOperationCompleted = new System.Threading.SendOrPostCallback(this.OnFnGetExaminationResultsOperationCompleted);
+            }
+            this.InvokeAsync("FnGetExaminationResults", new object[] {
+                        idNumber}, this.FnGetExaminationResultsOperationCompleted, userState);
+        }
+        
+        private void OnFnGetExaminationResultsOperationCompleted(object arg) {
+            if ((this.FnGetExaminationResultsCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.FnGetExaminationResultsCompleted(this, new FnGetExaminationResultsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnGetStudentProcessingH" +
+            "eader", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", ResponseElementName="FnGetStudentProcessingHeader_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string FnGetStudentProcessingHeader(string applicationNo, string studentNo, string examId) {
+            object[] results = this.Invoke("FnGetStudentProcessingHeader", new object[] {
+                        applicationNo,
+                        studentNo,
+                        examId});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void FnGetStudentProcessingHeaderAsync(string applicationNo, string studentNo, string examId) {
+            this.FnGetStudentProcessingHeaderAsync(applicationNo, studentNo, examId, null);
+        }
+        
+        /// <remarks/>
+        public void FnGetStudentProcessingHeaderAsync(string applicationNo, string studentNo, string examId, object userState) {
+            if ((this.FnGetStudentProcessingHeaderOperationCompleted == null)) {
+                this.FnGetStudentProcessingHeaderOperationCompleted = new System.Threading.SendOrPostCallback(this.OnFnGetStudentProcessingHeaderOperationCompleted);
+            }
+            this.InvokeAsync("FnGetStudentProcessingHeader", new object[] {
+                        applicationNo,
+                        studentNo,
+                        examId}, this.FnGetStudentProcessingHeaderOperationCompleted, userState);
+        }
+        
+        private void OnFnGetStudentProcessingHeaderOperationCompleted(object arg) {
+            if ((this.FnGetStudentProcessingHeaderCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.FnGetStudentProcessingHeaderCompleted(this, new FnGetStudentProcessingHeaderCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnGetStudentProcessingH" +
+            "eaderReg", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", ResponseElementName="FnGetStudentProcessingHeaderReg_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string FnGetStudentProcessingHeaderReg(string applicationNo, string idNumber, string examId) {
+            object[] results = this.Invoke("FnGetStudentProcessingHeaderReg", new object[] {
+                        applicationNo,
+                        idNumber,
+                        examId});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void FnGetStudentProcessingHeaderRegAsync(string applicationNo, string idNumber, string examId) {
+            this.FnGetStudentProcessingHeaderRegAsync(applicationNo, idNumber, examId, null);
+        }
+        
+        /// <remarks/>
+        public void FnGetStudentProcessingHeaderRegAsync(string applicationNo, string idNumber, string examId, object userState) {
+            if ((this.FnGetStudentProcessingHeaderRegOperationCompleted == null)) {
+                this.FnGetStudentProcessingHeaderRegOperationCompleted = new System.Threading.SendOrPostCallback(this.OnFnGetStudentProcessingHeaderRegOperationCompleted);
+            }
+            this.InvokeAsync("FnGetStudentProcessingHeaderReg", new object[] {
+                        applicationNo,
+                        idNumber,
+                        examId}, this.FnGetStudentProcessingHeaderRegOperationCompleted, userState);
+        }
+        
+        private void OnFnGetStudentProcessingHeaderRegOperationCompleted(object arg) {
+            if ((this.FnGetStudentProcessingHeaderRegCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.FnGetStudentProcessingHeaderRegCompleted(this, new FnGetStudentProcessingHeaderRegCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnGetExamBookingEntries" +
+            "", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", ResponseElementName="FnGetExamBookingEntries_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string FnGetExamBookingEntries(string studentNo, int txtstatus) {
+            object[] results = this.Invoke("FnGetExamBookingEntries", new object[] {
+                        studentNo,
+                        txtstatus});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void FnGetExamBookingEntriesAsync(string studentNo, int txtstatus) {
+            this.FnGetExamBookingEntriesAsync(studentNo, txtstatus, null);
+        }
+        
+        /// <remarks/>
+        public void FnGetExamBookingEntriesAsync(string studentNo, int txtstatus, object userState) {
+            if ((this.FnGetExamBookingEntriesOperationCompleted == null)) {
+                this.FnGetExamBookingEntriesOperationCompleted = new System.Threading.SendOrPostCallback(this.OnFnGetExamBookingEntriesOperationCompleted);
+            }
+            this.InvokeAsync("FnGetExamBookingEntries", new object[] {
+                        studentNo,
+                        txtstatus}, this.FnGetExamBookingEntriesOperationCompleted, userState);
+        }
+        
+        private void OnFnGetExamBookingEntriesOperationCompleted(object arg) {
+            if ((this.FnGetExamBookingEntriesCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.FnGetExamBookingEntriesCompleted(this, new FnGetExamBookingEntriesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnGetStudentUser", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", ResponseElementName="FnGetStudentUser_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string FnGetStudentUser(string email, string password) {
+            object[] results = this.Invoke("FnGetStudentUser", new object[] {
+                        email,
+                        password});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void FnGetStudentUserAsync(string email, string password) {
+            this.FnGetStudentUserAsync(email, password, null);
+        }
+        
+        /// <remarks/>
+        public void FnGetStudentUserAsync(string email, string password, object userState) {
+            if ((this.FnGetStudentUserOperationCompleted == null)) {
+                this.FnGetStudentUserOperationCompleted = new System.Threading.SendOrPostCallback(this.OnFnGetStudentUserOperationCompleted);
+            }
+            this.InvokeAsync("FnGetStudentUser", new object[] {
+                        email,
+                        password}, this.FnGetStudentUserOperationCompleted, userState);
+        }
+        
+        private void OnFnGetStudentUserOperationCompleted(object arg) {
+            if ((this.FnGetStudentUserCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.FnGetStudentUserCompleted(this, new FnGetStudentUserCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -3383,162 +3574,6 @@ namespace StudentManagementASPX.StudentManagement {
                 return true;
             }
             return false;
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    public delegate void GetStudentsImagesCompletedEventHandler(object sender, GetStudentsImagesCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetStudentsImagesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetStudentsImagesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    public delegate void PrintWithdrawalSummeryCompletedEventHandler(object sender, PrintWithdrawalSummeryCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class PrintWithdrawalSummeryCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal PrintWithdrawalSummeryCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    public delegate void ResultSlipCompletedEventHandler(object sender, ResultSlipCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ResultSlipCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ResultSlipCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    public delegate void FnChangeStudentPasswordCompletedEventHandler(object sender, FnChangeStudentPasswordCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class FnChangeStudentPasswordCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal FnChangeStudentPasswordCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    public delegate void FnResetPasswordCompletedEventHandler(object sender, FnResetPasswordCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class FnResetPasswordCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal FnResetPasswordCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    public delegate void FnRegistrationStudentCompletedEventHandler(object sender, FnRegistrationStudentCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class FnRegistrationStudentCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal FnRegistrationStudentCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
         }
     }
     
@@ -3596,7 +3631,59 @@ namespace StudentManagementASPX.StudentManagement {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void FnResetPasswordCompletedEventHandler(object sender, FnResetPasswordCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class FnResetPasswordCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal FnResetPasswordCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void ResetSendEmailCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void FnChangeStudentPasswordCompletedEventHandler(object sender, FnChangeStudentPasswordCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class FnChangeStudentPasswordCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal FnChangeStudentPasswordCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
@@ -3793,6 +3880,32 @@ namespace StudentManagementASPX.StudentManagement {
         private object[] results;
         
         internal InstitutionBookingLineCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void FnRegistrationStudentCompletedEventHandler(object sender, FnRegistrationStudentCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class FnRegistrationStudentCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal FnRegistrationStudentCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -4079,6 +4192,32 @@ namespace StudentManagementASPX.StudentManagement {
         private object[] results;
         
         internal PrintInvoiceInstRegCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void PrintWithdrawalSummeryCompletedEventHandler(object sender, PrintWithdrawalSummeryCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class PrintWithdrawalSummeryCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal PrintWithdrawalSummeryCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -5405,6 +5544,188 @@ namespace StudentManagementASPX.StudentManagement {
         private object[] results;
         
         internal FnGetCustomerPictureCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void GetStudentsImagesCompletedEventHandler(object sender, GetStudentsImagesCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetStudentsImagesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetStudentsImagesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void ResultSlipCompletedEventHandler(object sender, ResultSlipCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ResultSlipCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ResultSlipCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void FnGetExaminationResultsCompletedEventHandler(object sender, FnGetExaminationResultsCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class FnGetExaminationResultsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal FnGetExaminationResultsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void FnGetStudentProcessingHeaderCompletedEventHandler(object sender, FnGetStudentProcessingHeaderCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class FnGetStudentProcessingHeaderCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal FnGetStudentProcessingHeaderCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void FnGetStudentProcessingHeaderRegCompletedEventHandler(object sender, FnGetStudentProcessingHeaderRegCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class FnGetStudentProcessingHeaderRegCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal FnGetStudentProcessingHeaderRegCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void FnGetExamBookingEntriesCompletedEventHandler(object sender, FnGetExamBookingEntriesCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class FnGetExamBookingEntriesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal FnGetExamBookingEntriesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void FnGetStudentUserCompletedEventHandler(object sender, FnGetStudentUserCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class FnGetStudentUserCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal FnGetStudentUserCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }

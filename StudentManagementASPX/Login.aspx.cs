@@ -93,9 +93,6 @@ namespace StudentManagementASPX
                                 }
                                 Response.Redirect("Dashboard.aspx");
 
-
-
-
                             }
                             else
                             {

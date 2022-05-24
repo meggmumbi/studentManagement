@@ -505,25 +505,33 @@
 
                                                             string IdNumbers = Convert.ToString(Session["idNumber"]);
                                                             var nav = Config.ReturnNav();
+                                                            int programesCounter = 0;
                                                             //string courseId = Request.QueryString["courseId"];
                                                             var details = nav.ExaminationResults.Where(r => r.National_ID_No == IdNumbers);
-                                                            //string university = Convert.ToString(Session["UniversityCode"]);
-                                                            int programesCounter = 0;
-                                                            foreach (var detail in details)
+                                                            string surrenderData = new Config().ObjNav().FnGetExaminationResults(IdNumbers);
+                                                            String[] info = surrenderData.Split(new string[] { "::::" }, StringSplitOptions.RemoveEmptyEntries);
+                                                            if (info != null)
                                                             {
-                                                                programesCounter++;
+                                                                foreach (var allInfo in info)
+                                                                {
+                                                                    String[] arr = allInfo.Split('*');
+                                                                    programesCounter++;
+
                                                         %>
+
+
                                                         <tr>
                                                             <td><%=programesCounter %></td>
-                                                            <td><%=detail.Student_Name %></td>
-                                                            <td><%=detail.Paper%></td>
-                                                            <td><%=detail.Paper_Name %></td>
-                                                            <td><%=detail.Grade %></td>
-                                                            <td><%=detail.Examination_Sitting_ID +" "+ detail.Financial_Year %></td>
-                                                            <td><%=Convert.ToDateTime(detail.Issue_Date).ToString("yy/MM/dd") %></td>
+                                                            <td><%=arr[0] %></td>
+                                                            <td><%=arr[1]%>></td>
+                                                            <td><%=arr[2] %></td>
+                                                            <td><%=arr[3] %></td>
+                                                            <td><%=arr[4] + " " + arr[5] %></td>
+                                                            <td><%=Convert.ToDateTime(arr[6]).ToString("yy/MM/dd") %></td>
                                                             <%-- <td><a href="ResultSlip.aspx?No=<%=detail.Student_Reg_No%>&&sitting=<%=detail.Examination_Sitting_ID %>" class="btn btn-success"><i class="fa fa-eye"></i>Result Slip</a></td>--%>
                                                         </tr>
                                                         <%  
+                                                            }
                                                         } %>
                                                     </tbody>
                                                 </table>

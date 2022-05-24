@@ -179,6 +179,7 @@ namespace StudentManagementASPX
                 }
 
                 var studentProcessing = nav.StudentProcessing.Where(r => r.No == applicationNo && r.ID_Number_Passport_No == IdNumber && r.Examination_ID == courseId).ToList();
+
                 if (studentProcessing.Count > 0)
                 {
                     foreach (var descript in studentProcessing)
@@ -249,7 +250,7 @@ namespace StudentManagementASPX
                             kin.SelectedValue = "3";
 
                         }
-                        var nextofkinDetails = nav.StudentProcessing.Where(r => r.No == applicationNo && r.Highest_Academic_QCode != "" && r.Submitted == false && r.Contact_Full_Name != "").ToList();
+                        var nextofkinDetails = nav.StudentProcessing.Where(r => r.No == applicationNo && r.Highest_Academic_QCode != "" && r.Contact_Full_Name != "").ToList();
                         if (nextofkinDetails.Count > 0)
                         {
                             AdditionalNext.Visible = true;
