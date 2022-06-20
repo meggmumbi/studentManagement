@@ -13,42 +13,16 @@ namespace StudentManagementASPX
         {
             if (!IsPostBack)
             {
-
-                string name = Convert.ToString(Session["StudentName"]);
-                custName.Text = name;
-
-                //string student = Request.QueryString["studentNo"];
-                //invoiceNumber.Text = student;
+                
 
                 string applicationNo = Request.QueryString["applicationNo"];
-                invoiceNumber.Text = applicationNo;
-
-
+             
 
                 feedback.InnerHtml = "";
 
                 Boolean Error = false;
 
-                try
-                {
-
-                }
-
-                catch (Exception)
-                {
-                    Error = true;
-                    feedback.InnerHtml = "<div class='alert alert-danger'>Please provide a valid start date<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a></div>";
-                }
-
-                try
-                {
-
-                }
-                catch (Exception)
-                {
-                    Error = true;
-                    feedback.InnerHtml = "<div class='alert alert-danger'>Please provide a valid end date<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a></div>";
-                }
+           
                 if (!Error)
                 {
                     try

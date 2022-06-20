@@ -313,12 +313,18 @@
                                         <asp:TextBox runat="server" CssClass="form-control" ID="postalAddress"></asp:TextBox>
                                     </div>
                                 </div>
+                                     <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="city">Examination ID<span class="text-danger">*</span></label>
+                                    <asp:DropdownList runat="server" CssClass="form-control" ID="ExamCodes"></asp:DropdownList>
+                                </div>
+                            </div>
 
                             </div>
                             <div style="display: none">
                                 <asp:TextBox runat="server" CssClass="form-control" ID="appNo"></asp:TextBox>
                                 <asp:TextBox runat="server" CssClass="form-control" ID="project" Enabled="false"></asp:TextBox>
-                                <asp:TextBox runat="server" CssClass="form-control" ID="ExamCode" Enabled="false"></asp:TextBox>
+                              
                             </div>
 
 
@@ -437,10 +443,10 @@
 
                         <p><strong>--Additional Information--</strong></p>
                         <div class="row">
-                            <div class="col-md-6">
+                                  <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="city">Examination ID</label>
-                                    <asp:DropdownList runat="server" CssClass="form-control" ID="course" OnSelectedIndexChanged="course_SelectedIndexChanged" AutoPostBack="true"></asp:DropdownList>
+                                    <asp:TextBox runat="server" CssClass="form-control" ID="examinationz" ReadOnly="true"></asp:TextBox>
                                 </div>
                             </div>
 
@@ -1086,7 +1092,7 @@
                     </div>
                     <asp:Button runat="server" CssClass="btn btn-warning pull-left" Text="Previous" OnClick="previous_Click1" />
                     <%
-                        if (alldocuments.Count == details.Count)
+                        if (alldocuments.Count == details.Count && details.Count!=0)
                         {
                             nextDocs.Visible = true;
                         }

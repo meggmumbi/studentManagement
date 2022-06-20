@@ -11,7 +11,7 @@
 
 
     <%
-        const int maxStep = 3;
+        const int maxStep = 4;
         var nav = Config.ReturnNav();
         String appplication = "";
 
@@ -183,82 +183,7 @@
         </div>
         <div class="panel-body">
             <div runat="server" id="Div1"></div>
-            <%--    <section class="content">
-                <div class="box box-default">
-                    <div class="box-header with-border">
-                        <h3 class="box-title">Student Deferment</h3>
-
-                    </div>
-                    <!-- /.box-header -->
-                    <div class="box-body">
-                        <div id="Div2" runat="server"></div>
-
-                        <div runat="server" id="linesFeedback"></div>
-
-
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <strong>Booking Type:</strong>
-                                    <asp:DropDownList runat="server" ID="deffermentType" CssClass="form-control select2" OnSelectedIndexChanged="deffermentType_SelectedIndexChanged" AutoPostBack="True">
-                                        <asp:ListItem>--Select--</asp:ListItem>
-                                        <asp:ListItem Value="1">Paper</asp:ListItem>
-                                        <asp:ListItem Value="0">Section</asp:ListItem>
-                                        <asp:ListItem Value="2">Part</asp:ListItem>
-                                    </asp:DropDownList>
-
-                                </div>
-
-                                <div class="form-group">
-                                    <strong>Part:</strong>
-                                    <asp:DropDownList runat="server" ID="part" CssClass="form-control select2" OnSelectedIndexChanged="part_SelectedIndexChanged" AutoPostBack="true" />
-
-
-                                </div>
-
-                            </div>
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <strong>section:</strong>
-                                    <asp:DropDownList runat="server" ID="section" CssClass="form-control select2" OnSelectedIndexChanged="section_SelectedIndexChanged" AutoPostBack="true" />
-                                </div>
-
-
-
-                                <div class="form-group">
-                                    <strong>Paper:</strong>
-                                    <asp:DropDownList runat="server" ID="paper" CssClass="form-control select2" OnSelectedIndexChanged="paper_SelectedIndexChanged" AutoPostBack="true" />
-                                </div>
-                            </div>
-
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <strong>Exam Decsription </strong>
-                                    <asp:TextBox runat="server" ID="description" CssClass="form-control select2" />
-
-                                </div>
-
-
-                                <div class="form-group">
-                                    <strong>Currency</strong>
-                                    <asp:DropDownList runat="server" ID="currency" CssClass="form-control select2" />
-
-                                </div>
-                            </div>
-
-
-
-                            <div class="row">
-                                <div class="col-lg-6 col-sm-6">
-                                    <div class="form-group">
-                                        <br />
-                                        <asp:Button runat="server" CssClass="btn btn-success btn-block" Text=" submitDefferment" ID="addItem" OnClick="addItem_Click" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            </section>--%>
+           
             <div class="row">
                 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                     <p>Active Booking Papers.</p>
@@ -280,13 +205,8 @@
                         <tbody>
                             <%
                                 String applicationNo = Request.QueryString["applicationNo"];
-                                string studentNo = Convert.ToString(Session["studentNo"]);
-                                var details = nav.StudentProcessing.Where(r => r.Student_No == studentNo && r.Document_Type == "Booking" && r.Posted == true && r.Cancelled == false);
-                                foreach (var booking in details)
-                                {
-
-
-                                    var studentProcessingLine = nav.studentProcessingLines.Where(r => r.Student_No == studentNo && r.Booking_Header_No == booking.No);
+                               
+                                    var studentProcessingLine = nav.studentProcessingLines.Where(r => r.Document_Type == "Defferment" && r.Booking_Header_No == applicationNo);
                                     foreach (var line in studentProcessingLine)
                                     {
                             %>
@@ -297,13 +217,10 @@
                                 <td><% =line.Part %></td>
                                 <td><% =line.Paper %></td>
                                 <td><% =line.Description %></td>
-                                <td><%=String.Format("{0:n}", Convert.ToDouble(line.Amount)) %></td>
-                                <td>
-                                    <%--   <label class="btn btn-danger" onclick="removeLine('<% =line.Description %>','<%=line.Line_No %>');"><i class="fa fa-trash"></i>Delete</label></td>--%>
-                                    <%-- <td><a href="deffermentSummery.aspx?applicationNo=<%=line.Booking_Header_No%>" class="btn btn-success"><i class="fa fa-eye"></i>Summery</a></td>--%>
+                                <td><%=String.Format("{0:n}", Convert.ToDouble(line.Amount)) %></td>                              
                             </tr>
                             <% 
-                                    }
+                                    
                                 }
                             %>
                         </tbody>
@@ -313,13 +230,16 @@
             </div>
         </div>
 
+
         <div class="panel-footer">
             <asp:Button runat="server" CssClass="btn btn-warning pull-left" Text="Previous" ID="previous" OnClick="previous_Click" />
             <asp:Button runat="server" CssClass="btn btn-success pull-right" Text="Next" ID="step3" OnClick="step3_Click" />
+           
 
             <div class="clearfix"></div>
         </div>
     </div>
+  
 
 
     <%
@@ -634,6 +554,207 @@
          </div>
      </div>
 
+    <%}
+        else if (myStep == 4)
+        {
+    %>
+    <div class="row" style="width: 100%; margin: auto;">
+        <div class="panel panel-primary">
+
+            <div class="panel-heading">
+                <i class="icon-file"></i>
+                Payment
+            </div>
+            <!-- /widget-header -->
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="Dashboard.aspx">DashBoard </a></li>
+                            <li class="breadcrumb-item active">Payment </li>
+                        </ol>
+                    </div>
+                </div>
+                <div id="PaymentsMpesa" runat="server"></div>
+
+                <br />
+                <div class="row">
+
+                    <div class="tab-content">
+                        <div class="tab-pane fade active in" id="tab_1_1" style="width: 100%">
+                            <div class="row">
+                                <div id="openTenderfeedback" runat="server"></div>
+                                <div class="col-md-12">
+
+                                    <section class="accordion-section clearfix mt-3" aria-label="Question Accordions">
+                                        <div class="container">
+
+                                            <h3>Payment </h3>
+                                            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading p-3 mb-3" role="tab" id="heading0">
+                                                        <h3 class="panel-title">
+                                                            <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse0" aria-expanded="true" aria-controls="collapse0">Mpesa
+                                                            </a>
+                                                        </h3>
+                                                    </div>
+                                                    <div role="tabpanel" aria-labelledby="heading0">
+                                                        <div class="panel-body px-3 mb4">
+                                                        <div class="container">
+                                                            <div class="row">
+                                                                <div class="col-xs-12">                                                                    
+                                                                   <h3><strong>Payment Instructions</strong></h3>                                                                        
+                                                                                
+                                                                  
+                                                                        <div>
+                                                                            <div class="panel-body">
+                                                                                <div class="panel-body px-3 mb-4">
+                                                                                   
+                                                                                   <center><img class="imgMpesa" src="assets/img/stkMpesa.png" />
+                                                                                     <p></p><h4><strong>Please ensure you have the following ready to make payment</strong></h4></center> 
+                                                                                    <ol type="1">
+                                                                                       <li>Enough funds in your Mpesa account.</li>
+                                                                                        <li>The Correct Mpesa pin code.</li>
+                                                                                        <li>Use a Safaricom sim not older than 3 years</li>
+                                                                                        <li>Account No. <strong><%=Request.QueryString["applicationNo"] %> </strong></li>
+                                                                                        <li>Amount <strong>
+                                                                                            <p runat="server" style="display: inline" id="AmountInstructions"></p>
+                                                                                        </strong></li>
+                                                                                        <li>Make sure you have the phone you are making payment with.</li>
+                                                                                        <li>You will be prompted to enter your Mpesa Pin to complete the payment</li>
+                                                                                    </ol>
+                                                                                    <p style="text-align:center">NB: You have to wait for the Mpesa Pop Up message to confirm your payment. Should you wish to retry your transaction please wait for a period of 3 minutes.
+                                                                                    </p>
+                                                                                    <div class="panel-footer">
+                                                                                        <label class="btn btn-success" onclick="makePayments('<%=Request.QueryString["applicationNo"]%>')"><i class="fa fa-money"></i>Pay Now</label>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                                    <div class="panel panel-default">
+                                                                        <div class="panel-heading p-3 mb-3" role="tab" id="heading2">
+                                                                            <h3 class="panel-title">
+                                                                                <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapse2">Manual Payment Instructions (Pay Later)
+                                                                                </a>
+                                                                            </h3>
+                                                                        </div>
+                                                                        <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                                                                            <div class="panel-body px-3 mb-4">
+                                                                                <div>
+                                                                                    <div class="panel-body">
+                                                                                 <div class="panel-body px-3 mb-4">
+                                                                                    
+                                                                                     <img src="assets/img/paybill-number.jpg" style="width: 150px; height: 90px" />
+                                                                                     <div class="col-lg-12">
+                                                                                         <div class="form-group">                                                                                                                                                                                       <br />
+                                                                                             <asp:CheckBox runat="server" ID="CheckBox1" />
+                                                                                             <label class="font-noraml" for="acceptTerms">Pay Later.</label>
+                                                                                         </div>
+                                                                                     </div>
+                                                                                     <ol type="1">
+                                                                                         <li>Go to MPESA</li>
+                                                                                         <li>Lipa na Mpesa</li>
+                                                                                         <li>Paybill Option</li>
+                                                                                         <li>Paybill No: <strong>204777</strong></li>
+                                                                                         <li>Account No. <strong><%=Request.QueryString["applicationNo"] %> </strong></li>
+                                                                                         <li>Amount <strong>
+                                                                                             <p runat="server" style="display: inline" id="AmountInstructionsManual"></p>
+                                                                                         </strong></li>
+                                                                                         <li>Make sure you have the phone you are making payment with.</li>
+                                                                                         <li>You will be prompted to enter your Mpesa Pin to complete the payment</li>
+                                                                                     </ol>
+
+                                                                                 </div>
+                                                                             </div>
+                                                                         </div>
+
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                                   
+                                                           
+                                                <div class="panel panel-default" style="display: none">
+                                                    <div class="panel-heading p-3 mb-3" role="tab" id="heading2">
+                                                        <h3 class="panel-title">
+                                                            <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapse2">Other Modes of Payment
+
+                                                            </a>
+                                                        </h3>
+                                                    </div>
+                                                    <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                                                        <div class="panel-body px-3 mb-4">
+                                                            <div id="modalPay" role="dialog">
+
+                                                                <div class="row">
+                                                                    <div class="panel-heading">
+                                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                        <h4 class="modal-title">Confirm Examination registration Payment</h4>
+                                                                    </div>
+                                                                    <div class="panel-body">
+
+                                                                        <asp:TextBox runat="server" ID="editRationaleCode" type="hidden" />
+                                                                        <div class="form-group">
+                                                                            <strong>Application Number:</strong>
+                                                                            <asp:TextBox runat="server" CssClass="form-control" ID="accreditationnumber" />
+
+                                                                        </div>
+
+                                                                        <div class="form-group">
+                                                                            <strong>Payment Mode:</strong>
+                                                                            <asp:DropDownList runat="server" CssClass="form-control" ID="paymentsM" />
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <strong>Payment Document:</strong>
+                                                                            <asp:FileUpload runat="server" ID="paymentdocument" CssClass="form-control" Style="padding-top: 0px;" />
+                                                                            <%-- <asp:RequiredFieldValidator runat="server" ID="payments" ControlToValidate="paymentdocument" ErrorMessage="Please attach the Payment Document!" ForeColor="Red" />--%>
+                                                                            <div class="form-group">
+                                                                                <strong>Payment Reference Number:</strong>
+                                                                                <asp:TextBox runat="server" CssClass="form-control" ID="paymentsref" placeholder="Payment Reference Number" />
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <div class="panel-footer">
+                                                                        <%-- <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>--%>
+                                                                        <asp:Button runat="server" CssClass="btn btn-success" Text="Confirm Payments" ID="makePayments" OnClick="makePayments_Click" EnableViewState="true" />
+                                                                    </div>
+                                                                </div>
+
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                </div>
+                                            </div>
+                 
+                                    </section>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+
+
     <%} %>
       <script>
 
@@ -646,6 +767,21 @@
            <script type="text/javascript">
            function studentattachdocuments(entryNo) {
             $("#DocumentsAttach").modal();
+        }
+    </script>
+            <script>
+
+
+        $(document).ready(function () {
+
+
+        });
+    </script>
+    <script>
+        function makePayments(no) {
+            document.getElementById("MainContent_ApplicationNo").value = no;
+
+            $("#MakepaymentsModal").modal();
         }
     </script>
          <div id="DocumentsAttach" class="modal fade" role="dialog">
@@ -685,6 +821,40 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                     <asp:Button runat="server" CssClass="btn btn-danger" Text="Delete File" OnClick="deleteFile_Click" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id="MakepaymentsModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Confirm Registration Payments</h4>
+                </div>
+                <div class="modal-body">
+                    <asp:TextBox runat="server" ID="TextBox3" type="hidden" />
+                    <div class="form-group">
+                        <strong>Application Number:</strong>
+                        <asp:TextBox runat="server" CssClass="form-control" ID="ApplicationNo" placeholder="Institution Accreditation Number" ReadOnly="true" />
+
+                    </div>
+                    <div class="form-group">
+                        <strong>Amount:</strong>
+                        <asp:TextBox runat="server" CssClass="form-control" ID="Amount" ReadOnly="true" />
+                    </div>
+                    <div class="form-group">
+                        <strong>Phone Number:</strong>
+                        <asp:TextBox runat="server" TextMode="Number" CssClass="form-control" ID="PhoneNumberPay" />
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <asp:Button runat="server" CssClass="btn btn-success" Text="Confirm Payment" ID="SubmitPayment" OnClick="SubmitPayment_Click" />
                 </div>
             </div>
 

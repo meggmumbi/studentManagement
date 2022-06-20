@@ -92,11 +92,11 @@ namespace StudentManagementASPX
                 var projectCode = Request.QueryString["projectCode"];
 
                 var courses = nav.ExamCourses.Where(r => r.Job_No == projectCode);
-                course.DataSource = courses;
-                course.DataTextField = "Description";
-                course.DataValueField = "Job_Task_No";
-                course.DataBind();
-                course.Items.Insert(0, new System.Web.UI.WebControls.ListItem("--select--", ""));
+                ExamCodes.DataSource = courses;
+                ExamCodes.DataTextField = "Description";
+                ExamCodes.DataValueField = "Job_Task_No";
+                ExamCodes.DataBind();
+                ExamCodes.Items.Insert(0, new System.Web.UI.WebControls.ListItem("--select--", ""));
                 
 
 
@@ -156,8 +156,8 @@ namespace StudentManagementASPX
                 String applicationNo = Request.QueryString["applicationNo"];
                 accreditationnumber.Text = applicationNo;
                 // String courseId = Request.QueryString["courseId"];
-                ExamCode.Text = courseId;
-                course.SelectedValue = courseId;
+               
+                ExamCodes.SelectedValue = courseId;
                 var courseDesc = nav.ExamCourses.Where(r => r.Examination_Code == courseId);
                 foreach (var description in courseDesc)
                 {
@@ -208,6 +208,8 @@ namespace StudentManagementASPX
                         kinName.Text = descript.Contact_Full_Name;
                         kinEmail.Text = descript.Contact_Email;
                         kinPhone.Text = descript.Contact_Phone_No;
+                        examinationz.Text = descript.Examination_ID;
+                        courseTextBox.Text = descript.Examination_Description;
                         if (descript.Disabled == true)
                         {
                             disabledchallenge.SelectedValue = "2";
@@ -250,7 +252,7 @@ namespace StudentManagementASPX
                             kin.SelectedValue = "3";
 
                         }
-                        var nextofkinDetails = nav.StudentProcessing.Where(r => r.No == applicationNo && r.Highest_Academic_QCode != "" && r.Contact_Full_Name != "").ToList();
+                        var nextofkinDetails = nav.StudentProcessing.Where(r => r.No == applicationNo && r.Highest_Academic_QCode != "" && r.Contact_Full_Name != "" &&r.Examination_ID !="").ToList();
                         if (nextofkinDetails.Count > 0)
                         {
                             AdditionalNext.Visible = true;
@@ -306,7 +308,7 @@ namespace StudentManagementASPX
             {
 
                 string education = txteducationallevel.SelectedValue.Trim();
-                string texam = course.SelectedValue.Trim();
+               // string texam = course.SelectedValue.Trim();
                 // string texamCycle = examCylce.SelectedValue.Trim();
                 //string tExamCenter = examCenter.SelectedValue.Trim();
                 string tDisabled = disabledchallenge.SelectedValue.Trim();
@@ -344,11 +346,7 @@ namespace StudentManagementASPX
                     error = true;
                     message = "Please enter the the next of kin Phone Number";
                 }
-                //if (string.IsNullOrEmpty(texamCycle))
-                //{
-                //    error = true;
-                //    message = "Select Exam Cycle";
-                //}
+            
                 //if (string.IsNullOrEmpty(tExamCenter))
                 //{
                 //    error = true;
@@ -371,7 +369,7 @@ namespace StudentManagementASPX
 
 
 
-                string response = new Config().ObjNav().FnApplicantProfileRegistrationLines(applicationNo, tDisabled, texam, education, tinformation, tkin, tkinName, tkinEmail, tkinPhone, trainingInstitution);
+                string response = new Config().ObjNav().FnApplicantProfileRegistrationLines(applicationNo, tDisabled, "", education, tinformation, tkin, tkinName, tkinEmail, tkinPhone, trainingInstitution);
 
                 String[] info = response.Split('*');
                 if (info[0] == "success")
@@ -418,7 +416,7 @@ namespace StudentManagementASPX
                 string tpostal = postal.SelectedValue.Trim();
                 string tcity = city.Text.Trim();
                 string projectCode = project.Text;
-                string courseId = ExamCode.Text;
+                string courseId = ExamCodes.SelectedValue;
                 string tpostalAddress = postalAddress.Text;
                 int gender = Convert.ToInt32(txtgender.SelectedValue.Trim());
                 string tDOB = txtDOB.Text.Trim();
@@ -448,7 +446,13 @@ namespace StudentManagementASPX
                     message = "Enter firstName";
 
                 }
-              
+                if (string.IsNullOrEmpty(courseId))
+                {
+                    error = true;
+                    message = "Please selet Examination it cannot be empty";
+
+                }
+
                 if (string.IsNullOrEmpty(Convert.ToString(gender)))
                 {
                     error = true;
@@ -473,38 +477,7 @@ namespace StudentManagementASPX
                     message = "Please Enter Your Date of Birth";
 
                 }
-                //var nav = Config.ReturnNav();
-                //String applicationNumber = Request.QueryString["applicationNo"];
-                //var studentProcessing = nav.StudentProcessing.Where(r => r.No == applicationNumber && r.ID_Number_Passport_No == tIdNumber && r.Examination_ID == courseId).ToList();
-                //if (studentProcessing.Count == 0)
-                //{
-                //    if (string.IsNullOrEmpty(filename))
-                //    {
 
-                //        error = true;
-                //        message = "Please Upload Your Photo";
-
-                //    }
-                //    string extension = System.IO.Path.GetExtension(FileUpload1.FileName);
-                //    if (extension == ".png" || extension == ".PNG")
-                //    {
-                //        error = true;
-                //        message = "Please Select a JPEG image";
-
-                //    }
-                //    if (extension == ".jpeg" || extension == ".JPEG")
-                //    {
-                //        error = true;
-                //        message = "Please Select a JPG image";
-
-                //    }
-                //    if (extension == ".jplg" || extension == ".JPLG")
-                //    {
-                //        error = true;
-                //        message = "Please Select a JPG image";
-
-                //    }
-                //}
                 string IdNumber = Convert.ToString(Session["idNumber"]);
                 var path = "~/images/" + IdNumber+".jpg";                
                 string servpath = Server.MapPath(path);
@@ -661,8 +634,8 @@ namespace StudentManagementASPX
             string courseId = Request.QueryString["courseId"];
             string studentNo = Convert.ToString(Session["studentNo"]);
             string applicationNo = Request.QueryString["applicationNo"];
-
-            Response.Redirect("StudentRegistration.aspx?step=1&&courseId=" + courseId + "&&applicationNo=" + applicationNo);
+            string projectCodes = Request.QueryString["projectCode"];
+            Response.Redirect("StudentRegistration.aspx?step=1&&courseId=" + courseId + "&&applicationNo=" + applicationNo+ "&&projectCode="+projectCodes);
 
             // Response.Redirect("StudentRegistration.aspx?step=1");
         }
@@ -1943,14 +1916,6 @@ namespace StudentManagementASPX
             }
         }
 
-        protected void course_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var nav = Config.ReturnNav();
-            var courseDesc = nav.ExamCourses.Where(r => r.Examination_Code == course.SelectedValue);
-            foreach (var description in courseDesc)
-            {
-                courseTextBox.Text = description.Description;
-            }
-        }
+  
     }
 }

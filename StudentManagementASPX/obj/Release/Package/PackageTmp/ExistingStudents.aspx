@@ -304,7 +304,7 @@
                                         <% 
                                             // string studentNo = Convert.ToString(Session["studentNo"]);
                                             string courseId = Request.QueryString["courseId"];
-                                            var details = nav.AttachDocuments.Where(r => r.Template_No == template.Text && r.Examination_Process == "Registration" && r.Examiantion_ID == courseId).ToList();
+                                            var details = nav.AttachDocuments.Where(r => r.Template_No == template.Text && r.Examination_Process == "Registration" && r.Examiantion_ID == courseId && r.Type=="Both").ToList();
                                             //string university = Convert.ToString(Session["UniversityCode"]);
                                             int programesCounter = 0;
                                             int counter = 0;

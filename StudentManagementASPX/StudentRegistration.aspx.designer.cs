@@ -256,6 +256,15 @@ namespace StudentManagementASPX {
         protected global::System.Web.UI.WebControls.TextBox postalAddress;
         
         /// <summary>
+        /// ExamCodes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ExamCodes;
+        
+        /// <summary>
         /// appNo control.
         /// </summary>
         /// <remarks>
@@ -272,15 +281,6 @@ namespace StudentManagementASPX {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox project;
-        
-        /// <summary>
-        /// ExamCode control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ExamCode;
         
         /// <summary>
         /// nextExamDetails control.
@@ -328,13 +328,13 @@ namespace StudentManagementASPX {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl nextofkin;
         
         /// <summary>
-        /// course control.
+        /// examinationz control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList course;
+        protected global::System.Web.UI.WebControls.TextBox examinationz;
         
         /// <summary>
         /// examCylce control.

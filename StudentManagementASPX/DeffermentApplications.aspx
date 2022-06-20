@@ -33,6 +33,7 @@
                 <tbody>
                     <% 
                         //String applicationNo = Request.QueryString["applicationNo"];
+                         string application = "";
                         var nav = Config.ReturnNav();
                         string studentNo = Convert.ToString(Session["idNumber"]);
                         var details = nav.StudentProcessing.Where(r => r.ID_Number_Passport_No == studentNo && r.Document_Type == "Defferment");
@@ -63,33 +64,52 @@
                             else if (detail.Approval_Status == "Released")
                             {
                         %>
-                        <td style="color:green">Deferment Approved</td>
+                        <td style="color: green">Deferment Approved</td>
                         <%} %>
 
                         <td><%=detail.Reason_for_Rejection %></td>
-                         <td><a href="deffermentSummery.aspx?applicationNo=<%=detail.No%>" class="btn btn-success"><i class="fa fa-eye"></i>Deferment Summery</a></td>
-                        <%if (detail.Posted == false)
+                        <td><a href="deffermentSummery.aspx?applicationNo=<%=detail.No%>" class="btn btn-success"><i class="fa fa-eye"></i>Deferment Summery</a></td>
+                        <%if (detail.Posted == false && detail.Application_Invoice == "")
                             {
 
                         %>
                         <td><a href="Defferment.aspx?applicationNo=<%=detail.No %>" class="btn btn-success"><i class="fa fa-eye"></i>Edit</a></td>
 
                         <%}
-                        else
-                        { %>
-                        <td></td>
-                        <%} %>
+                            var detailz = nav.StudentProcessing.Where(r => r.ID_Number_Passport_No == studentNo && r.Document_Type == "Defferment" && r.Submitted == true && r.Application_Invoice != "" && r.Posted==false).ToList();
+                            if (detailz.Count > 0)
+                            {
+                                foreach (var detailsz in detailz)
+                                {
+                                    application = detailsz.No;
+                                }
+
+                                var mpesa = nav.MpesaTransaction.Where(r => r.ACCOUNT_NUMBER == application).ToList();
+                                if (mpesa.Count == 0)
+                                {%>
+
+                        <td><a href="DiffermentPayment.aspx?&&studentNo=<%=detail.Student_No%>&&invoiceNo=<%=detail.Application_Invoice %>&&applicationNo=<%=detail.No %>" class="btn btn-success"><i class="fa fa-eye"></i>View Invoice</a></td>
+                        <%}
+
+                            else if (mpesa.Count > 0)
+                            {
+
+                        %>
+                        <td style="color:green"><strong>Please wait for a notification </strong></td>
+
+                        <%}
+                                }
+                                else
+                                {
+                                    %>
+                         <td style="color:green"><strong>Your Application was successfull </strong></td>
+
+                              <%  }
+
+                            } %>
                     </tr>
-                    <%  
-                        } %>
                 </tbody>
             </table>
-
-
-
-
-
-
         </div>
     </div>
 </asp:Content>

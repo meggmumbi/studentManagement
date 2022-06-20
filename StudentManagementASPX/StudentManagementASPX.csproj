@@ -13298,6 +13298,7 @@
     <Content Include="DeffermentApplications.aspx" />
     <Content Include="DeffermentInstructions.aspx" />
     <Content Include="deffermentSummery.aspx" />
+    <Content Include="DiffermentPayment.aspx" />
     <Content Include="dist\css\bootstrap-grid.css" />
     <Content Include="dist\css\bootstrap-grid.min.css" />
     <Content Include="dist\css\bootstrap-reboot.css" />
@@ -15200,6 +15201,13 @@
     </Compile>
     <Compile Include="deffermentSummery.aspx.designer.cs">
       <DependentUpon>deffermentSummery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DiffermentPayment.aspx.cs">
+      <DependentUpon>DiffermentPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DiffermentPayment.aspx.designer.cs">
+      <DependentUpon>DiffermentPayment.aspx</DependentUpon>
     </Compile>
     <Compile Include="ExaminationAcounts.aspx.cs">
       <DependentUpon>ExaminationAcounts.aspx</DependentUpon>

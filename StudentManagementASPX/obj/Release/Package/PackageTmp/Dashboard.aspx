@@ -263,26 +263,30 @@
                                                     <%
                                                         var nav1 = Config.ReturnNav();
                                                         string studentNo = Convert.ToString(Session["studentNo"]);
-                                                        //string applicationNumber = Request.QueryString["applicationNo"];
-                                                        var program = nav.ExamBookingEntries.Where(r => r.Stud_Cust_No == studentNo && r.Blocked == false && r.Status=="Open");
-                                                        foreach (var programz in program)
+                                                        string surrenderData = new Config().ObjNav().FnGetExamBookingEntries(studentNo, 5);
+                                                        String[] info = surrenderData.Split(new string[] { "::::" }, StringSplitOptions.RemoveEmptyEntries);
+                                                        if (info != null)
                                                         {
+                                                            foreach (var allInfo in info)
+                                                            {
+                                                                String[] arr = allInfo.Split('*');
 
                                                     %>
                                                     <tr>
-                                                        <td><%=programz.Student_Reg_No %></td>
-                                                        <td><%=programz.Student_Name %></td>
-                                                        <td><%=programz.Examination %></td>                                                    
-                                                        <td><%=programz.Paper %></td>  
-                                                        <td><%=programz.Part %></td>                                    
-                                                       
+                                                        <td><%=arr[0] %></td>
+                                                        <td><%=arr[1] %></td>
+                                                        <td><%=arr[2]%></td>
+                                                        <td><%=arr[7] %></td>
+                                                        <td><%=arr[3] %></td>
+
                                                     </tr>
                                                     <%
                                                         }
+                                                    }
                                                     %>
                                                 </tbody>
                                             </table>
-                                                </div>
+                                            </div>
                                         </div>
                                         <!-- /.box-body -->
                                     </div>
@@ -350,43 +354,49 @@
                                         <!-- /.box-header -->
                                         <div class="box-body">
                                             <div class="table-responsive">
-                                            <table id="example7" class="table table-bordered table-striped">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Registration No:</th>
-                                                        <th>Student Name</th>
-                                                        <th>Examination ID</th>
-                                                        <th>Part</th>
-                                                        <th>Examination</th>
-                                                        <th>Fee Amount</th>
-                                                        <th>Status</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <%
-                                                        var nav3 = Config.ReturnNav();
-                                                        string student = Convert.ToString(Session["studentNo"]);
-                                                        //string applicationNumber = Request.QueryString["applicationNo"];
-                                                        var deffereement = nav2.ExamBookingEntries.Where(r => r.Stud_Cust_No == studentNo && r.Status=="Defered");
-                                                        foreach (var deffer in deffereement)
-                                                        {
+                                                <table id="example7" class="table table-bordered table-striped">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Registration No:</th>
+                                                            <th>Student Name</th>
+                                                            <th>Examination ID</th>
+                                                            <th>Part</th>
+                                                            <th>Examination</th>
+                                                            <th>Fee Amount</th>
+                                                            <th>Status</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <%
+                                                            var nav3 = Config.ReturnNav();
+                                                            string student = Convert.ToString(Session["studentNo"]);
+                                                           
+                                                            string surrenderDatas = new Config().ObjNav().FnGetExamBookingEntries(studentNo, 2);
+                                                            String[] infos = surrenderDatas.Split(new string[] { "::::" }, StringSplitOptions.RemoveEmptyEntries);
+                                                            if (infos != null)
+                                                            {
+                                                                foreach (var allInfo in infos)
+                                                                {
+                                                                    String[] arr = allInfo.Split('*');
 
-                                                    %>
-                                                    <tr>
-                                                        <td><%=deffer.Student_Reg_No %></td>
-                                                        <td><%=deffer.Student_Name %></td>
-                                                        <td><%=deffer.Examination %></td>
-                                                        <td><%=deffer.Part %></td>
-                                                        <td><%=deffer.Description %></td>
-                                                        <td><%=deffer.Fee_Amount %></td>
-                                                        <td><%=deffer.Status %></td>
-                                                    </tr>
-                                                    <%
+
+                                                        %>
+                                                        <tr>
+                                                            <td><%=arr[0] %></td>
+                                                            <td><%=arr[1] %></td>
+                                                            <td><%=arr[2]%></td>
+                                                            <td><%=arr[3] %></td>
+                                                            <td><%=arr[4] %></td>
+                                                            <td><%=arr[5] %></td>
+                                                            <td><%=arr[6] %></td>
+                                                        </tr>
+                                                        <%
+                                                            }
                                                         }
-                                                    %>
-                                                </tbody>
-                                            </table>
-                                                </div>
+                                                        %>
+                                                    </tbody>
+                                                </table>
+                                            </div>
                                         </div>
                                         <!-- /.box-body -->
                                     </div>
@@ -404,43 +414,48 @@
                                         <!-- /.box-header -->
                                         <div class="box-body">
                                             <div class="table-responsive">
-                                            <table id="example5" class="table table-bordered table-striped">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Registration No:</th>
-                                                        <th>Student Name</th>
-                                                        <th>Examination</th>
-                                                        <th>Part</th>
-                                                        <th>Examination</th>
-                                                        <th>Fee Amount</th>
-                                                        <th>Status</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <%
-                                                        var nav4 = Config.ReturnNav();
-                                                        string students = Convert.ToString(Session["studentNo"]);
-                                                        //string applicationNumber = Request.QueryString["applicationNo"];
-                                                        var withdrawn = nav2.ExamBookingEntries.Where(r => r.Stud_Cust_No == studentNo && r.Status=="Withdrawn");
-                                                        foreach (var withdraw in withdrawn)
-                                                        {
+                                                <table id="example5" class="table table-bordered table-striped">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Registration No:</th>
+                                                            <th>Student Name</th>
+                                                            <th>Examination</th>
+                                                            <th>Part</th>
+                                                            <th>Examination</th>
+                                                            <th>Fee Amount</th>
+                                                            <th>Status</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <%
+                                                            var nav4 = Config.ReturnNav();
+                                                            string students = Convert.ToString(Session["studentNo"]);
+                                                          
+                                                            string surrenderDataz = new Config().ObjNav().FnGetExamBookingEntries(studentNo, 7);
+                                                            String[] infoz = surrenderDataz.Split(new string[] { "::::" }, StringSplitOptions.RemoveEmptyEntries);
+                                                            if (infoz != null)
+                                                            {
+                                                                foreach (var allInfo in infoz)
+                                                                {
+                                                                    String[] arr = allInfo.Split('*');
 
-                                                    %>
-                                                    <tr>
-                                                        <td><%=withdraw.Student_Reg_No %></td>
-                                                        <td><%=withdraw.Student_Name %></td>
-                                                        <td><%=withdraw.Examination %></td>
-                                                        <td><%=withdraw.Part %></td>
-                                                        <td><%=withdraw.Description %></td>
-                                                        <td><%=withdraw.Fee_Amount %></td>
-                                                        <td><%=withdraw.Status %></td>
-                                                    </tr>
-                                                    <%
+                                                        %>
+                                                        <tr>
+                                                            <td><%=arr[0] %></td>
+                                                            <td><%=arr[1] %></td>
+                                                            <td><%=arr[2]%></td>
+                                                            <td><%=arr[3] %></td>
+                                                            <td><%=arr[4] %></td>
+                                                            <td><%=arr[5] %></td>
+                                                            <td><%=arr[6] %></td>
+                                                        </tr>
+                                                        <%
+                                                            }
                                                         }
-                                                    %>
-                                                </tbody>
-                                            </table>
-                                                </div>
+                                                        %>
+                                                    </tbody>
+                                                </table>
+                                            </div>
                                         </div>
                                         <!-- /.box-body -->
                                     </div>
@@ -506,8 +521,7 @@
                                                             string IdNumbers = Convert.ToString(Session["idNumber"]);
                                                             var nav = Config.ReturnNav();
                                                             int programesCounter = 0;
-                                                            //string courseId = Request.QueryString["courseId"];
-                                                            var details = nav.ExaminationResults.Where(r => r.National_ID_No == IdNumbers);
+                                                           
                                                             string surrenderData = new Config().ObjNav().FnGetExaminationResults(IdNumbers);
                                                             String[] info = surrenderData.Split(new string[] { "::::" }, StringSplitOptions.RemoveEmptyEntries);
                                                             if (info != null)
@@ -523,10 +537,10 @@
                                                         <tr>
                                                             <td><%=programesCounter %></td>
                                                             <td><%=arr[0] %></td>
-                                                            <td><%=arr[1]%>></td>
+                                                            <td><%=arr[1]%></td>
                                                             <td><%=arr[2] %></td>
                                                             <td><%=arr[3] %></td>
-                                                            <td><%=arr[4] + " " + arr[5] %></td>
+                                                            <td><%=arr[4] %></td>
                                                             <td><%=Convert.ToDateTime(arr[6]).ToString("yy/MM/dd") %></td>
                                                             <%-- <td><a href="ResultSlip.aspx?No=<%=detail.Student_Reg_No%>&&sitting=<%=detail.Examination_Sitting_ID %>" class="btn btn-success"><i class="fa fa-eye"></i>Result Slip</a></td>--%>
                                                         </tr>
