@@ -281,8 +281,9 @@ namespace StudentManagementASPX
             }
             else
             {
+                string courseid = Request.QueryString["courseid"];
                 String applicationNo = Request.QueryString["applicationNo"];
-                Response.Redirect("Withdrawal.aspx?step=3&&applicationNo=" + applicationNo);
+                Response.Redirect("Withdrawal.aspx?step=3&&applicationNo=" + applicationNo+ "&&courseid="+courseid);
             }
             
         }
@@ -295,9 +296,10 @@ namespace StudentManagementASPX
 
         protected void prevstep1_Click(object sender, EventArgs e)
         {
+            string courseid = Request.QueryString["courseid"];
             var cycle = Request.QueryString["cycle"];
             String applicationNo = Request.QueryString["applicationNo"];
-            Response.Redirect("Withdrawal.aspx?step=2&&applicationNo=" + applicationNo + "&&cycle=" + cycle);
+            Response.Redirect("Withdrawal.aspx?step=2&&applicationNo=" + applicationNo + "&&cycle=" + cycle+ "&&courseid=" + courseid);
         }
         public void UploadDocuments_Click(object sender, EventArgs e)
         {
@@ -436,7 +438,7 @@ namespace StudentManagementASPX
             String applicationNo = Request.QueryString["applicationNo"];
             var nav1 = Config.ReturnNav();
             string message = "";
-            var studentProcessingLine = nav1.studentProcessingLines.Where(r => r.Booking_Header_No == applicationNo && r.Type == "Booking").ToList();
+            var studentProcessingLine = nav1.studentProcessingLines.Where(r => r.Booking_Header_No == applicationNo && r.Type == "Withdrawal").ToList();
 
             if (studentProcessingLine.Count > 3)
             {

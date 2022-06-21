@@ -58,7 +58,7 @@ namespace StudentManagementASPX
                 examCycle.Items.Insert(0, new System.Web.UI.WebControls.ListItem("--select--", ""));
 
 
-                examCenter.DataSource = exmcycle;
+                examCenter.DataSource = exmcycle.Where(r => r.Sitting_Status == "Active" && r.Closed == false);
                 examCenter.DataTextField = "examCycle";
                 examCenter.DataValueField = "examCycle";
                 examCenter.DataBind();
@@ -153,7 +153,7 @@ namespace StudentManagementASPX
                     }
                     //Response.Redirect("Defferment.aspx?step=2&&applicationNo=" + applicationNo);
                     generalFeedback.InnerHtml = "<div class='alert alert-" + info[0] + " '>" + info[1] + " <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a></div>";
-                    Response.Redirect("Defferment.aspx?step=2&&courseId=" + info[3] + "&&applicationNo=" + applicationNo);
+                    Response.Redirect("Defferment.aspx?step=2&&courseId=" + info[3] + "&&applicationNo=" + applicationNo+"&&reason="+ withdrawalReason);
                     
                 }
                 else
@@ -588,9 +588,10 @@ namespace StudentManagementASPX
 
         protected void step3_Click(object sender, EventArgs e)
         {
+            string reason = Request.QueryString["reason"];
             string courseId = Request.QueryString["courseId"];
             String applicationNo = Request.QueryString["applicationNo"];
-            Response.Redirect("Defferment.aspx?step=3&&applicationNo=" + applicationNo+ "&&courseId="+ courseId);
+            Response.Redirect("Defferment.aspx?step=3&&applicationNo=" + applicationNo+ "&&courseId="+ courseId+ "&&reason="+ reason);
         }
         protected void attachdoc_Click(object sender, EventArgs e)
         {

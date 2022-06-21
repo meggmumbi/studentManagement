@@ -187,7 +187,7 @@
             <ul class="nav nav-tabs">
                 <li class="active" style="background-color: gray">
                     <a href="#tab_1_documents" data-toggle="tab">
-                        <p style="color: black">Defferment Document Attachments</p>
+                        <p style="color: black">Withdrawal Document Attachments</p>
                     </a>
                 </li>
             <%--    <li style="background-color: gray">

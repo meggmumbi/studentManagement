@@ -298,8 +298,9 @@
                                     </thead>
                                     <tbody>
                                         <% 
+                                            string reason = Request.QueryString["reason"];
                                             string courseId = Request.QueryString["courseId"];
-                                            var details = nav.AttachDocuments.Where(r => r.Template_No == template.Text  && r.Examination_Process == "Defferment" && r.Examiantion_ID == courseId).ToList();
+                                            var details = nav.AttachDocuments.Where(r => r.Template_No == template.Text  && r.Examination_Process == "Defferment" && r.Examiantion_ID == courseId && r.Examination_Document_Type==reason).ToList();
                                             int programesCounter = 0;
                                             int counter = 0;
                                             foreach (var detail in details)
