@@ -108,7 +108,7 @@ namespace StudentManagementASPX
             try
             {
                 
-                String StudentNo = studentNo.Text.Trim();
+                String StudentNo = Convert.ToString(Session["studentNo"]);
                 string courseid = Request.QueryString["courseid"];
                 //DateTime applicationDate = Convert.ToDateTime(Date.Text);
                 String regNUmber = regNo.SelectedValue.Trim();

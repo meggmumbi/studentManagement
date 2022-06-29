@@ -13289,6 +13289,8 @@
     <Content Include="CenterReallocationInstructions.aspx" />
     <Content Include="ChangeEmail.aspx" />
     <Content Include="ChangePassword.aspx" />
+    <Content Include="ConfirmationApp.aspx" />
+    <Content Include="ConfirmationApplications.aspx" />
     <Content Include="Courses.aspx" />
     <Content Include="assets\css\css.css" />
     <Content Include="CRMCaseManagement.aspx" />
@@ -13439,6 +13441,9 @@
     <Content Include="ExamBooking.aspx" />
     <Content Include="registrationInstructions.aspx" />
     <Content Include="RejectedApplications.aspx" />
+    <Content Include="RemarkingApp.aspx" />
+    <Content Include="RemarkingApplications.aspx" />
+    <Content Include="RemarkingList.aspx" />
     <Content Include="Renewal.aspx" />
     <Content Include="RenewalApplications.aspx" />
     <Content Include="RenewalInvoice.aspx" />
@@ -15153,6 +15158,20 @@
       <DependentUpon>ChangePassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Config.cs" />
+    <Compile Include="ConfirmationApp.aspx.cs">
+      <DependentUpon>ConfirmationApp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConfirmationApp.aspx.designer.cs">
+      <DependentUpon>ConfirmationApp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmationApplications.aspx.cs">
+      <DependentUpon>ConfirmationApplications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConfirmationApplications.aspx.designer.cs">
+      <DependentUpon>ConfirmationApplications.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Courses.aspx.cs">
       <DependentUpon>Courses.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -15496,6 +15515,27 @@
     <Compile Include="RejectedApplications.aspx.designer.cs">
       <DependentUpon>RejectedApplications.aspx</DependentUpon>
     </Compile>
+    <Compile Include="RemarkingApp.aspx.cs">
+      <DependentUpon>RemarkingApp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RemarkingApp.aspx.designer.cs">
+      <DependentUpon>RemarkingApp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RemarkingApplications.aspx.cs">
+      <DependentUpon>RemarkingApplications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RemarkingApplications.aspx.designer.cs">
+      <DependentUpon>RemarkingApplications.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RemarkingList.aspx.cs">
+      <DependentUpon>RemarkingList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RemarkingList.aspx.designer.cs">
+      <DependentUpon>RemarkingList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Renewal.aspx.cs">
       <DependentUpon>Renewal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -15701,6 +15741,11 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
+    <ServiceReferenceMetadataStorage Include="Service References\Nav\">
+      <Type>datasvcmap</Type>
+    </ServiceReferenceMetadataStorage>
+  </ItemGroup>
+  <ItemGroup>
     <WebReferenceUrl Include="http://192.168.0.95:6052/Kasneb/WS/kasneb/Codeunit/StudentManagement">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\StudentManagement\</RelPath>
@@ -15712,11 +15757,6 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>StudentManagementASPX_StudentManagement_StudentManagement</CachedSettingsPropName>
     </WebReferenceUrl>
-  </ItemGroup>
-  <ItemGroup>
-    <ServiceReferenceMetadataStorage Include="Service References\Nav\">
-      <Type>datasvcmap</Type>
-    </ServiceReferenceMetadataStorage>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

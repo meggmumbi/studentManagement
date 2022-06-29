@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b065ea55-0664-4546-a6b2-8a684a5ffdf5" xmlns="urn:schemas-microsoft-com:xml-dataservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1eb39de3-fe74-4baf-bb63-73ab04d5b787" xmlns="urn:schemas-microsoft-com:xml-dataservicemap">
   <MetadataSources>
     <MetadataSource Address="http://192.168.0.95:6053/Kasneb/OData/" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.edmx" MetadataType="Edmx" ID="d916ac61-95a7-4a76-9d7e-3dc9b7fe21bf" SourceId="1" SourceUrl="http://192.168.0.95:6053/Kasneb/OData/" />
+    <MetadataFile FileName="service.edmx" MetadataType="Edmx" ID="ddafde4b-fd3d-475f-a5a6-04f9d7d77daf" SourceId="1" SourceUrl="http://192.168.0.95:6053/Kasneb/OData/" />
   </Metadata>
   <Extensions />
   <Parameters>

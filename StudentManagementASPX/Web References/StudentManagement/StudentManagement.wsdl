@@ -1369,6 +1369,35 @@
           </sequence>
         </complexType>
       </element>
+      <element name="DeffermentInvoice">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="DeffermentInvoice_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnConfirmation">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="studentNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="regNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnConfirmation_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
       <element name="FnGetStudentUser">
         <complexType>
           <sequence>
@@ -1378,20 +1407,6 @@
         </complexType>
       </element>
       <element name="FnGetStudentUser_Result">
-        <complexType>
-          <sequence>
-            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
-          </sequence>
-        </complexType>
-      </element>
-      <element name="DeffermentInvoice">
-        <complexType>
-          <sequence>
-            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
-          </sequence>
-        </complexType>
-      </element>
-      <element name="DeffermentInvoice_Result">
         <complexType>
           <sequence>
             <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
@@ -1898,17 +1913,23 @@
   <message name="FnGetExamBookingEntries_Result">
     <part name="parameters" element="tns:FnGetExamBookingEntries_Result" />
   </message>
-  <message name="FnGetStudentUser">
-    <part name="parameters" element="tns:FnGetStudentUser" />
-  </message>
-  <message name="FnGetStudentUser_Result">
-    <part name="parameters" element="tns:FnGetStudentUser_Result" />
-  </message>
   <message name="DeffermentInvoice">
     <part name="parameters" element="tns:DeffermentInvoice" />
   </message>
   <message name="DeffermentInvoice_Result">
     <part name="parameters" element="tns:DeffermentInvoice_Result" />
+  </message>
+  <message name="FnConfirmation">
+    <part name="parameters" element="tns:FnConfirmation" />
+  </message>
+  <message name="FnConfirmation_Result">
+    <part name="parameters" element="tns:FnConfirmation_Result" />
+  </message>
+  <message name="FnGetStudentUser">
+    <part name="parameters" element="tns:FnGetStudentUser" />
+  </message>
+  <message name="FnGetStudentUser_Result">
+    <part name="parameters" element="tns:FnGetStudentUser_Result" />
   </message>
   <portType name="StudentManagement_Port">
     <operation name="FnRegistration">
@@ -2243,13 +2264,17 @@
       <input name="FnGetExamBookingEntries" message="tns:FnGetExamBookingEntries" />
       <output name="FnGetExamBookingEntries_Result" message="tns:FnGetExamBookingEntries_Result" />
     </operation>
-    <operation name="FnGetStudentUser">
-      <input name="FnGetStudentUser" message="tns:FnGetStudentUser" />
-      <output name="FnGetStudentUser_Result" message="tns:FnGetStudentUser_Result" />
-    </operation>
     <operation name="DeffermentInvoice">
       <input name="DeffermentInvoice" message="tns:DeffermentInvoice" />
       <output name="DeffermentInvoice_Result" message="tns:DeffermentInvoice_Result" />
+    </operation>
+    <operation name="FnConfirmation">
+      <input name="FnConfirmation" message="tns:FnConfirmation" />
+      <output name="FnConfirmation_Result" message="tns:FnConfirmation_Result" />
+    </operation>
+    <operation name="FnGetStudentUser">
+      <input name="FnGetStudentUser" message="tns:FnGetStudentUser" />
+      <output name="FnGetStudentUser_Result" message="tns:FnGetStudentUser_Result" />
     </operation>
   </portType>
   <binding name="StudentManagement_Binding" type="tns:StudentManagement_Port">
@@ -3001,21 +3026,30 @@
         <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       </output>
     </operation>
-    <operation name="FnGetStudentUser">
-      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnGetStudentUser" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
-      <input name="FnGetStudentUser">
-        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
-      </input>
-      <output name="FnGetStudentUser_Result">
-        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
-      </output>
-    </operation>
     <operation name="DeffermentInvoice">
       <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:DeffermentInvoice" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       <input name="DeffermentInvoice">
         <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       </input>
       <output name="DeffermentInvoice_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnConfirmation">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnConfirmation" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnConfirmation">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnConfirmation_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnGetStudentUser">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnGetStudentUser" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnGetStudentUser">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnGetStudentUser_Result">
         <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       </output>
     </operation>

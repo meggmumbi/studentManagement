@@ -451,7 +451,7 @@
 
                     <asp:Button runat="server" CssClass="btn btn-warning pull-left" Text="Previous" ID="prevstep1" OnClick="prevstep1_Click" />
                     <%
-                        if (alldocuments.Count >= details.Count)
+                        if (alldocuments.Count >= 1)
                         {
                             attachdoc.Visible = true;
                         }

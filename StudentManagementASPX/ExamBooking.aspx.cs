@@ -253,15 +253,17 @@ namespace StudentManagementASPX.Service_References
                     String[] info = status.Split('*');
                     if (info[0] == "success")
                     {
+
                         if (newApplicationNo)
                         {
                             applicationNo = info[2];
 
 
                         }
+                         string suggest = new Config().ObjNav().FnsuggestPapers(applicationNo);
                         linesFeedback.InnerHtml = "<div class='alert alert-" + info[0] + " '>" + info[1] + " <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a></div>";
 
-                       // string suggest = new Config().ObjNav().FnsuggestPapers(applicationNo);
+                      
                     
                         string examId = Request.QueryString["courseid"];
 
@@ -616,32 +618,57 @@ namespace StudentManagementASPX.Service_References
         {
             String applicationNo = Request.QueryString["applicationNo"];
             var nav1 = Config.ReturnNav();
+            string tentryNumber = removeFuelNumber.Text.Trim();
             var studentProcessingLine = nav1.studentProcessingLines.Where(r => r.Booking_Header_No == applicationNo && r.Type == "Booking").ToList();
-            //if (studentProcessingLine.Count > 3)
-            //{
-
-
-            try
+            if (studentProcessingLine.Count > 3)
             {
-                string tentryNumber = removeFuelNumber.Text.Trim();
+
+
+                try
+            {
+              
 
                     var nav = new Config().ObjNav();
                     String status = nav.RemoveExaminationPaper(applicationNo, tentryNumber);
                     String[] info = status.Split('*');
                  examBooking.InnerHtml = "<div class='alert alert-" + info[0] + "'>" + info[1] + "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a></div>";
-        }
+              }
                 catch (Exception t)
                 {
                     examBooking.InnerHtml = "<div class='alert alert-danger'>" + t.Message + "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a></div>";
                 }
-    //}
-    //else
-    //{
-    //    string message = "A minimum of three papers is required. Please proceed to the next step";
-    //    examBooking.InnerHtml = "<div class='alert alert-danger'>" + message + "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a></div>";
-    //}
+            }
 
-}
+
+
+            else
+            {
+                var Tpapers = nav1.Papers.Where(r => r.Code == tentryNumber && r.Status == "Optional").ToList();
+                if (Tpapers.Count > 0)
+                {
+
+                    try
+                    {
+
+
+                        var nav = new Config().ObjNav();
+                        String status = nav.RemoveExaminationPaper(applicationNo, tentryNumber);
+                        String[] info = status.Split('*');
+                        examBooking.InnerHtml = "<div class='alert alert-" + info[0] + "'>" + info[1] + "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a></div>";
+                    }
+                    catch (Exception t)
+                    {
+                        examBooking.InnerHtml = "<div class='alert alert-danger'>" + t.Message + "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a></div>";
+                    }
+                }
+                else
+                {
+                    string message = "A minimum of three papers is required. Please proceed to the next step";
+                    examBooking.InnerHtml = "<div class='alert alert-danger'>" + message + "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a></div>";
+                }
+            }
+
+        }
 
         protected void region_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -762,9 +789,12 @@ namespace StudentManagementASPX.Service_References
                 {
                     if (exemptionEntries.Count > 0)
                     {
-                       // string courseId = Request.QueryString["courseId"];
-                       // string applicationNo = Request.QueryString["applicationNo"];
+                        // string courseId = Request.QueryString["courseId"];
+                        // string applicationNo = Request.QueryString["applicationNo"];
+                       // String status = new Config().ObjNav().FnsuggestPapers(applicationNo);
                         Response.Redirect("ExamBooking.aspx?step=3&&courseId=" + courseId + "&&applicationNo=" + applicationNo);
+                       
+                       
                     }
                     else
                     {
@@ -777,6 +807,7 @@ namespace StudentManagementASPX.Service_References
                 {
                     //string courseId = Request.QueryString["courseId"];
                     //string applicationNo = Request.QueryString["applicationNo"];
+                   // String status = new Config().ObjNav().FnsuggestPapers(applicationNo);
                     Response.Redirect("ExamBooking.aspx?step=3&&courseId=" + courseId + "&&applicationNo=" + applicationNo);
                 }
 
@@ -785,6 +816,7 @@ namespace StudentManagementASPX.Service_References
             {
                 //string courseId = Request.QueryString["courseId"];
                 //string applicationNo = Request.QueryString["applicationNo"];
+                //zString status = new Config().ObjNav().FnsuggestPapers(applicationNo);
                 Response.Redirect("ExamBooking.aspx?step=3&&courseId=" + courseId + "&&applicationNo=" + applicationNo);
             }
 

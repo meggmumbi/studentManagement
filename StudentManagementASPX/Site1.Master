@@ -429,28 +429,35 @@
                             </a>
                             <ul class="treeview-menu">
                                 <li><a href="Renewal.aspx"><i class="fa fa-circle-o"></i>New Renewal Applications</a></li>
-                                <li><a href="RenewalApplications.aspx"><i class="fa fa-circle-o"></i>Renewal Applications </a></li>
-                                <%-- <li><a href="RenInv.aspx"><i class="fa fa-circle-o"></i>Invoice </a></li>
-                                <li><a href="pendingPaymentRenewal.aspx"><i class="fa fa-circle-o"></i>Renewal Payment</a></li>--%>
+                                <li><a href="RenewalApplications.aspx"><i class="fa fa-circle-o"></i>Renewal Applications </a></li>                             
                             </ul>
                         </li>
-                        <%--         <li class="treeview">
+                        
+                        <li class="treeview">
                             <a href="#">
-                                <i class="fa fa-th"></i><span>Reactivation</span>
+                                <i class="fa fa-th"></i><span>Confirmation</span>
                                 <span class="pull-right-container">
                                     <i class="fa fa-angle-left pull-right"></i>
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-
-                                <li><a href="Reactivation.aspx"><i class="fa fa-circle-o"></i>New Reactivation Application</a></li>
-                                 <li><a href="ReactivationApplications.aspx"><i class="fa fa-circle-o"></i>Reactivation Applications </a></li>
-                                <li><a href="RenInv.aspx"><i class="fa fa-circle-o"></i>Invoice </a></li>
-                                <li><a href="pendingPaymentRenewal.aspx"><i class="fa fa-circle-o"></i>Reactivation Payment</a></li>
+                                <li><a href="ConfirmationApp.aspx"><i class="fa fa-circle-o"></i>Confirmation Application</a></li>
+                                <li><a href="ConfirmationApplications.aspx"><i class="fa fa-circle-o"></i>My Applications </a></li>                               
                             </ul>
-                        </li>--%>
-
-                        <%--  <li><a href="Surveys.aspx"><i class="fa fa-comments"></i>Feedback</a></li>--%>
+                        </li>
+                               <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-th"></i><span>Remarking Application</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="RemarkingList.aspx"><i class="fa fa-circle-o"></i>Remarking new Application</a></li>
+                                <li><a href="RemarkingApplications.aspx"><i class="fa fa-circle-o"></i>My Applications </a></li>                               
+                            </ul>
+                        </li>
+                       
 
                         <li class="treeview">
                             <a href="#">

@@ -5433,6 +5433,8 @@
         <Property Name="Description" Type="Edm.String" />
         <Property Name="No_of_Passed_Students" Type="Edm.Int32" />
         <Property Name="No_of_Failed_Students" Type="Edm.Int32" />
+        <Property Name="Status" Type="Edm.String" />
+        <Property Name="Blocked" Type="Edm.Boolean" />
       </EntityType>
       <EntityType Name="Papersz">
         <Key>

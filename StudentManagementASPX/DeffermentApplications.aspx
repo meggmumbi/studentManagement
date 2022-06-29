@@ -13,7 +13,7 @@
 
             <div runat="server" id="Div1"></div>
 
-
+             <div class="table-responsive">
             <table class="table table-bordered table-striped dataTable" id="example4">
                 <thead>
                     <tr>
@@ -110,6 +110,7 @@
                     </tr>
                 </tbody>
             </table>
+                 </div>
         </div>
     </div>
 </asp:Content>

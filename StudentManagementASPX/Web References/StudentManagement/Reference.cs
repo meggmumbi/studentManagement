@@ -195,9 +195,11 @@ namespace StudentManagementASPX.StudentManagement {
         
         private System.Threading.SendOrPostCallback FnGetExamBookingEntriesOperationCompleted;
         
-        private System.Threading.SendOrPostCallback FnGetStudentUserOperationCompleted;
-        
         private System.Threading.SendOrPostCallback DeffermentInvoiceOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback FnConfirmationOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback FnGetStudentUserOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -487,10 +489,13 @@ namespace StudentManagementASPX.StudentManagement {
         public event FnGetExamBookingEntriesCompletedEventHandler FnGetExamBookingEntriesCompleted;
         
         /// <remarks/>
-        public event FnGetStudentUserCompletedEventHandler FnGetStudentUserCompleted;
+        public event DeffermentInvoiceCompletedEventHandler DeffermentInvoiceCompleted;
         
         /// <remarks/>
-        public event DeffermentInvoiceCompletedEventHandler DeffermentInvoiceCompleted;
+        public event FnConfirmationCompletedEventHandler FnConfirmationCompleted;
+        
+        /// <remarks/>
+        public event FnGetStudentUserCompletedEventHandler FnGetStudentUserCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnRegistration", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", ResponseElementName="FnRegistration_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -3532,6 +3537,68 @@ namespace StudentManagementASPX.StudentManagement {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/StudentManagement:DeffermentInvoice", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", ResponseElementName="DeffermentInvoice_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string DeffermentInvoice(string applicationNo) {
+            object[] results = this.Invoke("DeffermentInvoice", new object[] {
+                        applicationNo});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void DeffermentInvoiceAsync(string applicationNo) {
+            this.DeffermentInvoiceAsync(applicationNo, null);
+        }
+        
+        /// <remarks/>
+        public void DeffermentInvoiceAsync(string applicationNo, object userState) {
+            if ((this.DeffermentInvoiceOperationCompleted == null)) {
+                this.DeffermentInvoiceOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDeffermentInvoiceOperationCompleted);
+            }
+            this.InvokeAsync("DeffermentInvoice", new object[] {
+                        applicationNo}, this.DeffermentInvoiceOperationCompleted, userState);
+        }
+        
+        private void OnDeffermentInvoiceOperationCompleted(object arg) {
+            if ((this.DeffermentInvoiceCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.DeffermentInvoiceCompleted(this, new DeffermentInvoiceCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnConfirmation", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", ResponseElementName="FnConfirmation_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
+        public string FnConfirmation(string studentNo, string regNo) {
+            object[] results = this.Invoke("FnConfirmation", new object[] {
+                        studentNo,
+                        regNo});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void FnConfirmationAsync(string studentNo, string regNo) {
+            this.FnConfirmationAsync(studentNo, regNo, null);
+        }
+        
+        /// <remarks/>
+        public void FnConfirmationAsync(string studentNo, string regNo, object userState) {
+            if ((this.FnConfirmationOperationCompleted == null)) {
+                this.FnConfirmationOperationCompleted = new System.Threading.SendOrPostCallback(this.OnFnConfirmationOperationCompleted);
+            }
+            this.InvokeAsync("FnConfirmation", new object[] {
+                        studentNo,
+                        regNo}, this.FnConfirmationOperationCompleted, userState);
+        }
+        
+        private void OnFnConfirmationOperationCompleted(object arg) {
+            if ((this.FnConfirmationCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.FnConfirmationCompleted(this, new FnConfirmationCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/StudentManagement:FnGetStudentUser", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", ResponseElementName="FnGetStudentUser_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
         public string FnGetStudentUser(string email, string password) {
@@ -3560,36 +3627,6 @@ namespace StudentManagementASPX.StudentManagement {
             if ((this.FnGetStudentUserCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.FnGetStudentUserCompleted(this, new FnGetStudentUserCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("urn:microsoft-dynamics-schemas/codeunit/StudentManagement:DeffermentInvoice", RequestNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", ResponseElementName="DeffermentInvoice_Result", ResponseNamespace="urn:microsoft-dynamics-schemas/codeunit/StudentManagement", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return_value")]
-        public string DeffermentInvoice(string applicationNo) {
-            object[] results = this.Invoke("DeffermentInvoice", new object[] {
-                        applicationNo});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void DeffermentInvoiceAsync(string applicationNo) {
-            this.DeffermentInvoiceAsync(applicationNo, null);
-        }
-        
-        /// <remarks/>
-        public void DeffermentInvoiceAsync(string applicationNo, object userState) {
-            if ((this.DeffermentInvoiceOperationCompleted == null)) {
-                this.DeffermentInvoiceOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDeffermentInvoiceOperationCompleted);
-            }
-            this.InvokeAsync("DeffermentInvoice", new object[] {
-                        applicationNo}, this.DeffermentInvoiceOperationCompleted, userState);
-        }
-        
-        private void OnDeffermentInvoiceOperationCompleted(object arg) {
-            if ((this.DeffermentInvoiceCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.DeffermentInvoiceCompleted(this, new DeffermentInvoiceCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -5750,17 +5787,17 @@ namespace StudentManagementASPX.StudentManagement {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    public delegate void FnGetStudentUserCompletedEventHandler(object sender, FnGetStudentUserCompletedEventArgs e);
+    public delegate void DeffermentInvoiceCompletedEventHandler(object sender, DeffermentInvoiceCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class FnGetStudentUserCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class DeffermentInvoiceCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal FnGetStudentUserCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal DeffermentInvoiceCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -5776,17 +5813,43 @@ namespace StudentManagementASPX.StudentManagement {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    public delegate void DeffermentInvoiceCompletedEventHandler(object sender, DeffermentInvoiceCompletedEventArgs e);
+    public delegate void FnConfirmationCompletedEventHandler(object sender, FnConfirmationCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class DeffermentInvoiceCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class FnConfirmationCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal DeffermentInvoiceCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal FnConfirmationCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void FnGetStudentUserCompletedEventHandler(object sender, FnGetStudentUserCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class FnGetStudentUserCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal FnGetStudentUserCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
